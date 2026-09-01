@@ -1,0 +1,12 @@
+{
+  "project": "AURA",
+  "version": "0.2.0",
+  "release": "World Kernel",
+  "date": "2026-09-01",
+  "target": "Android Chrome",
+  "hosting": "GitHub Pages repository root",
+  "buildRequired": false,
+  "automaticTestFiles": 9,
+  "automaticResult": "PASS",
+  "manualHardwareStatus": "PENDING"
+}
