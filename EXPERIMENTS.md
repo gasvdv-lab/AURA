@@ -41,3 +41,19 @@ Snapshot the World and Embodiment Kernels mid-motion, restore both, and prove su
 ## EK-04 Local damage
 
 Damage one physical part and verify its integrity signal changes without spontaneous damage, interpretation or emotional meaning elsewhere.
+
+## SM-01 Repeatable consequence
+
+Run identical actuator trials from identical snapshots and prove pre/post signals, physical trajectories, models and causal records match exactly.
+
+## SM-02 Evidence accumulation
+
+Repeat a bounded actuator command and verify its effect model increments its sample count and deterministic means without reward, goal or interpretation fields.
+
+## SM-03 Combined continuity
+
+Restore World, Embodiment and Sensorimotor state after a learned trial; continue with the same inputs and prove equivalence to uninterrupted development.
+
+## SM-04 Semantic absence
+
+Verify there is no walking, standing, grasping, exploration, action-selection, success/failure or reward API in the learning kernel.

@@ -1,12 +1,12 @@
 {
   "project": "AURA",
-  "version": "0.3.0",
-  "release": "Embodiment Kernel",
+  "version": "0.4.0",
+  "release": "Sensorimotor Development",
   "date": "2026-09-01",
   "target": "Android Chrome",
   "hosting": "GitHub Pages repository root",
   "buildRequired": false,
-  "automaticTestFiles": 16,
+  "automaticTestFiles": 22,
   "automaticResult": "PASS",
   "manualHardwareStatus": "PENDING"
 }

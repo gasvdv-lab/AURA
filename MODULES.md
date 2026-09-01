@@ -1,6 +1,6 @@
-# AURA Modules — v0.3.0
+# AURA Modules — v0.4.0
 
-## Active cumulatively through v0.3.0
+## Active cumulatively through v0.4.0
 
 - `core/world`: objective state, 3D coordinates, bodies and fixed-step evolution.
 - `core/materials`: immutable generic material definitions and physical/degradation properties.
@@ -12,7 +12,8 @@
 - `observatory`: external append-only record, invisible to inhabitants.
 - `ui`: a human laboratory view only.
 - `embodiment`: abstract humanoid blueprint, physical part mapping, joint constraints, normalized low-level actuator commands, raw proprioception/integrity sampling and snapshot/restore.
+- `sensorimotor`: objective signal sampling, explicitly initiated low-level trials, causal consequence deltas, incremental actuator-effect models and persistence.
 
 ## Reserved and inactive
 
-`perception`, `cognition`, `xr`, `synthetic-network`, and `human-internet` have no v0.3 runtime. Embodiment sensor samples are objective hardware signals, not perceptions or experiences. Capability creep is prohibited.
+`perception`, `cognition`, `xr`, `synthetic-network`, and `human-internet` have no v0.4 runtime. Sensorimotor samples remain objective signals, not perceptions, experiences, desires or decisions. Capability creep is prohibited.
