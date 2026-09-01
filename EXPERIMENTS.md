@@ -25,3 +25,19 @@ Construction consumes declared resources; transformation exposes losses; idle ev
 Snapshot mid-trajectory, restore into a fresh kernel and prove the subsequent state and causal history match uninterrupted execution.
 
 No experiment in this release assigns meaning such as house, tool, tree, weapon, life, identity, intent or perception to a primitive.
+
+## EK-01 Topological integrity
+
+Verify all 14 abstract humanoid parts, parent links, joints, actuators and raw sensors exist without sex characteristics or identity fields.
+
+## EK-02 Unlearned actuation
+
+Apply identical normalized commands to individual actuators and verify deterministic force consequences. Confirm no `walk`, `stand` or `grasp` capability exists.
+
+## EK-03 Embodied continuity
+
+Snapshot the World and Embodiment Kernels mid-motion, restore both, and prove subsequent states and causal records match uninterrupted execution.
+
+## EK-04 Local damage
+
+Damage one physical part and verify its integrity signal changes without spontaneous damage, interpretation or emotional meaning elsewhere.

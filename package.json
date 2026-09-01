@@ -1,1 +1,1 @@
-{"name":"aura-world-kernel","version":"0.2.0","private":true,"type":"module","scripts":{"test":"node scripts/run-tests.mjs","validate":"node scripts/validate-release.mjs","check":"npm run test && npm run validate"},"engines":{"node":">=20"}}
+{"name":"aura-embodiment-kernel","version":"0.3.0","private":true,"type":"module","scripts":{"test":"node scripts/run-tests.mjs","validate":"node scripts/validate-release.mjs","check":"npm run test && npm run validate"},"engines":{"node":">=20"}}

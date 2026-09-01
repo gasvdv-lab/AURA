@@ -1,6 +1,6 @@
-# AURA v0.2.0 — World Kernel
+# AURA v0.3.0 — Embodiment Kernel
 
-AURA is an Android-first research runtime for a persistent, objective synthetic reality. v0.2.0 extends the v0.1.0 Synthetic Kernel with deterministic three-dimensional physics, materials, damage, resources, construction/destruction, and explicit causal records.
+AURA is an Android-first research runtime for a persistent, objective synthetic reality. v0.3.0 preserves the Synthetic and World Kernels and adds an abstract, physically sexless humanoid embodiment made from causal physical parts, joints, low-level actuators and raw body sensors.
 
 Live Android test: https://gasvdv-lab.github.io/AURA/
 
@@ -15,10 +15,10 @@ npm test
 npm run validate
 ```
 
-## v0.2.0 scope
+## v0.3.0 scope
 
-Included: objective `WORLD_STATE`, 3D vectors, physical spherical bodies, mass, position, velocity, acceleration, accumulated forces, gravity, fixed-step semi-implicit Euler integration, deterministic impulse collisions, a material registry, integrity/degradation, resources, generic processes, construction/destruction, snapshot/restore, and append-only hash-chained Observatory events.
+Included cumulatively: objective `WORLD_STATE`, deterministic physics and collisions, materials/damage, resources/processes, snapshot/restore, causal Observatory events, and a 14-part abstract humanoid topology. Its joints generate deterministic constraint forces. Every joint has a normalized low-level actuator, while sensors expose only raw position, velocity and integrity state.
 
-Excluded: high-level game objects, WebXR, humanoid rendering, cognition/LLM, camera, microphone, GPS, Synthetic Network runtime, and Human Internet access. Android Chrome is the only target until explicitly changed; this release does not yet request Android hardware capabilities.
+Excluded: learned movement, scripted skills such as walking/grasping/standing, high-level game objects, visual humanoid rendering, WebXR, cognition/LLM, camera, microphone, GPS, Synthetic Network runtime, and Human Internet access. Android Chrome is the only target until explicitly changed; this release requests no Android hardware capabilities.
 
 The browser interface is an Observatory-facing laboratory view, not AURA perception. AURA has no access to it.

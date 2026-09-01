@@ -2,6 +2,49 @@
 
 Live Android test: https://gasvdv-lab.github.io/AURA/
 
+## v0.3.0 automatic result
+
+Executed on 2026-09-01 with Node.js in the release workspace. Exact result:
+
+```text
+PASS tests/integration/browser-entry-smoke.test.mjs
+PASS tests/integration/construction-causality.test.mjs
+PASS tests/integration/determinism-collision.test.mjs
+PASS tests/integration/embodiment-damage.test.mjs
+PASS tests/integration/embodiment-determinism.test.mjs
+PASS tests/integration/embodiment-persistence.test.mjs
+PASS tests/integration/persistence-mid-simulation.test.mjs
+PASS tests/regression/no-spontaneous-creation.test.mjs
+PASS tests/regression/v0.1-invariants.test.mjs
+PASS tests/regression/v0.2-world-with-embodiment.test.mjs
+PASS tests/unit/actuator-boundary.test.mjs
+PASS tests/unit/damage-degradation.test.mjs
+PASS tests/unit/embodiment-blueprint.test.mjs
+PASS tests/unit/force-gravity.test.mjs
+PASS tests/unit/resource-process.test.mjs
+PASS tests/unit/vector-material.test.mjs
+PASS: 16/16 test files passed
+
+AURA v0.3.0 release validation: PASS
+Validated 13 required paths, cumulative live links, embodiment boundaries, and excluded capabilities.
+```
+
+New coverage proves sex-characteristic-free topology, unique and valid parent links, absence of scripted motor skills, actuator bounds and causal logging, deterministic embodiment trajectories, local part damage/raw integrity sensing, joint/body conservation, and exact combined World + Embodiment snapshot/restore. All v0.1 and v0.2 regression coverage remains active.
+
+## v0.3.0 Android real-world acceptance (manual)
+
+Record each as PASS or FAIL with device model, Android version and Chrome version.
+
+1. Open the fixed live link in current Chrome for Android. PASS: it shows **Embodiment Kernel v0.3.0**, 14 body parts and no permission prompt. FAIL: older release, wrong part count, blank/error page, or camera/microphone/location/XR prompt.
+2. Tap **Step 1 tick**. PASS: tick increases once; causal events include joint evaluation, forces, integration and sensor samples. Values remain finite. FAIL: missing event categories, `NaN`/infinite values, or crash.
+3. Tap **Step 60 ticks**. PASS: the body evolves under gravity/constraints without spontaneous extra/missing parts. Physical instability is a FAIL only if values become non-finite or the runtime crashes; learned standing is intentionally absent.
+4. Close Chrome fully and reopen the link. PASS: tick, all 14 parts, joint commands and causal history restore. FAIL: state resets or corrupts.
+5. Reload five times. PASS: exactly one `embodiment.created` genesis event remains and the body is not duplicated. FAIL: repeated genesis or changed saved state.
+6. After one online load, test airplane mode. PASS: the full v0.3 runtime opens from cache. A first-ever offline visit may fail and is not a kernel failure.
+7. Tap **Reset local world**. PASS: only AURA v0.3 local state resets and one fresh 14-part body appears. FAIL: reset fails or affects unrelated browser data.
+
+Humanoid rendering/appearance, WebXR, camera, microphone, GPS, cognition, autonomous movement and sensorimotor learning are **not applicable** to v0.3.0.
+
 ## v0.2.0 automatic result
 
 Executed on 2026-09-01 with Node.js in the release workspace. Exact result:

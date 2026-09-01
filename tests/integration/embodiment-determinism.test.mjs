@@ -1,0 +1,1 @@
+import {strict as assert} from 'node:assert';import {createEmbodiment} from '../helpers-embodiment.mjs';function run(){const x=createEmbodiment({fixedDelta:.02,gravity:{x:0,y:-9.81,z:0}});x.kernel.commandActuator(x.id,x.entity.actuators[2].id,.25);x.kernel.step(25);return {world:x.world.snapshot(),embodiment:x.kernel.snapshot()};}assert.deepEqual(run(),run());
