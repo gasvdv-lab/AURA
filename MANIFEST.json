@@ -1,12 +1,12 @@
 {
   "project": "AURA",
-  "version": "0.7.0",
-  "release": "Belief & Hypothesis Kernel",
+  "version": "0.8.0",
+  "release": "Foundation Model Bridge",
   "date": "2026-09-01",
   "target": "Android Chrome",
   "hosting": "GitHub Pages repository root",
   "buildRequired": false,
-  "automaticTestFiles": 44,
+  "automaticTestFiles": 50,
   "automaticResult": "PASS",
   "manualHardwareStatus": "PENDING"
 }

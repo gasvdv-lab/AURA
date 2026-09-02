@@ -109,3 +109,19 @@ Laat tijd verstrijken zonder nieuwe evidence en bewijs dat confidence afneemt en
 ## BH-04 Hypothese-evidence
 
 Toets dezelfde generieke hypothese met ondersteunende en tegensprekende percepties. Bewijs dat de uitkomst en status reproduceerbaar zijn en geen verborgen truth-label bevatten.
+
+## FM-01 Contextfirewall
+
+Compileer modelcontext uit alle actieve lagen en bewijs dat uitsluitend gewhiteliste percepties, herinneringen, beliefs, hypotheses en de capability `produce-text-response` aanwezig zijn.
+
+## FM-02 Providergrens
+
+Onderschep een relayaanvraag en bewijs dat de browser geen authorization-header of API-sleutel verstuurt, `store: false` en `tools: []` gebruikt.
+
+## FM-03 Geen modelagency
+
+Laat een provider tekst retourneren en bewijs dat `WORLD_STATE`, embodiment, resources, geheugen en beliefs daardoor niet wijzigen. Alleen causale aanvraag-/antwoordevents mogen bijkomen.
+
+## FM-04 Continuïteit
+
+Herstel na modelantwoorden en bewijs dat request-ID's en de tekstgeschiedenis exact doorlopen zonder providergeheimen te serialiseren.

@@ -4,6 +4,125 @@ Vaste live Android-test: https://gasvdv-lab.github.io/AURA/
 
 Vanaf v0.6.0 worden alle testinstructies, verwachte resultaten en mislukcriteria in het Nederlands bijgehouden. Technische bestandsnamen en de letterlijke automatische uitvoer blijven onvertaald zodat resultaten exact vergelijkbaar zijn.
 
+## Automatisch resultaat v0.8.0
+
+Uitgevoerd op 2 september 2026 zonder echte API-sleutel of betaalde modelaanroep:
+
+```text
+PASS tests/integration/belief-contradiction.test.mjs
+PASS tests/integration/belief-from-memory.test.mjs
+PASS tests/integration/belief-persistence-determinism.test.mjs
+PASS tests/integration/browser-entry-smoke.test.mjs
+PASS tests/integration/construction-causality.test.mjs
+PASS tests/integration/determinism-collision.test.mjs
+PASS tests/integration/embodiment-damage.test.mjs
+PASS tests/integration/embodiment-determinism.test.mjs
+PASS tests/integration/embodiment-persistence.test.mjs
+PASS tests/integration/foundation-bridge.test.mjs
+PASS tests/integration/foundation-persistence.test.mjs
+PASS tests/integration/foundation-security.test.mjs
+PASS tests/integration/hypothesis-evidence.test.mjs
+PASS tests/integration/memory-consolidation-retrieval.test.mjs
+PASS tests/integration/memory-delayed-encoding.test.mjs
+PASS tests/integration/memory-determinism.test.mjs
+PASS tests/integration/memory-persistence.test.mjs
+PASS tests/integration/perception-determinism.test.mjs
+PASS tests/integration/perception-occlusion.test.mjs
+PASS tests/integration/perception-persistence.test.mjs
+PASS tests/integration/perception-tracking-causality.test.mjs
+PASS tests/integration/persistence-mid-simulation.test.mjs
+PASS tests/integration/sensorimotor-determinism.test.mjs
+PASS tests/integration/sensorimotor-learning.test.mjs
+PASS tests/integration/sensorimotor-persistence.test.mjs
+PASS tests/regression/no-spontaneous-creation.test.mjs
+PASS tests/regression/v0.1-invariants.test.mjs
+PASS tests/regression/v0.2-world-with-embodiment.test.mjs
+PASS tests/regression/v0.3-embodiment-with-learning.test.mjs
+PASS tests/regression/v0.4-sensorimotor-with-perception.test.mjs
+PASS tests/regression/v0.5-perception-with-memory.test.mjs
+PASS tests/regression/v0.6-memory-with-beliefs.test.mjs
+PASS tests/regression/v0.7-beliefs-with-foundation.test.mjs
+PASS tests/unit/actuator-boundary.test.mjs
+PASS tests/unit/belief-boundary.test.mjs
+PASS tests/unit/belief-staleness.test.mjs
+PASS tests/unit/damage-degradation.test.mjs
+PASS tests/unit/embodiment-blueprint.test.mjs
+PASS tests/unit/force-gravity.test.mjs
+PASS tests/unit/foundation-context-boundary.test.mjs
+PASS tests/unit/memory-boundary.test.mjs
+PASS tests/unit/memory-capacity.test.mjs
+PASS tests/unit/memory-decay-forgetting.test.mjs
+PASS tests/unit/perception-boundary.test.mjs
+PASS tests/unit/perception-range.test.mjs
+PASS tests/unit/relay-provider.test.mjs
+PASS tests/unit/resource-process.test.mjs
+PASS tests/unit/sensorimotor-boundaries.test.mjs
+PASS tests/unit/sensorimotor-signals.test.mjs
+PASS tests/unit/vector-material.test.mjs
+PASS: 50/50 test files passed
+
+AURA v0.8.0 release validation: PASS
+Validated 26 required paths, controlled model context, relay isolation, Dutch testing documentation, and excluded capabilities.
+```
+
+## Handmatige praktijktest v0.8.0 zonder echte AI
+
+1. Open v0.8.0 en reset de lokale state.
+2. Klik **Waarnemen** en **Beliefs bijwerken**.
+3. Klik **Gecontroleerde context samenstellen**.
+4. Controleer `controlledModelContext`.
+
+**GESLAAGD:** context bevat alleen schema, begrensde perceptie, geselecteerde herinneringen, beliefs, hypotheses en `produce-text-response`. Verboden zijn `objectiveWorld`, Observatory, massa, materiaal, krachten, integriteit, interne body-ID's, internettools en wereldacties.
+
+5. Klik **Deterministische brugtest**.
+
+**GESLAAGD:** feedback toont `CONTEXT_OK`, modelantwoorden wordt 1 en de wereldstate blijft inhoudelijk gelijk. Deze testprovider is nadrukkelijk geen AI en kost niets.
+
+## Handmatige live-AI-test via lokale relay
+
+1. Volg `server/README.md` en start de relay in een afzonderlijke terminal met je eigen `OPENAI_API_KEY`, beschikbaar model en `AURA_ORIGIN=http://127.0.0.1:5500`.
+2. Voer de API-sleutel nooit in de AURA-pagina in.
+3. Vul als relay-endpoint `http://127.0.0.1:8787/v1/aura/respond` in.
+4. Vul een herkenbare modelnaam in; de relay gebruikt veilig zijn eigen serverconfiguratie.
+5. Stel opnieuw gecontroleerde context samen.
+6. Vul optioneel een korte modelinvoer in.
+7. Klik **Live AI via relay**.
+
+**GESLAAGD:** er verschijnt een tekstantwoord met modelnaam; Observatory bevat `foundation-model.requested` en `foundation-model.responded`; geen wereldbody, resource, herinnering of belief wordt door de tekst gewijzigd.
+
+**MISLUKT:** API-sleutel verschijnt in browseropslag/netwerkpayload, browser roept rechtstreeks `api.openai.com` aan, model krijgt objectieve wereldstate, tools zijn beschikbaar, modeltekst verandert runtime-state, CORS accepteert een verkeerde origin of een fout blijft onzichtbaar.
+
+Een echte live-AI-aanroep kon niet automatisch worden uitgevoerd omdat deze release bewust geen gebruikers-API-sleutel bevat. Kosten, accounttoegang, modelbeschikbaarheid, relayhosting en echte netwerkverbinding blijven daarom handmatig.
+
+Niet van toepassing: autonome aandacht, autonoom handelen, modeltools, camera, microfoon, GPS, WebXR, Synthetic Network en Human Internet.
+
+### Resultatenformulier v0.8.0
+
+```text
+Apparaat:
+Besturingssysteem:
+Browser en versie:
+Relay lokaal/publiek:
+Gebruikt model:
+Datum:
+
+1. Context samenstellen: GESLAAGD / MISLUKT
+2. Contextfirewall: GESLAAGD / MISLUKT
+3. Deterministische brugtest: GESLAAGD / MISLUKT
+4. Relay start: GESLAAGD / MISLUKT
+5. Live AI-antwoord: GESLAAGD / MISLUKT
+6. Geen browsergeheim: GESLAAGD / MISLUKT
+7. Geen tools/agency: GESLAAGD / MISLUKT
+8. Causale logging: GESLAAGD / MISLUKT
+9. State blijft onveranderd: GESLAAGD / MISLUKT
+
+Opmerkingen:
+```
+
+---
+
+## Historisch testplan v0.7.0
+
 ## Automatisch resultaat v0.7.0
 
 Uitgevoerd op 2 september 2026 met Node.js in de releasewerkruimte:
@@ -316,3 +435,4 @@ Opmerkingen:
 - v0.6.0: 36/36 testbestanden geslaagd.
 - v0.6.1: 37/37 testbestanden geslaagd.
 - v0.7.0: 44/44 testbestanden geslaagd.
+- v0.8.0: 50/50 testbestanden geslaagd; echte AI-relaytest handmatig wegens ontbrekende gebruikerscredential.

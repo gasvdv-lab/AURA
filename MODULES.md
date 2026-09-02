@@ -1,6 +1,6 @@
-# AURA Modules — v0.7.0
+# AURA Modules — v0.8.0
 
-## Actief, cumulatief tot en met v0.7.0
+## Actief, cumulatief tot en met v0.8.0
 
 - `core/world`: objective state, 3D coordinates, bodies and fixed-step evolution.
 - `core/materials`: immutable generic material definitions and physical/degradation properties.
@@ -16,8 +16,10 @@
 - `perception`: private access to objective state, range and occlusion filtering, reproducible measurement noise, uncertainty, opaque perceptual tracking and snapshot/restore.
 - `memory`: gevalideerde sensorische sporen uit `PERCEIVED_STATE`, deterministische opvraging, consolidatie, verzwakking, capaciteitsvergeten en snapshot/herstel.
 - `belief`: generieke perceptuele claims, alternatieven bij conflicterende evidence, veroudering, geheugenprovenance, hypotheses en evidence-evaluatie zonder waarheidsoracle.
+- `foundation-model`: whitelist-contextcompiler, providergrens, deterministische testprovider, vertrouwde relayprovider, tekst-only responslog en snapshot/herstel.
+- `server`: optionele referentierelay die de OpenAI API-sleutel uitsluitend server-side leest, origin beperkt en Responses-aanroepen zonder tools uitvoert.
 - `ui`: Nederlandstalige handelingfeedback, zichtbare knopvoorwaarden, actuator-/causaliteitstellers, veilige resetbevestiging en migratie van lokale v0.6.0-state.
 
 ## Reserved and inactive
 
-`cognition`, `foundation-model`, `xr`, `synthetic-network` en `human-internet` hebben geen v0.7-runtime. Beliefs zijn evidencegewogen interne claims, geen objectieve feiten, begrip, verlangens of beslissingen. Capability creep blijft verboden.
+Het foundation model kan in v0.8 alleen tekst produceren uit gecontroleerde context. `attention`, autonome actie, modeltools, `xr`, `synthetic-network` en `human-internet` hebben geen runtime. Modeltekst is geen wereldactie of objectieve waarheid.

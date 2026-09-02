@@ -9,8 +9,9 @@
 - v0.6.0 Memory Kernel — sensorische sporen, consolidatie, opvraging, verzwakking, capaciteit en vergeten zonder chatgeschiedenis als geheugen — voltooid.
 - v0.6.1 Memory Flow Fix — vertraagde codering, zichtbare knopfeedback, veilige knopvoorwaarden en resetbevestiging — voltooid.
 - v0.7.0 Belief & Hypothesis Kernel — onzekere, tegenstrijdige, verouderde en mogelijk onjuiste beliefs uit perceptie en geheugen — voltooid.
-- v0.8.0 Foundation Model Bridge — volgende stap; gecontroleerde AI-modelkoppeling zonder toegang tot `WORLD_STATE`, Observatory of externe agency.
-- v0.9+ Aandacht en autonomie pas na hun eigen veiligheidspoorten.
+- v0.8.0 Foundation Model Bridge — gecontroleerde echte AI-modelkoppeling via server-side relay, zonder toegang tot `WORLD_STATE`, Observatory, tools of externe agency — voltooid.
+- v0.9.0 Attention Kernel — volgende stap; beperkte verwerkingscapaciteit en evidence-selectie zonder ingebouwde nieuwsgierigheid of engagementdoelen.
+- v0.10+ Autonomie pas na de aandacht- en veiligheidsproeven.
 - Later phases: persistent environments, synthetic information systems, strictly read-only Human Internet, communication, physical-world sensing, places, WebAR rendering, and longitudinal research.
 
 Capabilities remain gated: adding a later phase must not silently pull its runtime into an earlier release.
