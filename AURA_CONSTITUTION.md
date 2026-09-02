@@ -1,5 +1,9 @@
 # AURA Constitution (cumulative)
 
+## Capability-oorsprong (v0.8.6)
+
+Toestemming om foundation-modelkennis te gebruiken is geen leren door AURA. De oorsprong moet zichtbaar blijven en mag nooit door presentatie, persistentie of contextcompilatie worden afgezwakt.
+
 ## Tijdelijke evaluatietoegang (v0.8.5.1)
 
 Een kandidaat-capability mag uitsluitend binnen één begrensde toetsaanroep tijdelijk worden blootgesteld. Dat is geen normale beschikbaarstelling en verleent geen wereldactie, tooltoegang of toegang tot het verwachte antwoord.

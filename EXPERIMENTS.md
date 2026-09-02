@@ -1,5 +1,9 @@
 # AURA Experiments (cumulative)
 
+## v0.8.6 — oorsprongsgrens
+
+Laat Gemini/Groq twee proeven slagen en controleer dat de capability uitsluitend `foundation-authorized` wordt. Een regressietest bewijst daarnaast dat alleen native-runtime-evidence ooit `aura-learned` kan opleveren.
+
 ## v0.8.5.1 — uitvoerbare blinde kandidaatproef
 
 Leg het verwachte antwoord vast, laat Gemini/Groq de nieuwe opgave via tijdelijke kandidaattoegang uitvoeren en vergelijk het automatisch ontvangen antwoord. Controleer dat les en verwacht antwoord niet in de provideraanvraag staan.

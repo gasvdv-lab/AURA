@@ -1,4 +1,8 @@
-# Foundation Model Bridge — v0.8.5.1
+# Foundation Model Bridge — v0.8.6
+
+## Capability Origin Boundary
+
+Een Gemini/Groq-evaluatie krijgt altijd oorsprong `foundation-authorized`, nooit `aura-learned`. De gecontroleerde context draagt deze oorsprong expliciet mee. `aura-learned` is alleen geldig na volledig native, reproduceerbare vaardigheidsverwerving zonder foundation-modeluitvoering.
 
 ## Tijdelijke kandidaatevaluatie
 

@@ -1,6 +1,6 @@
-# AURA v0.8.5.1 — actueel en cumulatief testplan
+# AURA v0.8.6 — actueel en cumulatief testplan
 
-Dit bestand is volledig Nederlandstalig en hoort bij **AURA v0.8.5.1 — Evaluation Flow & Research UI**.
+Dit bestand is volledig Nederlandstalig en hoort bij **AURA v0.8.6 — Capability Origin & Learning Boundary**.
 
 Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
@@ -8,19 +8,19 @@ Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
 Uitgevoerd op 2 september 2026 met Node.js 24.20.0:
 
-- Testbestanden uitgevoerd: **57**
-- GESLAAGD: **57**
+- Testbestanden uitgevoerd: **58**
+- GESLAAGD: **58**
 - MISLUKT: **0**
 - Releasevalidatie: **GESLAAGD**
 - Vereiste releasepaden gecontroleerd: **29**
-- ZIP-inhoud: **133 onderdelen**
+- ZIP-inhoud: **134 onderdelen**
 - Oude ZIP-bestanden of `sources/` in de release-ZIP: **0**
 
 Samenvattende uitvoer:
 
 ```text
-PASS: 57/57 test files passed
-AURA v0.8.5.1 release validation: PASS
+PASS: 58/58 test files passed
+AURA v0.8.6 release validation: PASS
 Validated 29 required paths
 ```
 
@@ -66,7 +66,7 @@ De volgende onderdelen blijven een handmatige praktijktest:
 
 GESLAAGD wanneer:
 
-- bovenaan `v0.8.5.1` staat;
+- bovenaan `v0.8.6` staat;
 - de status begint met tick 0;
 - er 0 waarnemingen, 0 geheugenitems, 0 beliefs, 0 hypotheses en 0 modelantwoorden zijn;
 - onder de knoppen in het Nederlands staat waarom sommige knoppen nog niet beschikbaar zijn;
@@ -168,7 +168,7 @@ Bij een fout noteer je de volledige rode melding en of je Gemini of Groq gekozen
 5. Draai het toestel eenmaal van staand naar liggend en terug.
 6. Controleer dat knoppen bereikbaar blijven en tekst niet buiten het scherm valt.
 
-GESLAAGD wanneer v0.8.5.1 zichtbaar is, de volledige basisvolgorde en leerworkflow werken, uitgeschakelde knoppen uitleg tonen en de veilige AI-brugtest slaagt.
+GESLAAGD wanneer v0.8.6 zichtbaar is, de volledige basisvolgorde en leerworkflow werken, uitgeschakelde knoppen uitleg tonen en de veilige AI-brugtest slaagt.
 
 De lokale laptop-relay op `127.0.0.1` is vanaf een andere telefoon niet rechtstreeks bereikbaar. **Echte AI vragen** via GitHub Pages/Android blijft daarom MISLUKT of niet van toepassing totdat later een beveiligde online relay wordt ingericht. Dit is geen defect in de statische AURA-runtime.
 
@@ -186,7 +186,10 @@ Voer eerst deze leerworkflow zonder echte AI uit:
 8. Wacht tot **Antwoord van AURA** automatisch is ingevuld.
 9. Klik **03 · Antwoord objectief controleren**. Bij antwoord `56` toont de status `1/2`.
 10. Vul bij `proef-2` de nieuwe opgave `9 × 6` en verwacht antwoord `54` in.
-11. Herhaal stap 7–9. Bij antwoord `54` toont de status `beschikbaar` en `2/2`.
+11. Herhaal stap 7–9. Bij antwoord `54` toont de status `beschikbaar`, `2/2` en oorsprong **FOUNDATION TOEGESTAAN**.
+12. Controleer in de technische toestand dat `origin` gelijk is aan `foundation-authorized` en nergens `aura-learned` staat.
+
+MISLUKT wanneer een Gemini/Groq-proef als **AURA AANGELEERD** of `aura-learned` wordt aangeduid.
 9. Klik **AI-context voorbereiden**. De technische context moet `arithmetic.multiply`, status `available` en menselijke evidence bevatten.
 
 Controleer afzonderlijk dat een verkeerd AURA-antwoord als MISLUKT geldt. De knoppen voor menselijke beoordeling registreren alleen evidence en verhogen de onafhankelijke teller niet. Een reeds gebruikte proef-ID, dubbele opgave of opgave die letterlijk in het leermateriaal staat, moet worden geweigerd.

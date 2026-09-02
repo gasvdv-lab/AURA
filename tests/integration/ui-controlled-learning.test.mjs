@@ -11,5 +11,5 @@ nodes.get('lesson-input').value='Vermenigvuldigen is herhaald optellen.';await n
 const verify=async(id,challenge,expected)=>{nodes.get('test-id').value=id;nodes.get('test-challenge').value=challenge;nodes.get('test-expected').value=expected;await nodes.get('run-candidate-test').onclick();assert.equal(nodes.get('test-observed').value,expected);await nodes.get('verify-test').onclick();};
 await verify('proef-1','7 × 8','56');assert.match(nodes.get('capability-status').textContent,/1\/2/);
 await verify('proef-2','9 × 6','54');assert.match(nodes.get('capability-status').textContent,/available/);
-await nodes.get('compile').onclick();const saved=JSON.parse(store.get('aura-generalization-lab-v0.8.5.1'));
-assert.ok(saved.modelContext.capabilities.includes('arithmetic.multiply'));assert.equal(saved.modelContext.capabilityProvenance[0].independentTests,2);
+await nodes.get('compile').onclick();const saved=JSON.parse(store.get('aura-capability-origin-v0.8.6'));
+assert.ok(saved.modelContext.capabilities.includes('arithmetic.multiply'));assert.equal(saved.modelContext.capabilityProvenance[0].independentTests,2);assert.equal(saved.modelContext.capabilityProvenance[0].origin,'foundation-authorized');assert.match(nodes.get('capability-status').textContent,/FOUNDATION TOEGESTAAN/);

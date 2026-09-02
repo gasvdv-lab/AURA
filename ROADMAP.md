@@ -1,5 +1,12 @@
 # AURA Roadmap (cumulative)
 
+## v0.8.6 — voltooid
+
+- Expliciete oorsprong `foundation-authorized`, `aura-learned` of `unknown-origin`.
+- Gemini/Groq-proeven kunnen nooit als AURA-eigen leren worden geregistreerd.
+- Oorsprong zichtbaar in UI, context, snapshots en causale gebeurtenissen.
+- Native Skill Learning blijft een afzonderlijke volgende ontwikkelfase.
+
 ## v0.8.5.1 — voltooid
 
 - Kandidaatproef uitvoerbaar via tijdelijke, geïsoleerde evaluatiemodus.

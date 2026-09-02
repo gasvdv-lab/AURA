@@ -1,4 +1,8 @@
-# AURA Modules — v0.8.5.1
+# AURA Modules — v0.8.6
+
+## Capability Origin Boundary
+
+Classificeert de oorsprong van iedere beschikbare capability. Foundation-modelproeven leveren alleen toestemming voor foundationgebruik; uitsluitend toekomstige `native-runtime`-proeven kunnen `aura-learned` opleveren.
 
 ## Candidate Evaluation Mode
 

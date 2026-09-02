@@ -1,3 +1,13 @@
+# AURA v0.8.6 — Capability Origin & Learning Boundary
+
+Live Android-test: https://gasvdv-lab.github.io/AURA/
+
+v0.8.6 scheidt drie oorsprongen: `foundation-authorized`, `aura-learned` en `unknown-origin`. Een geslaagde Gemini/Groq-proef wordt uitsluitend `foundation-authorized`: AURA mag de modelvaardigheid gebruiken, maar claimt niet haar zelf te hebben geleerd. `aura-learned` is gereserveerd voor toekomstige proeven met een eigen native leermechanisme zonder foundation-modeluitvoering.
+
+Oorsprong staat zichtbaar in de onderzoeksconsole, in snapshots, in de gecontroleerde AI-context en in causale capability-events.
+
+## Cumulatief behouden uit v0.8.5.1
+
 # AURA v0.8.5.1 — Evaluation Flow & Research UI
 
 Live Android-test: https://gasvdv-lab.github.io/AURA/
