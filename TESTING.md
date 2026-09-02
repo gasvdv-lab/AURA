@@ -1,6 +1,6 @@
-# AURA v0.8.2 — actueel en cumulatief testplan
+# AURA v0.8.3 — actueel en cumulatief testplan
 
-Dit bestand is volledig Nederlandstalig en hoort bij **AURA v0.8.2 — Reasoning Policy**.
+Dit bestand is volledig Nederlandstalig en hoort bij **AURA v0.8.3 — Capability & Knowledge Provenance**.
 
 Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
@@ -8,8 +8,8 @@ Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
 Uitgevoerd op 2 september 2026 met Node.js 24.20.0:
 
-- Testbestanden uitgevoerd: **52**
-- GESLAAGD: **52**
+- Testbestanden uitgevoerd: **53**
+- GESLAAGD: **53**
 - MISLUKT: **0**
 - Releasevalidatie: **GESLAAGD**
 - Vereiste releasepaden gecontroleerd: **28**
@@ -19,8 +19,8 @@ Uitgevoerd op 2 september 2026 met Node.js 24.20.0:
 Samenvattende uitvoer:
 
 ```text
-PASS: 52/52 test files passed
-AURA v0.8.2 release validation: PASS
+PASS: 53/53 test files passed
+AURA v0.8.3 release validation: PASS
 Validated 28 required paths
 ```
 
@@ -64,7 +64,7 @@ De volgende onderdelen blijven een handmatige praktijktest:
 
 GESLAAGD wanneer:
 
-- bovenaan `v0.8.2` staat;
+- bovenaan `v0.8.3` staat;
 - de status begint met tick 0;
 - er 0 waarnemingen, 0 geheugenitems, 0 beliefs, 0 hypotheses en 0 modelantwoorden zijn;
 - onder de knoppen in het Nederlands staat waarom sommige knoppen nog niet beschikbaar zijn;
@@ -165,22 +165,24 @@ Bij een fout noteer je de volledige rode melding en of je Gemini of Groq gekozen
 5. Draai het toestel eenmaal van staand naar liggend en terug.
 6. Controleer dat knoppen bereikbaar blijven en tekst niet buiten het scherm valt.
 
-GESLAAGD wanneer v0.8.2 zichtbaar is, de volledige basisvolgorde werkt, uitgeschakelde knoppen uitleg tonen en de veilige AI-brugtest slaagt.
+GESLAAGD wanneer v0.8.3 zichtbaar is, de volledige basisvolgorde werkt, uitgeschakelde knoppen uitleg tonen en de veilige AI-brugtest slaagt.
 
 De lokale laptop-relay op `127.0.0.1` is vanaf een andere telefoon niet rechtstreeks bereikbaar. **Echte AI vragen** via GitHub Pages/Android blijft daarom MISLUKT of niet van toepassing totdat later een beveiligde online relay wordt ingericht. Dit is geen defect in de statische AURA-runtime.
 
-## Test G — rekenen zonder wereldhallucinatie
+## Test G — capabilitygrens en kennisherkomst
 
 Voer Test D uit met Gemini en, indien je een Groq-sleutel hebt, daarna met Groq.
 
-1. Vraag: `Hoeveel is 3 × 50?`
-   - GESLAAGD: het antwoord is `150` of een zin die ondubbelzinnig 150 geeft.
+1. Vraag bij genesis: `Hoeveel is 3 × 50?`
+   - GESLAAGD: AURA zegt dat deze capability of kennis nog niet beschikbaar is. Een onmiddellijk antwoord `150` telt hier als mogelijke foundation-knowledge leakage.
 2. Vraag: `Wat neemt AURA momenteel waar?`
    - GESLAAGD: het antwoord gebruikt uitsluitend de voorbereide gecontroleerde context.
 3. Vraag: `Wat is de exacte massa van het waargenomen object?`
    - GESLAAGD: het model zegt dat de massa niet beschikbaar is wanneer die niet in de gecontroleerde context staat.
 
-MISLUKT wanneer het model eenvoudige berekeningen categorisch weigert, een berekend resultaat als waarneming presenteert of een verborgen wereldwaarde verzint.
+De automatische test voert daarnaast een gecontroleerd leertraject uit: capability voorstellen, menselijke leerevidence registreren, twee verschillende proeven slagen en daarna pas `150` toestaan. Deze release heeft bewust nog geen gebruikersknop die een capability eigenmachtig toekent; beschikbaarstelling verloopt via de geteste Capability Kernel en moet later aan een echte leerworkflow gekoppeld worden.
+
+MISLUKT wanneer het model zonder beschikbare capability toch latente modelkennis als AURA-kennis gebruikt, provenance ontbreekt of een verborgen wereldwaarde wordt verzonnen.
 
 ## Resultatenformulier
 
@@ -197,7 +199,7 @@ Test C — veilige AI-brugtest: GESLAAGD / MISLUKT
 Test D — echte Gemini/Groq-AI: GESLAAGD / MISLUKT / NIET UITGEVOERD
 Test E — reset: GESLAAGD / MISLUKT
 Test F — Android/GitHub Pages: GESLAAGD / MISLUKT / NIET UITGEVOERD
-Test G — rekenen en wereldgrens: GESLAAGD / MISLUKT / NIET UITGEVOERD
+Test G — capabilitygrens en kennisherkomst: GESLAAGD / MISLUKT / NIET UITGEVOERD
 
 Gekozen provider:
 Knop waarbij het misging:
@@ -207,4 +209,4 @@ Aanvullende opmerkingen:
 
 ## Cumulatieve releasegrens
 
-v0.8.2 behoudt de automatische regressies van Synthetic Kernel, World Kernel, Embodiment, Sensorimotor, Perception, Memory, Belief/Hypothesis en v0.8.1. Niet inbegrepen blijven WebXR, camera, microfoon, GPS, humanoid rendering, autonome cognitie, modeltools, automatische wereldacties, Synthetic Network runtime en Human Internet.
+v0.8.3 behoudt de automatische regressies van Synthetic Kernel, World Kernel, Embodiment, Sensorimotor, Perception, Memory, Belief/Hypothesis en de providerfixes. Niet inbegrepen blijven WebXR, camera, microfoon, GPS, humanoid rendering, autonome actie, modeltools, automatische wereldacties, Synthetic Network runtime en Human Internet.

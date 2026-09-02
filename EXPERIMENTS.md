@@ -1,5 +1,9 @@
 # AURA Experiments (cumulative)
 
+## v0.8.3 — Capability & Knowledge Provenance
+
+Zonder beschikbare vermenigvuldigingscapability weigert de cognitieve component de berekening. Na gecontroleerde leerevidence en twee unieke geslaagde proeven verschijnt `arithmetic.multiply` met herkomst in de modelcontext en mag dezelfde vraag worden berekend.
+
 ## v0.8.2 — Reasoning Policy
 
 Contractproef voor Gemini en Groq: `3 × 50` levert `150`, terwijl een gevraagde verborgen massa als niet beschikbaar wordt behandeld. Er worden geen tools of wereldacties toegevoegd.

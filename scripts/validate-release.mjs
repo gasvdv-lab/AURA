@@ -1,6 +1,6 @@
 import {access,readFile} from 'node:fs/promises';
 
-const required=['server/start-aura-ai.cmd','server/start-aura-ai.ps1','index.html','README.md','ROADMAP.md','TESTING.md','MODULES.md','AURA_CONSTITUTION.md','EXPERIMENTS.md','docs/WORLD_LAWS.md','docs/OBSERVATORY.md','docs/EMBODIMENT.md','docs/SENSORIMOTOR.md','docs/PERCEPTION.md','docs/MEMORY.md','docs/BELIEFS.md','docs/FOUNDATION_MODEL.md','server/README.md','server/relay-example.mjs','.github/workflows/validate.yml','src/embodiment/embodiment-kernel.js','src/sensorimotor/sensorimotor-kernel.js','src/perception/perception-kernel.js','src/memory/memory-kernel.js','src/belief/belief-kernel.js','src/foundation-model/context-compiler.js','src/foundation-model/foundation-model-bridge.js','src/foundation-model/providers.js'];
+const required=['server/start-aura-ai.cmd','server/start-aura-ai.ps1','index.html','README.md','ROADMAP.md','TESTING.md','MODULES.md','AURA_CONSTITUTION.md','EXPERIMENTS.md','docs/WORLD_LAWS.md','docs/OBSERVATORY.md','docs/EMBODIMENT.md','docs/SENSORIMOTOR.md','docs/PERCEPTION.md','docs/MEMORY.md','docs/BELIEFS.md','docs/FOUNDATION_MODEL.md','server/README.md','server/relay-example.mjs','.github/workflows/validate.yml','src/embodiment/embodiment-kernel.js','src/sensorimotor/sensorimotor-kernel.js','src/perception/perception-kernel.js','src/memory/memory-kernel.js','src/belief/belief-kernel.js','src/capability/capability-kernel.js','src/foundation-model/context-compiler.js','src/foundation-model/foundation-model-bridge.js','src/foundation-model/providers.js'];
 for(const path of required)await access(path);
 
 const liveLink='https://gasvdv-lab.github.io/AURA/';
@@ -20,5 +20,5 @@ for(const id of ['feedback','workflow-help','step','run','trial','observe','reme
 
 for(const path of ['src/app.js','src/foundation-model/context-compiler.js','src/foundation-model/foundation-model-bridge.js','src/foundation-model/providers.js']){const source=await readFile(path,'utf8');for(const secretToken of ['OPENAI_API_KEY','api.openai.com','authorization:'])if(source.includes(secretToken))throw new Error(`Servergeheim of directe OpenAI-aanroep in browsercode: ${path}`);}
 
-console.log('AURA v0.8.2 release validation: PASS');
+console.log('AURA v0.8.3 release validation: PASS');
 console.log(`Validated ${required.length} required paths, controlled model context, relay isolation, Dutch testing documentation, and excluded capabilities.`);

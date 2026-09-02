@@ -1,5 +1,5 @@
 $ErrorActionPreference = 'Stop'
-Write-Host 'AURA v0.8.2 - eenvoudige AI-starter' -ForegroundColor Cyan
+Write-Host 'AURA v0.8.3 - eenvoudige AI-starter' -ForegroundColor Cyan
 Write-Host 'Je sleutel wordt alleen tijdelijk gebruikt en niet opgeslagen.'
 $keuze = Read-Host 'Typ 1 voor Gemini of 2 voor Groq'
 $veilig = Read-Host 'Plak nu je API-sleutel' -AsSecureString

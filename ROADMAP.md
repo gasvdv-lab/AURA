@@ -1,5 +1,12 @@
 # AURA Roadmap (cumulative)
 
+## v0.8.3 — voltooid
+
+- Foundation-modelkennis gescheiden van AURA-kennis.
+- Capabilitykandidaten, leerevidence, proefresultaten en herkomst.
+- Pas beschikbaar na twee verschillende geslaagde proeven en minimaal één evidencebron.
+- Capabilitylijst wordt bij iedere modelaanvraag causaal geregistreerd.
+
 ## v0.8.2 — voltooid
 
 - Rekenen en logisch redeneren expliciet toegestaan.

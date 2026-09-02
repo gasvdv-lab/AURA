@@ -1,4 +1,12 @@
-# Foundation Model Bridge — v0.8.2
+# Foundation Model Bridge — v0.8.3
+
+## Capability & Knowledge Provenance
+
+Latente foundation-modelkennis is geen AURA-kennis. De brug vermeldt bij iedere aanvraag exact welke capabilities beschikbaar zijn. Ontbrekende capabilities mogen niet stilzwijgend door Gemini of Groq worden ingevuld.
+
+Een capability wordt eerst voorgesteld, krijgt leerevidence met bronherkomst en blijft kandidaat totdat minimaal twee verschillende proeven slagen. Daarna wordt zij beschikbaar en verschijnt haar beperkte provenance in de gecontroleerde context. Observatory bewaart voorstel, evidence, proeven en beschikbaarstelling causaal.
+
+## Gecorrigeerd uit v0.8.2
 
 ## Reasoning Policy
 

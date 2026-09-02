@@ -1,4 +1,10 @@
-# AURA Modules — v0.8.2
+# AURA Modules — v0.8.3
+
+## Capability Kernel
+
+Beheert generieke cognitieve capabilities als `candidate` of `available`, met leerevidence, bronsoort, unieke proeven, persistentie en causale Observatory-events. Externe wereldacties kunnen niet als cognitieve capability worden geregistreerd.
+
+## Cumulatief behouden uit v0.8.2
 
 ## Reasoning Policy
 

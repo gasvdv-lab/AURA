@@ -1,5 +1,9 @@
 # AURA Constitution (cumulative)
 
+## Capability- en kennisherkomst (v0.8.3)
+
+Latente kennis of vaardigheid van een gekoppeld foundation model geldt niet automatisch als kennis of vaardigheid van AURA. Een hogere cognitieve capability moet een expliciete, causale herkomst hebben en door afzonderlijke proeven beschikbaar worden gesteld. Onzekerheid of “ik weet het niet” is geldig gedrag en mag niet alleen voor gebruiksgemak worden weggeprogrammeerd.
+
 1. Human Reality and AURA Reality are distinct.
 2. `WORLD_STATE` is objective and exists independently of any inhabitant, perception or UI.
 3. Every state transition must follow an implemented world law and have an explicit causal record. No artifact is created without a process.
