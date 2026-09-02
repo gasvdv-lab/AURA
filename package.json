@@ -1,1 +1,1 @@
-{"name":"aura-native-skill-learning","version":"0.8.7","private":true,"type":"module","scripts":{"test":"node scripts/run-tests.mjs","validate":"node scripts/validate-release.mjs","check":"npm run test && npm run validate"},"engines":{"node":">=20"}}
+{"name":"aura-native-skill-validation","version":"0.8.8","private":true,"type":"module","scripts":{"test":"node scripts/run-tests.mjs","validate":"node scripts/validate-release.mjs","check":"npm run test && npm run validate"},"engines":{"node":">=20"}}

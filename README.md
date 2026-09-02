@@ -1,3 +1,13 @@
+# AURA v0.8.8 — Native Skill Validation & Robustness
+
+Live Android-test: https://gasvdv-lab.github.io/AURA/
+
+v0.8.8 splitst native leren op in training, kandidaatregels, validatie en blinde tests. Wanneer meerdere regels de training verklaren, bewaart AURA ze allemaal en stelt ze deterministisch een invoer voor waarop hun voorspellingen verschillen. Validatie registreert welke regels door tegenbewijs afvallen.
+
+Training, validatie en test mogen nooit dezelfde invoer bevatten. Een nieuwe onafhankelijke mislukking na beschikbaarstelling maakt de capability `contested` en verwijdert haar uit de beschikbare AI-context.
+
+## Cumulatief behouden uit v0.8.7
+
 # AURA v0.8.7 — Native Skill Learning
 
 Live Android-test: https://gasvdv-lab.github.io/AURA/

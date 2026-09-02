@@ -1,5 +1,9 @@
 # AURA Constitution (cumulative)
 
+## Weerlegbaar leren (v0.8.8)
+
+Een aangeleerde capability blijft voorlopig en weerlegbaar. Training, validatie en blinde testsets mogen niet overlappen. Nieuw tegenbewijs moet de beschikbaarheid kunnen betwisten of intrekken en mag nooit stil worden genegeerd.
+
 ## Native leren (v0.8.7)
 
 `aura-learned` vereist een reproduceerbare lokale uitvoerder die zonder foundation-modelantwoord nieuwe invoer verwerkt. Trainingsdata alleen volstaat niet; onafhankelijke proeven en causale herkomst zijn verplicht.

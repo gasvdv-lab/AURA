@@ -1,4 +1,8 @@
-# AURA Modules — v0.8.7
+# AURA Modules — v0.8.8
+
+## Native Validation Pipeline
+
+Beheert disjuncte datasets, kandidaatregels, onderscheidende invoer, validatie-eliminatie, blinde tests en weerlegbare capabilitystatussen.
 
 ## Native Skill Kernel
 

@@ -1,5 +1,9 @@
 # AURA Experiments (cumulative)
 
+## v0.8.8 — ambiguïteit, validatie en weerlegging
+
+Gebruik `0,0→0`, `1,1→1` en `2,2→2` om meerdere passende regels te produceren. Laat AURA een onderscheidende invoer voorstellen, registreer validatie en controleer causale regelafwijzingen. Een later onafhankelijk tegenvoorbeeld moet een beschikbare capability `contested` maken.
+
 ## v0.8.7 — native regelverwerving
 
 Registreer `2,3→6`, `4,5→20` en `3,7→21`. De enige passende regel moet `repeated-addition` zijn. Test daarna lokaal `6,8→48` en `9,4→36`; pas daarna mag `arithmetic.multiply` de oorsprong `aura-learned` krijgen.

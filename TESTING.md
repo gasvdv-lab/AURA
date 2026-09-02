@@ -1,6 +1,6 @@
-# AURA v0.8.7 — actueel en cumulatief testplan
+# AURA v0.8.8 — actueel en cumulatief testplan
 
-Dit bestand is volledig Nederlandstalig en hoort bij **AURA v0.8.7 — Native Skill Learning**.
+Dit bestand is volledig Nederlandstalig en hoort bij **AURA v0.8.8 — Native Skill Validation & Robustness**.
 
 Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
@@ -8,19 +8,19 @@ Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
 Uitgevoerd op 2 september 2026 met Node.js 24.20.0:
 
-- Testbestanden uitgevoerd: **62**
-- GESLAAGD: **62**
+- Testbestanden uitgevoerd: **64**
+- GESLAAGD: **64**
 - MISLUKT: **0**
 - Releasevalidatie: **GESLAAGD**
 - Vereiste releasepaden gecontroleerd: **31**
-- ZIP-inhoud: **140 onderdelen**
+- ZIP-inhoud: **142 onderdelen**
 - Oude ZIP-bestanden of `sources/` in de release-ZIP: **0**
 
 Samenvattende uitvoer:
 
 ```text
-PASS: 62/62 test files passed
-AURA v0.8.7 release validation: PASS
+PASS: 64/64 test files passed
+AURA v0.8.8 release validation: PASS
 Validated 31 required paths
 ```
 
@@ -66,7 +66,7 @@ De volgende onderdelen blijven een handmatige praktijktest:
 
 GESLAAGD wanneer:
 
-- bovenaan `v0.8.7` staat;
+- bovenaan `v0.8.8` staat;
 - de status begint met tick 0;
 - er 0 waarnemingen, 0 geheugenitems, 0 beliefs, 0 hypotheses en 0 modelantwoorden zijn;
 - onder de knoppen in het Nederlands staat waarom sommige knoppen nog niet beschikbaar zijn;
@@ -215,7 +215,7 @@ Voer deze test na een volledige reset uit. De AI-starter hoeft niet open te staa
 2. Vul `2`, `3`, `6` in en klik **Voorbeeld toevoegen**.
 3. Herhaal met `4`, `5`, `20`.
 4. Herhaal met `3`, `7`, `21`.
-5. Klik **Regel zoeken**. GESLAAGD wanneer `repeated-addition` verschijnt.
+5. Klik **Kandidaatregels zoeken**. GESLAAGD wanneer alleen `repeated-addition` overblijft.
 6. Vul proef-ID `native-1`, invoer `6` en `8`, en verwachte uitvoer `48` in.
 7. Klik **Native proef uitvoeren**. GESLAAGD wanneer uitvoer 48 en status 1/2 verschijnen.
 8. Vul proef-ID `native-2`, invoer `9` en `4`, en verwachte uitvoer `36` in.
@@ -224,6 +224,10 @@ Voer deze test na een volledige reset uit. De AI-starter hoeft niet open te staa
 GESLAAGD wanneer de capability daarna `available` is met oorsprong **AURA AANGELEERD**, terwijl de modelantwoordteller gedurende Test H niet stijgt.
 
 MISLUKT wanneer een trainingsvoorbeeld als proef wordt aanvaard, Gemini/Groq wordt aangeroepen, een fout antwoord meetelt of de oorsprong `foundation-authorized` blijft.
+
+### Aanvullende ambiguïteitsproef
+
+Begin na een reset met `0,0→0`, `1,1→1` en `2,2→2`. Klik **Kandidaatregels zoeken**. Er moeten meerdere kandidaten zichtbaar blijven. Klik **Onderscheidende invoer voorstellen**; AURA vult een invoerpaar in en toont de verschillende voorspellingen. Vul de correcte validatie-uitvoer in en klik **Validatie registreren**. Herhaal indien meerdere kandidaten overblijven. Training-, validatie- en blinde testinvoer mogen nooit gelijk zijn.
 
 ## Resultatenformulier
 

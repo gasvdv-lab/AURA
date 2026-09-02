@@ -1,5 +1,13 @@
 # AURA Roadmap (cumulative)
 
+## v0.8.8 — voltooid
+
+- Gescheiden training-, validatie- en blinde testsets zonder overlap.
+- Meerdere kandidaatregels blijven expliciet bewaard.
+- Deterministisch voorstel voor een onderscheidende validatie-invoer.
+- Negatieve evidence en regelafwijzingen causaal geregistreerd.
+- Later tegenvoorbeeld maakt een beschikbare capability `contested`.
+
 ## v0.8.7 — voltooid
 
 - Native Skill Kernel met deterministische selectie uit generieke kandidaatregels.
