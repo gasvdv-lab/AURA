@@ -2,6 +2,63 @@
 
 Live Android test: https://gasvdv-lab.github.io/AURA/
 
+## v0.5.0 automatic result
+
+Executed on 2026-09-01 with Node.js in the release workspace. Exact result:
+
+```text
+PASS tests/integration/browser-entry-smoke.test.mjs
+PASS tests/integration/construction-causality.test.mjs
+PASS tests/integration/determinism-collision.test.mjs
+PASS tests/integration/embodiment-damage.test.mjs
+PASS tests/integration/embodiment-determinism.test.mjs
+PASS tests/integration/embodiment-persistence.test.mjs
+PASS tests/integration/perception-determinism.test.mjs
+PASS tests/integration/perception-occlusion.test.mjs
+PASS tests/integration/perception-persistence.test.mjs
+PASS tests/integration/perception-tracking-causality.test.mjs
+PASS tests/integration/persistence-mid-simulation.test.mjs
+PASS tests/integration/sensorimotor-determinism.test.mjs
+PASS tests/integration/sensorimotor-learning.test.mjs
+PASS tests/integration/sensorimotor-persistence.test.mjs
+PASS tests/regression/no-spontaneous-creation.test.mjs
+PASS tests/regression/v0.1-invariants.test.mjs
+PASS tests/regression/v0.2-world-with-embodiment.test.mjs
+PASS tests/regression/v0.3-embodiment-with-learning.test.mjs
+PASS tests/regression/v0.4-sensorimotor-with-perception.test.mjs
+PASS tests/unit/actuator-boundary.test.mjs
+PASS tests/unit/damage-degradation.test.mjs
+PASS tests/unit/embodiment-blueprint.test.mjs
+PASS tests/unit/force-gravity.test.mjs
+PASS tests/unit/perception-boundary.test.mjs
+PASS tests/unit/perception-range.test.mjs
+PASS tests/unit/resource-process.test.mjs
+PASS tests/unit/sensorimotor-boundaries.test.mjs
+PASS tests/unit/sensorimotor-signals.test.mjs
+PASS tests/unit/vector-material.test.mjs
+PASS: 29/29 test files passed
+
+AURA v0.5.0 release validation: PASS
+Validated 16 required paths, cumulative live links, perception separation, and excluded capabilities.
+```
+
+New coverage proves the objective-state firewall, range limitation, deterministic occlusion, stable opaque tracks, reproducible noise, causal observation records, exact perception snapshot/restore, browser-entry observation and preservation of all v0.1–v0.4 invariants.
+
+## v0.5.0 Android real-world acceptance (manual)
+
+Record each as PASS or FAIL with device model, Android version and Chrome version.
+
+1. Open the fixed live link in current Chrome for Android. PASS: **Perception Kernel v0.5.0** appears with 14 body parts, zero perceptions and no permission prompt. FAIL: older release, blank/error page or any hardware permission prompt.
+2. Tap **Observe** once. PASS: perception count becomes one and `perceivedState.items` contains the generic fixture as an opaque `track-1`. FAIL: no observation, crash or an objective ID such as `perception-fixture` inside `perceivedState`.
+3. Inspect `perceivedState`. PASS: it contains relative position, distance, apparent radius and uncertainty; it does not contain mass, material, force, integrity or Observatory. FAIL: any privileged field leaks.
+4. Tap **Observe** again. PASS: the same external body keeps the same track while measurements may differ reproducibly due to bounded noise. FAIL: arbitrary track replacement or non-finite measurements.
+5. Close Chrome fully and reopen. PASS: observations, track identity and all earlier kernel state restore. FAIL: state resets or corrupts.
+6. Reload five times. PASS: no bodies, trials, tracks or observations appear spontaneously. FAIL: duplicated genesis/state.
+7. After one online load, test airplane mode. PASS: v0.5 opens from cache. A first-ever offline visit may fail and is not a kernel failure.
+8. Tap **Reset local world**. PASS: only AURA v0.5 local state resets to one body embodiment, one external fixture and zero perceptions/trials. FAIL: reset fails or affects unrelated browser data.
+
+Interpretation, attention, memory, belief, cognition, autonomous observation, visual rendering, WebXR, camera, microphone and GPS are **not applicable** to v0.5.0.
+
 ## v0.4.0 automatic result
 
 Executed on 2026-09-01 with Node.js in the release workspace. Exact result:

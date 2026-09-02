@@ -1,1 +1,1 @@
-{"name":"AURA Sensorimotor Development","short_name":"AURA","start_url":"./","display":"standalone","background_color":"#07111f","theme_color":"#07111f","description":"Android-first deterministic sensorimotor development runtime v0.4.0"}
+{"name":"AURA Perception Kernel","short_name":"AURA","start_url":"./","display":"standalone","background_color":"#07111f","theme_color":"#07111f","description":"Android-first limited synthetic perception runtime v0.5.0"}

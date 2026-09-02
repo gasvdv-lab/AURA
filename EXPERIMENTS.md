@@ -57,3 +57,19 @@ Restore World, Embodiment and Sensorimotor state after a learned trial; continue
 ## SM-04 Semantic absence
 
 Verify there is no walking, standing, grasping, exploration, action-selection, success/failure or reward API in the learning kernel.
+
+## PK-01 Objective-state firewall
+
+Observe a body with privileged properties and prove `PERCEIVED_STATE` contains no objective ID, mass, material, force, integrity, static flag or Observatory reference.
+
+## PK-02 Range and occlusion
+
+Place generic bodies inside/outside sensor range and directly behind blockers; verify deterministic incompleteness without deleting them from `WORLD_STATE`.
+
+## PK-03 Reproducible imperfection
+
+Repeat observations from identical snapshots and seeds; prove bounded noise and track assignment are identical while differing from exact world values.
+
+## PK-04 Perceptual continuity
+
+Restore after observations and prove random state, track identities, next observation and subsequent `PERCEIVED_STATE` continue exactly.
