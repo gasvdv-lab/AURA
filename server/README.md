@@ -1,28 +1,15 @@
-# Optionele AURA OpenAI-relay
+# Echte AI starten — eenvoudige uitleg
 
-Deze relay is nodig voor echte AI-antwoorden. GitHub Pages kan een API-sleutel niet veilig bewaren.
+De gewone AURA-knoppen en **Veilige test zonder echte AI** werken zonder sleutel.
 
-## Vereisten
+1. Maak zelf een API-sleutel bij Google Gemini of Groq.
+2. Dubbelklik op `start-aura-ai.cmd`.
+3. Kies `1` voor Gemini of `2` voor Groq.
+4. Plak je sleutel. Tijdens het plakken zie je bewust geen tekens.
+5. Druk bij het Live Server-adres op Enter als je `http://127.0.0.1:5500` gebruikt.
+6. Laat het zwarte venster open.
+7. Open AURA met Live Server, bereid de AI-context voor en klik op **Echte AI vragen**.
 
-- Node.js 20 of nieuwer.
-- Een eigen OpenAI API-sleutel en beschikbare API-tegoeden.
-- Een modelnaam die voor jouw OpenAI-project beschikbaar is.
+De sleutel wordt niet naar AURA, GitHub of een bestand geschreven. Sluit je het zwarte venster, dan verdwijnt de tijdelijke sleutel uit dat proces.
 
-## Lokale PowerShell-start
-
-Stel de waarden uitsluitend in de terminalomgeving in. Plaats de sleutel nooit in AURA-bestanden, GitHub of het browserformulier.
-
-```powershell
-$env:OPENAI_API_KEY="jouw_geheime_sleutel"
-$env:OPENAI_MODEL="jouw_beschikbare_model"
-$env:AURA_ORIGIN="http://127.0.0.1:5500"
-$env:PORT="8787"
-node server/relay-example.mjs
-```
-
-Vul daarna in AURA in:
-
-- Relay-endpoint: `http://127.0.0.1:8787/v1/aura/respond`
-- Modelnaam: dezelfde herkenbare modelnaam; de relay gebruikt veilig zijn eigen `OPENAI_MODEL`.
-
-Voor publiek gebruik moet de relay achter HTTPS worden gehost en `AURA_ORIGIN` exact op `https://gasvdv-lab.github.io` worden ingesteld. Beperk daarnaast kosten, requestfrequentie en logs op je hostingplatform.
+GitHub Pages op je telefoon kan deze lokale laptop-relay niet rechtstreeks bereiken. Daarvoor is later een beveiligde online relay nodig.

@@ -1,5 +1,9 @@
 # AURA Experiments (cumulative)
 
+## v0.8.1 — Bedienings- en providerexperiment
+
+Doel: iedere beschikbare knop geeft een zichtbaar resultaat, iedere vergrendeling wordt verklaard en Gemini/Groq ontvangen uitsluitend gecontroleerde context. Automatisch resultaat: 51/51 testbestanden GESLAAGD. Providerquota, Android-netwerk en hardware blijven handmatig.
+
 ## WK-01 Identical trajectories
 
 Same initial state, fixed delta, ordered inputs and seed must produce byte-equivalent snapshots and Observatory records.

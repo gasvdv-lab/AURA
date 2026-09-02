@@ -1,3 +1,13 @@
+# AURA v0.8.1 — Bedieningsfix en Gemini/Groq
+
+Live Android-test: https://gasvdv-lab.github.io/AURA/
+
+Deze correctierelease maakt de knopvolgorde begrijpelijk en gebruikt **Gemini als primaire provider** en **Groq als tweede provider/fallback**. De veilige brugtest werkt zonder sleutel. Voor echte AI dubbelklik je op `server/start-aura-ai.cmd`; de sleutel wordt alleen tijdelijk gebruikt en nooit opgeslagen.
+
+Belangrijkste fixes: zichtbare redenen bij uitgeschakelde knoppen, juiste telling van tijdelijke en geconsolideerde geheugenitems, een nieuwe-hypotheseknop, begrijpelijke AI-fouten en een vooraf ingevuld lokaal relay-adres. Alleen gecontroleerde context en tekst gaan naar de provider; geen WORLD_STATE, tools of wereldacties.
+
+## Cumulatieve geschiedenis: v0.8.0
+
 # AURA v0.8.0 — Foundation Model Bridge
 
 AURA is een Android-first onderzoeksruntime voor een persistente, objectieve synthetische werkelijkheid. v0.8.0 is de eerste release met een echte AI-modelkoppeling, veilig gescheiden van de statische GitHub Pages-app door een vertrouwde server-side relay.
@@ -21,7 +31,7 @@ npm run validate
 - Actieve weigering van `WORLD_STATE`, Observatory, massa, materiaal, krachten, integriteit en interne body-ID's.
 - Deterministische testprovider voor volledig automatische brugtests zonder netwerk of kosten.
 - Relayprovider voor echte modeltekst via HTTPS of localhost.
-- Voorbeeldrelay voor de officiële OpenAI Responses API.
+- Historische v0.8.0-relay (in v0.8.1 volledig vervangen door Gemini/Groq).
 - Geen API-sleutel in browsercode, opslag of ZIP.
 - `store: false`, lege toolslijst en maximaal 400 outputtokens in de referentierelay.
 - Modeltekst wordt alleen gelogd; ze verandert wereld, lichaam, geheugen of beliefs niet automatisch.

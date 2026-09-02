@@ -1,5 +1,12 @@
 # AURA Roadmap (cumulative)
 
+## v0.8.1 — voltooid
+
+- Bedieningsfix met zichtbare vereisten per knop.
+- Correcte geheugentelling en herstartbare hypothesecyclus.
+- Gemini primair, Groq secundair/fallback.
+- Nederlandstalige Windows-starter zonder sleutelopslag.
+
 - v0.0.1 Constitution & Research Specification — complete.
 - v0.1.0 Synthetic Kernel — persistent state, time, events, causality, reproducible randomness, persistence, Observatory — complete.
 - v0.2.0 World Kernel — generic objective space, matter, physics, materials, damage and transformation — complete.

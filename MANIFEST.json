@@ -1,12 +1,12 @@
 {
   "project": "AURA",
-  "version": "0.8.0",
-  "release": "Foundation Model Bridge",
-  "date": "2026-09-01",
+  "version": "0.8.1",
+  "release": "Bedieningsfix en Gemini/Groq Provider Migration",
+  "date": "2026-09-02",
   "target": "Android Chrome",
   "hosting": "GitHub Pages repository root",
   "buildRequired": false,
-  "automaticTestFiles": 50,
+  "automaticTestFiles": 51,
   "automaticResult": "PASS",
   "manualHardwareStatus": "PENDING"
 }
