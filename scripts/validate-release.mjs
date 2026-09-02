@@ -22,5 +22,5 @@ for(const path of ['src/app.js','src/foundation-model/context-compiler.js','src/
 
 await access('docs/GUIDED_TESTING.md');await access('docs/AUTONOMOUS_LEARNING.md');await access('src/self-learning/self-learning-kernel.js');
 for(const id of ['view-toggle','phase-help','self-learning-lab','self-learning-run','self-learning-status'])if(!page.includes(`id="${id}"`))throw new Error(`Ontbrekend begeleidings- of zelfleer-element: ${id}`);
-console.log('AURA v0.9.2 release validation: PASS');
+console.log('AURA v0.9.2.1 release validation: PASS');
 console.log(`Validated ${required.length} required paths, controlled model context, relay isolation, Dutch testing documentation, and excluded capabilities.`);

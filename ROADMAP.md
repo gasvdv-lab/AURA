@@ -1,5 +1,12 @@
 # AURA Roadmap (cumulative)
 
+## v0.9.2.1 — voltooid
+
+- Alle zichtbare acties gekoppeld en opnieuw doorgelopen.
+- Native knoppen volgen nu aantoonbaar de vereiste volgorde.
+- Foundation-, aandachts- en zelfleeracties blokkeren onvolledige invoer vooraf.
+- Zevenfasennavigatie en uitleg overal gelijkgetrokken.
+
 ## v0.9.2 — voltooid
 
 - Eerste zelfstandige cyclus: experiment kiezen, meten, hypothesen vergelijken, voorspellen en onafhankelijk toetsen.

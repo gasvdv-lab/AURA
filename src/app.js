@@ -32,7 +32,7 @@ relayEndpoint.value=relayConfig.endpoint;relayModel.value=relayConfig.model;rela
 
 const save=()=>localStorage.setItem(KEY,JSON.stringify({world:world.snapshot(),embodiment:embodiment.snapshot(),sensorimotor:sensorimotor.snapshot(),perception:perception.snapshot(),memory:memory.snapshot(),belief:belief.snapshot(),capability:capability.snapshot(),nativeSkill:nativeSkill.snapshot(),attention:attention.snapshot(),modelBridge:modelBridge.snapshot(),modelContext,pendingChallenge,lastRecalls,lessonCounter,relayConfig:{endpoint:relayEndpoint.value.trim(),model:relayModel.value.trim(),provider:relayProvider.value}}));
 const hasTrack=track=>[...memory.traces.values(),...memory.memories.values()].some(x=>x.content.items.some(i=>i.track===track));
-const lock=(button,condition,reason)=>{button.disabled=condition;button.title=condition?reason:'';};
+const lock=(button,condition,reason)=>{if(!button)return;button.disabled=condition;button.title=condition?reason:'';};
 const invalidateModelContext=()=>{modelContext=null;};
 const nextTestIdFor=item=>{const used=new Set(item?.evaluations.map(x=>x.testId)??[]);let number=1,candidate;do{candidate=`proef-${number++}`;}while(used.has(candidate));return candidate;};
 
@@ -85,5 +85,22 @@ if(selfLearningStatus&&selfLearningButton){
   const selfLink=typeof document.querySelector==='function'?document.querySelector('.phase-nav a[href="#self-learning-lab"]'):null;
   if(selfLink)selfLink.onclick=()=>{if(!document.body.classList.contains('focus-mode'))return;for(const panel of document.querySelectorAll('main > section'))panel.hidden=panel.id!=='self-learning-lab';for(const link of document.querySelectorAll('.phase-nav a'))link.classList.toggle('active',link===selfLink);$('phase-help').textContent='Fase 5 van 7 · AURA kiest, meet, voorspelt en controleert zelf.';};
 }
-$('reset').onclick=()=>{if(!confirm('Alle lokale AURA v0.9.2-state wissen?')){feedback.textContent='Reset geannuleerd.';return;}localStorage.removeItem(KEY);localStorage.removeItem('aura-self-learning-v0.9.2');for(const key of LEGACY_KEYS)localStorage.removeItem(key);location.reload();};
+const nativeFields=['native-a','native-b','native-output','native-validation-a','native-validation-b','native-validation-output','native-test-id','native-test-a','native-test-b','native-expected'].map($).filter(Boolean);
+const filled=(...ids)=>ids.every(id=>String($(id)?.value??'').trim()!=='');
+const renderControlLocks=()=>{
+  const candidate=capability.get(capabilityId.value.trim()),skill=nativeSkill.get('arithmetic.multiply'),hasAttentionEvidence=Boolean(perception.observations.length||lastRecalls.length||belief.beliefs.size||belief.hypotheses.size);
+  lock($('attention-select'),!hasAttentionEvidence,'Maak eerst een waarneming, herinnering, belief of hypothese.');lock($('attention-clear'),!attention.selected.length,'Er is geen aandachtsselectie om te wissen.');
+  lock(startLearningButton,!lessonInput.value.trim(),'Vul eerst leermateriaal in.');
+  lock(runCandidateButton,!candidate||!filled('test-id','test-challenge','test-expected'),!candidate?'Registreer eerst leermateriaal.':'Vul proef-ID, nieuwe proefopgave en verwacht antwoord volledig in.');
+  lock($('native-add-example'),!filled('native-a','native-b','native-output'),'Vul beide invoeren en de trainingsuitvoer in.');
+  lock($('native-learn'),!skill||skill.examples.length<3,'Voeg eerst minimaal drie verschillende trainingsvoorbeelden toe.');
+  lock($('native-suggest'),!skill||skill.candidateRules.length<2,'Deze actie is alleen nodig wanneer meerdere kandidaatregels overblijven.');
+  lock($('native-validate'),!skill||skill.candidateRules.length<2||!filled('native-validation-a','native-validation-b','native-validation-output'),'Laat eerst meerdere kandidaten vinden en vul daarna de validatiemeting volledig in.');
+  lock($('native-run'),!skill?.selectedRule||!filled('native-test-id','native-test-a','native-test-b','native-expected'),!skill?.selectedRule?'Leer of valideer eerst tot één regel overblijft.':'Vul de volledige blinde proef in.');
+  if(selfLearningButton){const done=Boolean(selfLearning.get('analysis.force-acceleration'));lock(selfLearningButton,done,done?'Dit begrensde programma is al volledig uitgevoerd. Reset de lokale state voor een volledig nieuwe run.':'');}
+};
+const renderWithControlLocks=render;render=()=>{renderWithControlLocks();renderControlLocks();};
+for(const node of [lessonInput,testId,testChallenge,testExpected,...nativeFields])node.oninput=render;
+if(typeof document.querySelectorAll==='function'&&document.body?.classList){const panels=[...document.querySelectorAll('main > section')],links=[...document.querySelectorAll('.phase-nav a')],messages={'world-lab':'Fase 1 van 7 · Bouw eerst controleerbare evidence op.','attention-lab':'Fase 2 van 7 · Kies maximaal vier evidence-items voor de context.','learning-lab':'Fase 3 van 7 · Test foundation-toestemming en herkomst.','native-lab':'Fase 4 van 7 · Train, valideer en test een lokale regel.','self-learning-lab':'Fase 5 van 7 · AURA kiest, meet, voorspelt en controleert zelf.','ai-lab':'Fase 6 van 7 · Controleer de begrensde AI-context.','research-state':'Fase 7 van 7 · Inspecteer het volledige onderzoeksbewijs.'};for(const link of links)link.onclick=()=>{if(!document.body.classList.contains('focus-mode'))return;const id=link.hash.slice(1);for(const panel of panels)panel.hidden=panel.id!==id;for(const item of links)item.classList.toggle('active',item===link);$('phase-help').textContent=messages[id];};}
+$('reset').onclick=()=>{if(!confirm('Alle lokale AURA v0.9.2.1-state wissen?')){feedback.textContent='Reset geannuleerd.';return;}localStorage.removeItem(KEY);localStorage.removeItem('aura-self-learning-v0.9.2');for(const key of LEGACY_KEYS)localStorage.removeItem(key);location.reload();};
 render();

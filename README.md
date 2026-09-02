@@ -1,3 +1,11 @@
+# AURA v0.9.2.1 — Autonomous Learning Controls Fix
+
+Live Android-test: https://gasvdv-lab.github.io/AURA/
+
+v0.9.2.1 herstelt de volledige bedieningslogica. Native training, regelzoeken, validatie en blinde proeven worden nu pas actief wanneer alle vereiste gegevens en voorafgaande stappen werkelijk aanwezig zijn. Aandacht, Foundation-proeven en Zelfleren krijgen dezelfde expliciete vergrendeling. De zeven fasen gebruiken overal dezelfde teller en navigatielogica.
+
+## Cumulatief behouden uit v0.9.2
+
 # AURA v0.9.2 — Autonomous Learning Loop
 
 Live Android-test: https://gasvdv-lab.github.io/AURA/

@@ -1,6 +1,6 @@
-# AURA v0.9.2 — actueel en cumulatief testplan
+# AURA v0.9.2.1 — actueel en cumulatief testplan
 
-Dit bestand is volledig Nederlandstalig en hoort bij **AURA v0.9.2 — Autonomous Learning Loop**.
+Dit bestand is volledig Nederlandstalig en hoort bij **AURA v0.9.2.1 — Autonomous Learning Controls Fix**.
 
 Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
@@ -8,19 +8,19 @@ Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
 Uitgevoerd op 2 september 2026 met Node.js 24.20.0:
 
-- Testbestanden uitgevoerd: **73**
-- GESLAAGD: **73**
+- Testbestanden uitgevoerd: **74**
+- GESLAAGD: **74**
 - MISLUKT: **0**
 - Releasevalidatie: **GESLAAGD**
 - Vereiste releasepaden gecontroleerd: **33 plus de begeleidingsdocumentatie**
-- ZIP-inhoud: **156 onderdelen**
+- ZIP-inhoud: **157 onderdelen**
 - Oude ZIP-bestanden of `sources/` in de release-ZIP: **0**
 
 Samenvattende uitvoer:
 
 ```text
-PASS: 73/73 test files passed
-AURA v0.9.2 release validation: PASS
+PASS: 74/74 test files passed
+AURA v0.9.2.1 release validation: PASS
 Validated 33 required paths, plus docs/GUIDED_TESTING.md
 ```
 
@@ -90,7 +90,7 @@ MISLUKT wanneer een testpaneel ontbreekt, gegevens door navigatie veranderen of 
 
 GESLAAGD wanneer:
 
-- bovenaan `v0.9.2` staat;
+- bovenaan `v0.9.2.1` staat;
 - de status begint met tick 0;
 - er 0 waarnemingen, 0 geheugenitems, 0 beliefs, 0 hypotheses en 0 modelantwoorden zijn;
 - onder de knoppen in het Nederlands staat waarom sommige knoppen nog niet beschikbaar zijn;
