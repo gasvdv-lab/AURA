@@ -4,6 +4,8 @@ Live Android-test: https://gasvdv-lab.github.io/AURA/
 
 Gemini en Groq zijn cognitieve infrastructuur, maar hun latente voorkennis is niet automatisch kennis van AURA. Iedere hogere redeneervaardigheid begint als kandidaat, verzamelt expliciete leerevidence en wordt pas beschikbaar na minimaal twee verschillende geslaagde proeven. Herkomst, bewijs en proeven worden persistent en causaal gelogd.
 
+De interface toont tijdens manuele tests steeds één expliciete **Volgende teststap**. De volledige activeringsketen van alle knoppen is als automatische regressietest vastgelegd.
+
 Zonder `arithmetic.multiply` is “ik weet nog niet hoe ik dit moet berekenen” het correcte antwoord op `3 × 50`. Wanneer de capability later aantoonbaar verworven is, mag het model de berekening uitvoeren. v0.8.3 corrigeert daarmee de te ruime v0.8.2-policy.
 
 ## Cumulatief behouden en gecorrigeerd uit v0.8.2

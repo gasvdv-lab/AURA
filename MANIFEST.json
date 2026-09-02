@@ -6,7 +6,7 @@
   "target": "Android Chrome",
   "hosting": "GitHub Pages repository root",
   "buildRequired": false,
-  "automaticTestFiles": 53,
+  "automaticTestFiles": 54,
   "automaticResult": "PASS",
   "manualHardwareStatus": "PENDING"
 }

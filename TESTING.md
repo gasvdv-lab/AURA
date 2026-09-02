@@ -8,8 +8,8 @@ Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
 Uitgevoerd op 2 september 2026 met Node.js 24.20.0:
 
-- Testbestanden uitgevoerd: **53**
-- GESLAAGD: **53**
+- Testbestanden uitgevoerd: **54**
+- GESLAAGD: **54**
 - MISLUKT: **0**
 - Releasevalidatie: **GESLAAGD**
 - Vereiste releasepaden gecontroleerd: **28**
@@ -19,7 +19,7 @@ Uitgevoerd op 2 september 2026 met Node.js 24.20.0:
 Samenvattende uitvoer:
 
 ```text
-PASS: 53/53 test files passed
+PASS: 54/54 test files passed
 AURA v0.8.3 release validation: PASS
 Validated 28 required paths
 ```
@@ -35,6 +35,7 @@ De automatische tests controleren cumulatief:
 - beliefs, tegenstrijdige evidence, hypothesen en persistentie;
 - gecontroleerde AI-context en weigering van objectieve wereldvelden;
 - volledige basisvolgorde van de interfaceknoppen;
+- iedere activering en vergrendeling na elke stap van de volledige knopketen;
 - zichtbare telling van tijdelijke geheugenitems;
 - Nederlandstalige uitleg bij uitgeschakelde knoppen;
 - Gemini-request en antwoordverwerking;
@@ -68,13 +69,14 @@ GESLAAGD wanneer:
 - de status begint met tick 0;
 - er 0 waarnemingen, 0 geheugenitems, 0 beliefs, 0 hypotheses en 0 modelantwoorden zijn;
 - onder de knoppen in het Nederlands staat waarom sommige knoppen nog niet beschikbaar zijn;
+- een opvallende regel `Volgende teststap: Waarnemen` zichtbaar is;
 - er geen toestemming voor camera, microfoon, GPS of andere hardware wordt gevraagd.
 
 MISLUKT wanneer een oudere versie zichtbaar blijft, de pagina leeg is, een rode opstartfout verschijnt of hardwaretoestemming wordt gevraagd.
 
 ## Test B — alle simulatie- en bewijsknoppen
 
-Voer deze stappen in deze exacte volgorde uit.
+Voer deze stappen in deze exacte volgorde uit. Controleer na iedere klik de regel **Volgende teststap**. Wanneer een handeling al in de bewaarde toestand uitgevoerd was, kan haar knop terecht donker zijn; volg dan de stap die deze regel aanwijst. Voor een volledig schone test voer je eerst Test A uit.
 
 1. Klik **1 tick vooruit**.
    - GESLAAGD: de status toont tick 1 en er verschijnt Nederlandstalige feedback.
