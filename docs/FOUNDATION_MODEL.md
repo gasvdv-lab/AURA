@@ -1,4 +1,12 @@
-# Foundation Model Bridge — v0.8.4
+# Foundation Model Bridge — v0.8.5
+
+## Generalization & Leakage Lab
+
+Alleen twee uniek geïdentificeerde, onafhankelijke proeven met een objectief overeenkomend verwacht en waargenomen antwoord kunnen een capability beschikbaar maken. Menselijke beoordelingen worden wel gelogd maar tellen niet mee. De gecontroleerde context vermeldt het aantal onafhankelijk geslaagde proeven, nooit de verborgen verwachte antwoorden.
+
+Dit is een gedragsproef. Omdat Gemini en Groq vermenigvuldigen mogelijk al beheersen, kan ze niet bewijzen dat de vaardigheid door AURA's les ontstond.
+
+## Cumulatief behouden uit v0.8.4
 
 ## Controlled Learning Workflow
 

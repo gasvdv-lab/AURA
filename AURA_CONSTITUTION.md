@@ -1,5 +1,9 @@
 # AURA Constitution (cumulative)
 
+## Onafhankelijke toetsing (v0.8.5)
+
+Leermateriaal en toetsmateriaal moeten herleidbaar gescheiden blijven. Menselijke goedkeuring alleen geldt niet als onafhankelijke prestatie. Een geslaagde gedragstest bewijst uitsluitend het gemeten gedrag en niet de interne oorsprong ervan of wijziging van modelgewichten.
+
 ## Gecontroleerd leren (v0.8.4)
 
 Een menselijke les of proefbeoordeling is herleidbare evidence, geen objectieve wereldwaarheid en geen bewijs van interne modeltraining. Beschikbaarstelling moet reproduceerbaar, persistent, causaal gelogd en herroepbaar onderzoekbaar blijven.

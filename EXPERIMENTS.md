@@ -1,5 +1,9 @@
 # AURA Experiments (cumulative)
 
+## v0.8.5 — generalisatie en antwoordlekkage
+
+Geef uitsluitend de algemene vermenigvuldigingsmethode als les. Test daarna twee nieuwe opgaven met vooraf vastgelegde verwachte antwoorden. Controleer dat een fout antwoord, dubbele opgave, letterlijk uit de les overgenomen opgave of uitsluitend menselijke goedkeuring de capability niet beschikbaar maakt.
+
 ## v0.8.4 — gecontroleerde leerworkflow
 
 Registreer een les voor `arithmetic.multiply`, beoordeel twee verschillend benoemde proeven als geslaagd en controleer dat de capability pas daarna van `candidate` naar `available` gaat. Compileer vervolgens AI-context en verifieer dat capability en provenance aanwezig zijn. Een mislukte of dubbel benoemde proef mag de drempel niet omzeilen.

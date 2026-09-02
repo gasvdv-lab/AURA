@@ -1,4 +1,8 @@
-# AURA Modules — v0.8.4
+# AURA Modules — v0.8.5
+
+## Generalization & Leakage Lab
+
+Registreert unieke held-out proefopgaven, verwachte antwoorden, AURA-antwoorden en objectieve exacte vergelijkingen. Alleen onafhankelijke geslaagde proeven tellen voor beschikbaarstelling; handmatige beoordelingen blijven apart herkenbaar.
 
 ## Controlled Learning UI
 

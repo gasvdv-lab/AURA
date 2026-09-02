@@ -1,5 +1,13 @@
 # AURA Roadmap (cumulative)
 
+## v0.8.5 — voltooid
+
+- Leermateriaal en onafhankelijke toetsopgaven expliciet gescheiden.
+- Exacte, reproduceerbare vergelijking van verwacht en waargenomen antwoord.
+- Dubbele of letterlijk uit de les gekopieerde proefopgaven worden geweigerd.
+- Menselijke beoordeling blijft evidence maar telt niet als onafhankelijke proef.
+- Capabilitycontext rapporteert het aantal onafhankelijk geslaagde proeven.
+
 ## v0.8.4 — voltooid
 
 - Bedienbare leerworkflow voor lesregistratie en menselijke proefbeoordeling.

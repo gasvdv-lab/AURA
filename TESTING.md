@@ -1,6 +1,6 @@
-# AURA v0.8.4 — actueel en cumulatief testplan
+# AURA v0.8.5 — actueel en cumulatief testplan
 
-Dit bestand is volledig Nederlandstalig en hoort bij **AURA v0.8.4 — Controlled Learning Workflow**.
+Dit bestand is volledig Nederlandstalig en hoort bij **AURA v0.8.5 — Generalization & Leakage Lab**.
 
 Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
@@ -8,19 +8,19 @@ Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
 Uitgevoerd op 2 september 2026 met Node.js 24.20.0:
 
-- Testbestanden uitgevoerd: **56**
-- GESLAAGD: **56**
+- Testbestanden uitgevoerd: **57**
+- GESLAAGD: **57**
 - MISLUKT: **0**
 - Releasevalidatie: **GESLAAGD**
 - Vereiste releasepaden gecontroleerd: **29**
-- ZIP-inhoud: **132 onderdelen**
+- ZIP-inhoud: **133 onderdelen**
 - Oude ZIP-bestanden of `sources/` in de release-ZIP: **0**
 
 Samenvattende uitvoer:
 
 ```text
-PASS: 56/56 test files passed
-AURA v0.8.4 release validation: PASS
+PASS: 57/57 test files passed
+AURA v0.8.5 release validation: PASS
 Validated 29 required paths
 ```
 
@@ -66,7 +66,7 @@ De volgende onderdelen blijven een handmatige praktijktest:
 
 GESLAAGD wanneer:
 
-- bovenaan `v0.8.4` staat;
+- bovenaan `v0.8.5` staat;
 - de status begint met tick 0;
 - er 0 waarnemingen, 0 geheugenitems, 0 beliefs, 0 hypotheses en 0 modelantwoorden zijn;
 - onder de knoppen in het Nederlands staat waarom sommige knoppen nog niet beschikbaar zijn;
@@ -168,7 +168,7 @@ Bij een fout noteer je de volledige rode melding en of je Gemini of Groq gekozen
 5. Draai het toestel eenmaal van staand naar liggend en terug.
 6. Controleer dat knoppen bereikbaar blijven en tekst niet buiten het scherm valt.
 
-GESLAAGD wanneer v0.8.4 zichtbaar is, de volledige basisvolgorde en leerworkflow werken, uitgeschakelde knoppen uitleg tonen en de veilige AI-brugtest slaagt.
+GESLAAGD wanneer v0.8.5 zichtbaar is, de volledige basisvolgorde en leerworkflow werken, uitgeschakelde knoppen uitleg tonen en de veilige AI-brugtest slaagt.
 
 De lokale laptop-relay op `127.0.0.1` is vanaf een andere telefoon niet rechtstreeks bereikbaar. **Echte AI vragen** via GitHub Pages/Android blijft daarom MISLUKT of niet van toepassing totdat later een beveiligde online relay wordt ingericht. Dit is geen defect in de statische AURA-runtime.
 
@@ -180,13 +180,13 @@ Voer eerst deze leerworkflow zonder echte AI uit:
 2. Laat capability-ID `arithmetic.multiply` en naam `vermenigvuldigen` staan.
 3. Schrijf bij **Les of instructie**: `Vermenigvuldigen is herhaald optellen; 3 × 50 = 150.`
 4. Klik **Les registreren**. De status moet `kandidaat` en `0/2` tonen.
-5. Vul proef-ID `vermenigvuldigen-1` en details `3 × 50 levert 150` in.
-6. Klik **Proef geslaagd**. De status moet `1/2` tonen en nog niet beschikbaar zijn.
-7. Wijzig de proef-ID in `vermenigvuldigen-2` en details in `4 × 25 levert 100`.
-8. Klik **Proef geslaagd**. De status moet `beschikbaar` en `2/2` tonen.
+5. Vul proef-ID `vermenigvuldigen-1`, nieuwe proefopgave `7 × 8`, verwacht antwoord `56` en antwoord van AURA `56` in.
+6. Klik **Antwoord objectief controleren**. De status moet `1/2` tonen en nog niet beschikbaar zijn.
+7. Vul voor de volgende proef de nieuwe opgave `9 × 6`, verwacht antwoord `54` en antwoord van AURA `54` in.
+8. Klik opnieuw **Antwoord objectief controleren**. De status moet `beschikbaar` en `2/2` tonen.
 9. Klik **AI-context voorbereiden**. De technische context moet `arithmetic.multiply`, status `available` en menselijke evidence bevatten.
 
-Klik tijdens een afzonderlijke controle **Proef mislukt**: dat resultaat wordt geregistreerd maar verhoogt het aantal geslaagde proeven niet. Een reeds gebruikte proef-ID mag evenmin als nieuwe unieke proef tellen.
+Controleer afzonderlijk dat een verkeerd AURA-antwoord als MISLUKT geldt. De knoppen voor menselijke beoordeling registreren alleen evidence en verhogen de onafhankelijke teller niet. Een reeds gebruikte proef-ID, dubbele opgave of opgave die letterlijk in het leermateriaal staat, moet worden geweigerd.
 
 Voer daarna Test D uit met Gemini en, indien je een Groq-sleutel hebt, daarna met Groq.
 
@@ -226,4 +226,4 @@ Aanvullende opmerkingen:
 
 ## Cumulatieve releasegrens
 
-v0.8.4 behoudt de automatische regressies van Synthetic Kernel, World Kernel, Embodiment, Sensorimotor, Perception, Memory, Belief/Hypothesis, capability-provenance en de providerfixes. Niet inbegrepen blijven WebXR, camera, microfoon, GPS, humanoid rendering, autonome actie, modeltools, automatische wereldacties, Synthetic Network runtime en Human Internet.
+v0.8.5 behoudt de automatische regressies van Synthetic Kernel, World Kernel, Embodiment, Sensorimotor, Perception, Memory, Belief/Hypothesis, capability-provenance en de providerfixes. Niet inbegrepen blijven WebXR, camera, microfoon, GPS, humanoid rendering, autonome actie, modeltools, automatische wereldacties, Synthetic Network runtime en Human Internet.

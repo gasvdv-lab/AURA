@@ -1,3 +1,13 @@
+# AURA v0.8.5 — Generalization & Leakage Lab
+
+Live Android-test: https://gasvdv-lab.github.io/AURA/
+
+v0.8.5 scheidt leermateriaal van onafhankelijke toetsopgaven. Iedere objectieve proef bewaart de nieuwe opgave, het verwachte antwoord, AURA's antwoord en de vergelijking. Letterlijk hergebruik van een opgave uit de les en dubbele opgaven worden geweigerd. Een menselijke beoordeling blijft zichtbaar als evidence, maar telt niet voor de twee onafhankelijke proeven die een capability beschikbaar maken.
+
+Dit bewijst gedragsmatige generalisatie binnen de gekozen proeven; het bewijst niet dat Gemini of Groq intern nieuwe modelgewichten heeft geleerd. Foundation-modelvoorkennis blijft een afzonderlijk onderzoeksrisico.
+
+## Cumulatief behouden uit v0.8.4
+
 # AURA v0.8.4 — Controlled Learning Workflow
 
 Live Android-test: https://gasvdv-lab.github.io/AURA/
