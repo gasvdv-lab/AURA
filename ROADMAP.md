@@ -1,5 +1,12 @@
 # AURA Roadmap (cumulative)
 
+## v0.9.2 — voltooid
+
+- Eerste zelfstandige cyclus: experiment kiezen, meten, hypothesen vergelijken, voorspellen en onafhankelijk toetsen.
+- Vijf objectieve World Kernel-metingen zonder door mensen ingevoerde antwoorden.
+- `aura-learned` uitsluitend na twee nieuwe geslaagde native-runtimeproeven.
+- Causale logging, snapshot/herstel en expliciete uitsluiting van foundation-modellen.
+
 ## v0.9.1.1 — voltooid
 
 - GitHub Pages en beide gebruikelijke Live Server-hostnamen veilig toegestaan door de lokale relay.

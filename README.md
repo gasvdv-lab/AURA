@@ -1,3 +1,13 @@
+# AURA v0.9.2 — Autonomous Learning Loop
+
+Live Android-test: https://gasvdv-lab.github.io/AURA/
+
+v0.9.2 introduceert de eerste begrensde zelfstandige leerlus. Met één opdracht kiest AURA zelf drie kracht-massaproeven, meet de versnelling rechtstreeks in geïsoleerde World Kernel-simulaties, vergelijkt meerdere kandidaatregels en controleert de unieke regel met twee nieuwe proeven. Geen menselijk verwacht antwoord en geen Gemini/Groq-uitvoer komt in deze bewijsroute voor.
+
+Alleen wanneer beide onafhankelijke voorspellingen exact overeenkomen met nieuwe objectieve wereldmetingen wordt `analysis.force-acceleration` beschikbaar met oorsprong `aura-learned`. Iedere experimentmeting, hypothesevergelijking en verificatie krijgt een causaal event.
+
+## Cumulatief behouden uit v0.9.1.1
+
 # AURA v0.9.1.1 — Guided Testing Relay Fix
 
 Live Android-test: https://gasvdv-lab.github.io/AURA/

@@ -1,6 +1,6 @@
-# AURA v0.9.1.1 — actueel en cumulatief testplan
+# AURA v0.9.2 — actueel en cumulatief testplan
 
-Dit bestand is volledig Nederlandstalig en hoort bij **AURA v0.9.1.1 — Guided Testing Relay Fix**.
+Dit bestand is volledig Nederlandstalig en hoort bij **AURA v0.9.2 — Autonomous Learning Loop**.
 
 Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
@@ -8,19 +8,19 @@ Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
 Uitgevoerd op 2 september 2026 met Node.js 24.20.0:
 
-- Testbestanden uitgevoerd: **70**
-- GESLAAGD: **70**
+- Testbestanden uitgevoerd: **73**
+- GESLAAGD: **73**
 - MISLUKT: **0**
 - Releasevalidatie: **GESLAAGD**
 - Vereiste releasepaden gecontroleerd: **33 plus de begeleidingsdocumentatie**
-- ZIP-inhoud: **151 onderdelen**
+- ZIP-inhoud: **156 onderdelen**
 - Oude ZIP-bestanden of `sources/` in de release-ZIP: **0**
 
 Samenvattende uitvoer:
 
 ```text
-PASS: 70/70 test files passed
-AURA v0.9.1.1 release validation: PASS
+PASS: 73/73 test files passed
+AURA v0.9.2 release validation: PASS
 Validated 33 required paths, plus docs/GUIDED_TESTING.md
 ```
 
@@ -56,6 +56,17 @@ De volgende onderdelen blijven een handmatige praktijktest:
 - verbinding met een echte provider, omdat geen gebruikerssleutel in de release of tests wordt opgenomen;
 - GitHub Pages-cache na publicatie.
 
+## Test Z — zelfstandig leren met minimale menselijke invoer
+
+1. Klik op fase **5 Zelfleren**.
+2. Vul geen leerdata, proefopgaven of verwachte antwoorden in.
+3. Klik eenmaal op **Zelfstandig leerprogramma uitvoeren**.
+4. Lees de statusregel.
+
+GESLAAGD wanneer de status `VERIFIED`, regel `force-divided-by-mass`, `3 zelf verzamelde metingen`, `2/2 onafhankelijke proeven` en oorsprong `aura-learned` toont. In de technische details moeten vijf `self-learning.experiment-observed`-events en daarna `self-learning.verified` staan.
+
+MISLUKT wanneer een verwacht antwoord moet worden ingevuld, Gemini/Groq wordt aangeroepen, minder dan twee nieuwe proeven plaatsvinden of de capability zonder twee geslaagde proeven `aura-learned` wordt.
+
 ## Test 0 — de vereenvoudigde testweergave
 
 1. Open AURA. Je ziet standaard alleen fase **1 Bewijs** en dus niet alle lange testformulieren tegelijk.
@@ -79,7 +90,7 @@ MISLUKT wanneer een testpaneel ontbreekt, gegevens door navigatie veranderen of 
 
 GESLAAGD wanneer:
 
-- bovenaan `v0.9.1.1` staat;
+- bovenaan `v0.9.2` staat;
 - de status begint met tick 0;
 - er 0 waarnemingen, 0 geheugenitems, 0 beliefs, 0 hypotheses en 0 modelantwoorden zijn;
 - onder de knoppen in het Nederlands staat waarom sommige knoppen nog niet beschikbaar zijn;

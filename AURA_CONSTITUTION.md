@@ -43,3 +43,4 @@ Latente kennis of vaardigheid van een gekoppeld foundation model geldt niet auto
 9. Android is the sole development target until the project owner explicitly changes it.
 10. Releases are cumulative: documentation, automated evidence, manual hardware gates, and the fixed public test link remain present.
 11. A simpler presentation may never remove, bypass, pre-fill or weaken an evidentiary test condition.
+12. Self-learned knowledge requires measurements generated after an internal prediction; foundation output or a human-provided expected answer can never establish `aura-learned` origin.

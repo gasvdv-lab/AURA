@@ -1,5 +1,9 @@
 # AURA Experiments (cumulative)
 
+## v0.9.2 — zelfstandige kracht-massalering
+
+Start het zelfstandige leerprogramma zonder velden in te vullen. Controleer dat AURA drie trainingsmetingen en twee onafhankelijke proeven uitvoert, `force-divided-by-mass` selecteert en alleen bij twee exacte overeenkomsten `aura-learned` rapporteert.
+
 ## v0.9.1 — begeleide testweergave
 
 Doorloop de zes fasetabs en controleer dat telkens precies het gekozen paneel zichtbaar is. Schakel daarna het volledige overzicht in en verifieer dat alle panelen verschijnen terwijl status, bewijs en knopvergrendelingen identiek blijven.

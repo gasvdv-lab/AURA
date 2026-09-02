@@ -1,4 +1,8 @@
-# AURA Modules — v0.9.1
+# AURA Modules — v0.9.2
+
+## Autonomous Learning Loop
+
+Voert een vast begrensd onderzoeksprogramma uit in geïsoleerde World Kernel-werelden. De module verzamelt zelf metingen, elimineert niet-passende kandidaatregels en verifieert de overblijvende regel op ongeziene invoer. Ze importeert geen foundation-modelcode en ontvangt geen menselijk verwacht antwoord.
 
 ## Guided Test Navigator
 

@@ -1,1 +1,1 @@
-{"name":"aura-guided-testing-ui","version":"0.9.1.1","private":true,"type":"module","scripts":{"test":"node scripts/run-tests.mjs","validate":"node scripts/validate-release.mjs","check":"npm run test && npm run validate"},"engines":{"node":">=20"}}
+{"name":"aura-autonomous-learning-loop","version":"0.9.2","private":true,"type":"module","scripts":{"test":"node scripts/run-tests.mjs","validate":"node scripts/validate-release.mjs","check":"npm run test && npm run validate"},"engines":{"node":">=20"}}
