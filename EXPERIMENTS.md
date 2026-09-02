@@ -1,5 +1,9 @@
 # AURA Experiments (cumulative)
 
+## v0.8.2 — Reasoning Policy
+
+Contractproef voor Gemini en Groq: `3 × 50` levert `150`, terwijl een gevraagde verborgen massa als niet beschikbaar wordt behandeld. Er worden geen tools of wereldacties toegevoegd.
+
 ## v0.8.1 — Bedienings- en providerexperiment
 
 Doel: iedere beschikbare knop geeft een zichtbaar resultaat, iedere vergrendeling wordt verklaard en Gemini/Groq ontvangen uitsluitend gecontroleerde context. Automatisch resultaat: 51/51 testbestanden GESLAAGD. Providerquota, Android-netwerk en hardware blijven handmatig.

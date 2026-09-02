@@ -1,4 +1,4 @@
-const CACHE='aura-v0.8.1-fetch-fix-1';
+const CACHE='aura-v0.8.2-reasoning-policy';
 const FILES=['./','./index.html','./styles/main.css','./src/app.js','./src/core/world/default-world.js','./src/core/world/world-kernel.js','./src/core/world/vector3.js','./src/core/materials/material-registry.js','./src/core/causality/hash.js','./src/core/randomness/prng.js','./src/observatory/observatory.js','./src/embodiment/embodiment-kernel.js','./src/embodiment/humanoid-blueprint.js','./src/sensorimotor/sensorimotor-kernel.js','./src/perception/perception-kernel.js','./src/memory/memory-kernel.js','./src/belief/belief-kernel.js','./src/foundation-model/context-compiler.js','./src/foundation-model/foundation-model-bridge.js','./src/foundation-model/providers.js'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));

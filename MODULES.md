@@ -1,4 +1,10 @@
-# AURA Modules — v0.8.1
+# AURA Modules — v0.8.2
+
+## Reasoning Policy
+
+Staat berekeningen en logische afleidingen toe, maar classificeert ze als berekend of afgeleid en nooit als waarneming. Wereldclaims blijven beperkt tot gecontroleerde percepties, herinneringen, beliefs en hypotheses.
+
+## Cumulatief behouden uit v0.8.1
 
 ## Nieuwe aanvullingen
 

@@ -20,5 +20,5 @@ for(const id of ['feedback','workflow-help','step','run','trial','observe','reme
 
 for(const path of ['src/app.js','src/foundation-model/context-compiler.js','src/foundation-model/foundation-model-bridge.js','src/foundation-model/providers.js']){const source=await readFile(path,'utf8');for(const secretToken of ['OPENAI_API_KEY','api.openai.com','authorization:'])if(source.includes(secretToken))throw new Error(`Servergeheim of directe OpenAI-aanroep in browsercode: ${path}`);}
 
-console.log('AURA v0.8.1 release validation: PASS');
+console.log('AURA v0.8.2 release validation: PASS');
 console.log(`Validated ${required.length} required paths, controlled model context, relay isolation, Dutch testing documentation, and excluded capabilities.`);

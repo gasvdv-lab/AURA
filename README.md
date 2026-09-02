@@ -1,3 +1,13 @@
+# AURA v0.8.2 — Reasoning Policy
+
+Live Android-test: https://gasvdv-lab.github.io/AURA/
+
+v0.8.2 staat rekenen, logica, vergelijking, samenvatting en afleiding over de gebruikersvraag en gecontroleerde context expliciet toe. Een berekend resultaat, zoals `3 × 50 = 150`, mag worden gegeven maar mag nooit als waargenomen wereldfeit worden voorgesteld. Onbeschikbare massa, materiaalwaarden of andere verborgen WORLD_STATE-informatie moeten nog steeds worden geweigerd.
+
+Gemini en Groq gebruiken dezelfde policy. Modeltools, directe wereldacties en objectieve wereldtoegang blijven uitgesloten.
+
+## Cumulatief behouden uit v0.8.1
+
 # AURA v0.8.1 — Bedieningsfix en Gemini/Groq
 
 Live Android-test: https://gasvdv-lab.github.io/AURA/

@@ -1,5 +1,12 @@
 # AURA Roadmap (cumulative)
 
+## v0.8.2 — voltooid
+
+- Rekenen en logisch redeneren expliciet toegestaan.
+- Afgeleide conclusies gescheiden van waargenomen wereldfeiten.
+- Verborgen WORLD_STATE blijft ontoegankelijk.
+- Dezelfde Reasoning Policy voor Gemini en Groq.
+
 ## v0.8.1 — voltooid
 
 - Bedieningsfix met zichtbare vereisten per knop.
