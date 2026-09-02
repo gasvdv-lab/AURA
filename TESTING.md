@@ -8,8 +8,8 @@ Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
 Uitgevoerd op 2 september 2026 met Node.js 24.20.0:
 
-- Testbestanden uitgevoerd: **54**
-- GESLAAGD: **54**
+- Testbestanden uitgevoerd: **55**
+- GESLAAGD: **55**
 - MISLUKT: **0**
 - Releasevalidatie: **GESLAAGD**
 - Vereiste releasepaden gecontroleerd: **28**
@@ -19,7 +19,7 @@ Uitgevoerd op 2 september 2026 met Node.js 24.20.0:
 Samenvattende uitvoer:
 
 ```text
-PASS: 54/54 test files passed
+PASS: 55/55 test files passed
 AURA v0.8.3 release validation: PASS
 Validated 28 required paths
 ```
@@ -41,6 +41,7 @@ De automatische tests controleren cumulatief:
 - Gemini-request en antwoordverwerking;
 - Groq-request en antwoordverwerking;
 - geen API-sleutel of `Authorization`-header in browserverkeer;
+- Windows-versleutelde sleutelopslag buiten repository en release-ZIP;
 - correcte browserkoppeling van `fetch`, zodat `Illegal invocation` niet terugkeert;
 - regressie van alle invarianten uit v0.1.0 tot en met v0.8.0.
 
@@ -126,7 +127,7 @@ Deze test gebruikt jouw eigen provideraccount. Plaats je API-sleutel nooit in `i
 1. Open de map `server`.
 2. Dubbelklik op `start-aura-ai.cmd`.
 3. Typ `1` voor Gemini of `2` voor Groq.
-4. Plak je eigen API-sleutel. Tijdens het plakken toont Windows bewust geen tekens.
+4. Bij de eerste start plak je je eigen API-sleutel. Tijdens het plakken toont Windows bewust geen tekens. Bij volgende starts wordt de versleutelde sleutel automatisch geladen en wordt deze stap overgeslagen.
 5. Druk op Enter wanneer Live Server `http://127.0.0.1:5500` gebruikt. Typ anders exact het adres dat Live Server toont, zonder afsluitende schuine streep.
 6. Laat het zwarte startervenster open.
 7. Ga terug naar AURA.
@@ -148,7 +149,7 @@ MISLUKT wanneer:
 - de API-sleutel zichtbaar wordt in de pagina of browseropslag;
 - modeltekst zelfstandig een wereldactie uitvoert.
 
-Bij een fout noteer je de volledige rode melding en of je Gemini of Groq gekozen had. Sluit daarna het startervenster; de tijdelijke sleutel verdwijnt dan uit dat proces.
+Bij een fout noteer je de volledige rode melding en of je Gemini of Groq gekozen had. Wil je de bewaarde sleutel of provider wijzigen, sluit dan de starter en dubbelklik op `server/reset-opgeslagen-api-key.cmd`.
 
 ## Test E — reset
 

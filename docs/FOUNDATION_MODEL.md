@@ -16,7 +16,7 @@ Voor uitspraken over AURA's werkelijkheid blijft uitsluitend de gecontroleerde c
 
 ## Cumulatief behouden uit v0.8.1
 
-De brug ondersteunt Gemini als primaire provider en Groq als tweede provider of fallback. De browser stuurt nooit een API-sleutel. `server/start-aura-ai.cmd` vraagt de sleutel tijdelijk en start een lokale Node-relay.
+De brug ondersteunt Gemini als primaire provider en Groq als tweede provider of fallback. De browser stuurt nooit een API-sleutel. `server/start-aura-ai.cmd` vraagt de sleutel de eerste keer en bewaart hem met Windows-versleuteling buiten het project onder `%LOCALAPPDATA%\AURA`. Volgende starts laden hem automatisch.
 
 Alleen `aura-controlled-context-v1`, een begrensde gebruikersvraag en vaste veiligheidsinstructies worden verstuurd. WORLD_STATE, Observatory, verborgen sensoren, massa, materialen, krachten, interne body-ID's, tools en wereldacties blijven uitgesloten. Modeltekst wordt gelogd maar verandert de wereld niet automatisch.
 

@@ -6,6 +6,8 @@ Gemini en Groq zijn cognitieve infrastructuur, maar hun latente voorkennis is ni
 
 De interface toont tijdens manuele tests steeds één expliciete **Volgende teststap**. De volledige activeringsketen van alle knoppen is als automatische regressietest vastgelegd.
 
+De Windows-starter bewaart je gekozen Gemini- of Groq-sleutel na de eerste invoer versleuteld als `%LOCALAPPDATA%\AURA\gemini.key` of `groq.key`. Hij laadt die sleutel volgende keren automatisch. Het bestand staat bewust niet in de repository en komt nooit in de release-ZIP. Gebruik `server/reset-opgeslagen-api-key.cmd` om hem te verwijderen of van provider te wisselen.
+
 Zonder `arithmetic.multiply` is “ik weet nog niet hoe ik dit moet berekenen” het correcte antwoord op `3 × 50`. Wanneer de capability later aantoonbaar verworven is, mag het model de berekening uitvoeren. v0.8.3 corrigeert daarmee de te ruime v0.8.2-policy.
 
 ## Cumulatief behouden en gecorrigeerd uit v0.8.2
@@ -24,7 +26,7 @@ Gemini en Groq gebruiken dezelfde policy. Modeltools, directe wereldacties en ob
 
 Live Android-test: https://gasvdv-lab.github.io/AURA/
 
-Deze correctierelease maakt de knopvolgorde begrijpelijk en gebruikt **Gemini als primaire provider** en **Groq als tweede provider/fallback**. De veilige brugtest werkt zonder sleutel. Voor echte AI dubbelklik je op `server/start-aura-ai.cmd`; de sleutel wordt alleen tijdelijk gebruikt en nooit opgeslagen.
+Deze correctierelease maakte de knopvolgorde begrijpelijk en introduceerde Gemini/Groq. Vanaf de actuele beveiligingsfix bewaart de Windows-starter de sleutel optioneel versleuteld buiten het project.
 
 Belangrijkste fixes: zichtbare redenen bij uitgeschakelde knoppen, juiste telling van tijdelijke en geconsolideerde geheugenitems, een nieuwe-hypotheseknop, begrijpelijke AI-fouten en een vooraf ingevuld lokaal relay-adres. Alleen gecontroleerde context en tekst gaan naar de provider; geen WORLD_STATE, tools of wereldacties.
 

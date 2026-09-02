@@ -16,7 +16,7 @@ Staat berekeningen en logische afleidingen toe, maar classificeert ze als bereke
 
 - UI Workflow Guidance verklaart waarom een actie niet beschikbaar is.
 - Gemini/Groq Relay verzorgt server-side providerselectie en begrensde tekstuitvoer.
-- Windows AI Starter vraagt een sleutel tijdelijk en schrijft hem niet naar project of browser.
+- Windows AI Starter bewaart de sleutel versleuteld onder `%LOCALAPPDATA%\AURA` en schrijft hem nooit naar project, ZIP of browser.
 
 ## Cumulatief behouden uit v0.8.0
 
@@ -37,7 +37,7 @@ Staat berekeningen en logische afleidingen toe, maar classificeert ze als bereke
 - `memory`: gevalideerde sensorische sporen uit `PERCEIVED_STATE`, deterministische opvraging, consolidatie, verzwakking, capaciteitsvergeten en snapshot/herstel.
 - `belief`: generieke perceptuele claims, alternatieven bij conflicterende evidence, veroudering, geheugenprovenance, hypotheses en evidence-evaluatie zonder waarheidsoracle.
 - `foundation-model`: whitelist-contextcompiler, providergrens, deterministische testprovider, vertrouwde relayprovider, tekst-only responslog en snapshot/herstel.
-- `server`: optionele Gemini/Groq-referentierelay die sleutels uitsluitend tijdelijk server-side leest, de origin beperkt en tekstaanroepen zonder tools uitvoert.
+- `server`: optionele Gemini/Groq-referentierelay die een lokaal versleutelde sleutel in het serverproces gebruikt, de origin beperkt en tekstaanroepen zonder tools uitvoert.
 - `ui`: Nederlandstalige handelingfeedback, zichtbare knopvoorwaarden, actuator-/causaliteitstellers, veilige resetbevestiging en migratie van lokale v0.6.0-state.
 
 ## Reserved and inactive
