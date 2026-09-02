@@ -1,0 +1,2 @@
+import {createSensorimotor} from './helpers-sensorimotor.mjs';import {PerceptionKernel} from '../src/perception/perception-kernel.js';import {vec3} from './helpers.mjs';
+export function createPerception(options={}){const {perception:perceptionOptions={},...worldOptions}=options,x=createSensorimotor(worldOptions);const addTarget=(id,position,extra={})=>x.world.createBody({id,materialId:'inert-standard',mass:2,radius:.3,position:position??vec3(0,3,-2),static:true,...extra});return {...x,perception:new PerceptionKernel(x.world,x.kernel,perceptionOptions),addTarget};}

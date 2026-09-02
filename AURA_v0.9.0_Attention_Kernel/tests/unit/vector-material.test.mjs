@@ -1,0 +1,2 @@
+import {assert,createDefaultWorld,vec3} from '../helpers.mjs';import {add,length} from '../../src/core/world/vector3.js';
+assert.deepEqual(add(vec3(1,2,3),vec3(4,5,6)),vec3(5,7,9));assert.equal(length(vec3(3,4,0)),5);const w=createDefaultWorld();assert.equal(w.materials.get('rigid-standard').toughness,25);assert.throws(()=>w.materials.register('bad',{density:-1,restitution:0,hardness:1,toughness:1}));

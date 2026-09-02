@@ -1,0 +1,1 @@
+import {assert,createDefaultWorld,body} from '../helpers.mjs';const w=createDefaultWorld();body(w);w.addResource('matter',7);const count=w.bodies.size,total=w.totalResource();w.step(1000);assert.equal(w.bodies.size,count);assert.equal(w.totalResource(),total);assert.equal(w.observatory.records.filter(e=>e.type==='body.created').length,1);

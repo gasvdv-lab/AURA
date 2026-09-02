@@ -1,0 +1,1 @@
+import {assert,createDefaultWorld,body} from '../helpers.mjs';const w=createDefaultWorld();const id=body(w);w.damage(id,2);assert.equal(w.bodies.get(id).integrity,.8);w.degrade(id,100);assert.equal(w.bodies.get(id).integrity,.799);assert.ok(w.observatory.records.some(e=>e.type==='material.damaged'));

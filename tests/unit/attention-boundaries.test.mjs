@@ -1,0 +1,2 @@
+import {strict as assert} from 'node:assert';import {AttentionKernel} from '../../src/attention/attention-kernel.js';
+assert.throws(()=>new AttentionKernel({capacity:0}));const k=new AttentionKernel();assert.throws(()=>k.select([{id:'x',kind:'world',priority:1}]));assert.throws(()=>k.select([{id:'x',kind:'belief',priority:2}]));assert.equal(JSON.stringify(k.snapshot()).includes('worldState'),false);

@@ -1,0 +1,9 @@
+const clone=structuredClone;
+const KINDS=new Set(['perception','memory','belief','hypothesis']);
+export class AttentionKernel{
+  constructor({capacity=4,emit=()=>({id:null})}={}){if(!Number.isInteger(capacity)||capacity<1||capacity>32)throw new Error('Ongeldige aandachtscapaciteit');this.capacity=capacity;this.emit=emit;this.cycle=0;this.selected=[];this.lastTick=0;}
+  select(candidates,tick=0,causeIds=[]){if(!Array.isArray(candidates))throw new Error('Aandachtskandidaten moeten een lijst zijn');const seen=new Set(),valid=candidates.map(x=>{if(!x||typeof x.id!=='string'||!x.id||!KINDS.has(x.kind)||!Number.isFinite(x.priority)||x.priority<0||x.priority>1)throw new Error('Ongeldige aandachtskandidaat');if(seen.has(x.id))throw new Error('Dubbele aandachtskandidaat');seen.add(x.id);return {id:x.id,kind:x.kind,sourceId:String(x.sourceId??x.id),priority:x.priority};});valid.sort((a,b)=>b.priority-a.priority||a.kind.localeCompare(b.kind)||a.id.localeCompare(b.id));this.selected=valid.slice(0,this.capacity);this.cycle++;this.lastTick=tick;this.emit('attention.selected',{cycle:this.cycle,tick,capacity:this.capacity,candidateCount:valid.length,selected:clone(this.selected)},causeIds);return clone(this.selected);}
+  clear(tick=0,causeIds=[]){this.selected=[];this.lastTick=tick;this.emit('attention.cleared',{cycle:this.cycle,tick},causeIds);}
+  snapshot(){return {schema:'aura-attention-v1',capacity:this.capacity,cycle:this.cycle,lastTick:this.lastTick,selected:clone(this.selected)};}
+  static restore(snapshot,{emit=()=>({id:null})}={}){if(snapshot?.schema!=='aura-attention-v1')throw new Error('Ongeldige attention-snapshot');const k=new AttentionKernel({capacity:snapshot.capacity,emit});k.cycle=snapshot.cycle;k.lastTick=snapshot.lastTick;k.selected=clone(snapshot.selected);return k;}
+}

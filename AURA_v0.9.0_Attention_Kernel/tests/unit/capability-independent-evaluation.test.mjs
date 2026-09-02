@@ -1,0 +1,14 @@
+import {strict as assert} from 'node:assert';
+import {CapabilityKernel} from '../../src/capability/capability-kernel.js';
+const kernel=new CapabilityKernel();
+kernel.propose({id:'arithmetic.multiply',label:'vermenigvuldigen'});
+kernel.addEvidence('arithmetic.multiply',{sourceType:'human-instruction',sourceId:'les-1',summary:'algemene methode'});
+kernel.recordEvaluation('arithmetic.multiply',{testId:'mens-1',passed:true,independent:false,challenge:'2 × 3'});
+assert.equal(kernel.get('arithmetic.multiply').status,'candidate');
+kernel.recordEvaluation('arithmetic.multiply',{testId:'objectief-1',passed:true,independent:true,challenge:'7 × 8',expected:'56',observed:'56'});
+assert.throws(()=>kernel.recordEvaluation('arithmetic.multiply',{testId:'objectief-duplicaat',passed:true,challenge:'7 × 8'}),/al gebruikt/);
+kernel.recordEvaluation('arithmetic.multiply',{testId:'objectief-2',passed:false,independent:true,challenge:'9 × 6',expected:'54',observed:'45'});
+assert.equal(kernel.get('arithmetic.multiply').status,'candidate');
+kernel.recordEvaluation('arithmetic.multiply',{testId:'objectief-3',passed:true,independent:true,challenge:'12 × 4',expected:'48',observed:'48'});
+assert.equal(kernel.get('arithmetic.multiply').status,'available');
+assert.equal(kernel.available()[0].passedTests,2);
