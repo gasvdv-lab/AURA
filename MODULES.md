@@ -1,4 +1,8 @@
-# AURA Modules — v0.9.0
+# AURA Modules — v0.9.1
+
+## Guided Test Navigator
+
+Beheert uitsluitend de zichtbaarheid van de zes testpanelen en hun korte uitleg. De navigator schrijft niet naar kernels, verandert geen bewijs en omzeilt geen vergrendelingen.
 
 ## Attention Kernel
 

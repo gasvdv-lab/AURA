@@ -1,5 +1,5 @@
 $ErrorActionPreference = 'Stop'
-Write-Host 'AURA v0.9.0 - eenvoudige AI-starter' -ForegroundColor Cyan
+Write-Host 'AURA v0.9.1.1 - eenvoudige AI-starter' -ForegroundColor Cyan
 $sleutelmap = Join-Path $env:LOCALAPPDATA 'AURA'
 $providerbestand = Join-Path $sleutelmap 'provider.txt'
 New-Item -ItemType Directory -Path $sleutelmap -Force | Out-Null
@@ -28,8 +28,8 @@ try {
   $sleutel = [Runtime.InteropServices.Marshal]::PtrToStringBSTR($ptr)
   if ([string]::IsNullOrWhiteSpace($sleutel)) { throw 'De opgeslagen API-sleutel is leeg.' }
   if ($provider -eq 'groq') { $env:GROQ_API_KEY = $sleutel } else { $env:GEMINI_API_KEY = $sleutel }
-  $env:AURA_ORIGIN = Read-Host 'Druk Enter als Live Server http://127.0.0.1:5500 gebruikt'
-  if ([string]::IsNullOrWhiteSpace($env:AURA_ORIGIN)) { $env:AURA_ORIGIN = 'http://127.0.0.1:5500' }
+  $env:AURA_ORIGINS = 'http://127.0.0.1:5500,http://localhost:5500,https://gasvdv-lab.github.io'
+  Write-Host 'Live Server en de vaste GitHub Pages-link zijn toegestaan.' -ForegroundColor Green
   Write-Host "AURA gebruikt $provider. Laat dit venster open." -ForegroundColor Green
   node (Join-Path $PSScriptRoot 'relay-example.mjs')
 } finally {
@@ -37,4 +37,5 @@ try {
   $sleutel = $null
   Remove-Item Env:GEMINI_API_KEY -ErrorAction SilentlyContinue
   Remove-Item Env:GROQ_API_KEY -ErrorAction SilentlyContinue
+  Remove-Item Env:AURA_ORIGINS -ErrorAction SilentlyContinue
 }

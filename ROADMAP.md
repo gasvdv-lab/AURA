@@ -1,5 +1,18 @@
 # AURA Roadmap (cumulative)
 
+## v0.9.1.1 — voltooid
+
+- GitHub Pages en beide gebruikelijke Live Server-hostnamen veilig toegestaan door de lokale relay.
+- Private-networkpreflight expliciet ondersteund.
+- Geen wijziging aan API-sleutelopslag of inhoudelijke testvoorwaarden.
+
+## v0.9.1 — voltooid
+
+- Compacte onderzoeksconsole met één testfase per scherm.
+- Zes duidelijke fasetabs en contextuele fase-uitleg.
+- Volledig overzicht blijft beschikbaar zonder testlogica te veranderen.
+- Mobiele lay-out vereenvoudigd voor Android Chrome.
+
 ## v0.9.0 — voltooid
 
 - Begrensde Attention Kernel met standaardcapaciteit vier.

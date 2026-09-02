@@ -1,5 +1,9 @@
 # AURA Experiments (cumulative)
 
+## v0.9.1 — begeleide testweergave
+
+Doorloop de zes fasetabs en controleer dat telkens precies het gekozen paneel zichtbaar is. Schakel daarna het volledige overzicht in en verifieer dat alle panelen verschijnen terwijl status, bewijs en knopvergrendelingen identiek blijven.
+
 ## v0.9.0 — begrensde aandacht
 
 Bied meer dan vier evidencekandidaten aan, selecteer aandacht en controleer dat exact vier kandidaten met hoogste prioriteit in stabiele volgorde overblijven. De modelcontext moet alle niet-geselecteerde evidence uitsluiten.

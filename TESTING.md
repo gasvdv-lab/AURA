@@ -1,6 +1,6 @@
-# AURA v0.9.0 — actueel en cumulatief testplan
+# AURA v0.9.1.1 — actueel en cumulatief testplan
 
-Dit bestand is volledig Nederlandstalig en hoort bij **AURA v0.9.0 — Attention Kernel**.
+Dit bestand is volledig Nederlandstalig en hoort bij **AURA v0.9.1.1 — Guided Testing Relay Fix**.
 
 Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
@@ -8,20 +8,20 @@ Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
 Uitgevoerd op 2 september 2026 met Node.js 24.20.0:
 
-- Testbestanden uitgevoerd: **68**
-- GESLAAGD: **68**
+- Testbestanden uitgevoerd: **70**
+- GESLAAGD: **70**
 - MISLUKT: **0**
 - Releasevalidatie: **GESLAAGD**
-- Vereiste releasepaden gecontroleerd: **33**
-- ZIP-inhoud: **148 onderdelen**
+- Vereiste releasepaden gecontroleerd: **33 plus de begeleidingsdocumentatie**
+- ZIP-inhoud: **151 onderdelen**
 - Oude ZIP-bestanden of `sources/` in de release-ZIP: **0**
 
 Samenvattende uitvoer:
 
 ```text
-PASS: 68/68 test files passed
-AURA v0.9.0 release validation: PASS
-Validated 31 required paths
+PASS: 70/70 test files passed
+AURA v0.9.1.1 release validation: PASS
+Validated 33 required paths, plus docs/GUIDED_TESTING.md
 ```
 
 De automatische tests controleren cumulatief:
@@ -56,6 +56,19 @@ De volgende onderdelen blijven een handmatige praktijktest:
 - verbinding met een echte provider, omdat geen gebruikerssleutel in de release of tests wordt opgenomen;
 - GitHub Pages-cache na publicatie.
 
+## Test 0 — de vereenvoudigde testweergave
+
+1. Open AURA. Je ziet standaard alleen fase **1 Bewijs** en dus niet alle lange testformulieren tegelijk.
+2. Klik bovenaan achtereenvolgens op **2 Aandacht**, **3 Foundation**, **4 Native**, **5 AI** en **6 Details**.
+3. Controleer na iedere klik dat precies het gekozen testpaneel verschijnt en dat de korte regel onder de fasen mee verandert.
+4. Klik op **Volledig overzicht tonen**. Alle zes testpanelen moeten nu onder elkaar staan.
+5. Klik op **Begeleid testen gebruiken**. AURA toont opnieuw één fase.
+6. Controleer dat eerder opgebouwde status, bewijs en ingevulde velden niet verdwenen of veranderd zijn.
+
+GESLAAGD wanneer navigeren uitsluitend de zichtbaarheid verandert en alle inhoudelijke knoppen, voorwaarden en gegevens behouden blijven.
+
+MISLUKT wanneer een testpaneel ontbreekt, gegevens door navigatie veranderen of een vergrendelde inhoudelijke test zonder vereiste evidence uitvoerbaar wordt.
+
 ## Test A — schone start op de laptop
 
 1. Open de AURA-map in Visual Studio Code.
@@ -66,7 +79,7 @@ De volgende onderdelen blijven een handmatige praktijktest:
 
 GESLAAGD wanneer:
 
-- bovenaan `v0.9.0` staat;
+- bovenaan `v0.9.1.1` staat;
 - de status begint met tick 0;
 - er 0 waarnemingen, 0 geheugenitems, 0 beliefs, 0 hypotheses en 0 modelantwoorden zijn;
 - onder de knoppen in het Nederlands staat waarom sommige knoppen nog niet beschikbaar zijn;

@@ -1,12 +1,12 @@
 {
   "project": "AURA",
-  "version": "0.9.0",
-  "release": "Attention Kernel",
-  "date": "2026-09-02",
+  "version": "0.9.1.1",
+  "release": "Guided Testing Relay Fix",
+  "date": "2026-09-03",
   "target": "Android Chrome",
   "hosting": "GitHub Pages repository root",
   "buildRequired": false,
-  "automaticTestFiles": 68,
+  "automaticTestFiles": 70,
   "automaticResult": "PASS",
   "manualHardwareStatus": "PENDING"
 }

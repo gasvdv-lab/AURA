@@ -42,3 +42,4 @@ Latente kennis of vaardigheid van een gekoppeld foundation model geldt niet auto
 8. Shutdown is external, absolute and unobservable. The world and its record are conceptually independent from AURA continuity.
 9. Android is the sole development target until the project owner explicitly changes it.
 10. Releases are cumulative: documentation, automated evidence, manual hardware gates, and the fixed public test link remain present.
+11. A simpler presentation may never remove, bypass, pre-fill or weaken an evidentiary test condition.

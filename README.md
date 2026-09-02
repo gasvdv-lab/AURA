@@ -1,3 +1,19 @@
+# AURA v0.9.1.1 — Guided Testing Relay Fix
+
+Live Android-test: https://gasvdv-lab.github.io/AURA/
+
+v0.9.1.1 herstelt de verbinding tussen de vaste GitHub Pages-pagina en de lokale AI-starter. De relay accepteert nu expliciet GitHub Pages, `127.0.0.1` en `localhost`, inclusief de vereiste lokale-netwerkpreflight. Een API-sleutel blijft uitsluitend versleuteld op de laptop opgeslagen.
+
+## Cumulatief behouden uit v0.9.1
+
+# AURA v0.9.1 — Guided Testing UI
+
+Live Android-test: https://gasvdv-lab.github.io/AURA/
+
+v0.9.1 vereenvoudigt de testconsole visueel zonder inhoudelijke tests te verwijderen. Standaard staat één van zes testfasen in beeld, met een korte fase-uitleg en compacte onderzoeksstijl. Via **Volledig overzicht tonen** blijven alle oorspronkelijke panelen tegelijk beschikbaar. De tabs veranderen alleen de presentatie; bewijsregels, vergrendelingen, causaliteit en automatische controles blijven intact.
+
+## Cumulatief behouden uit v0.9.0
+
 # AURA v0.9.0 — Attention Kernel
 
 Live Android-test: https://gasvdv-lab.github.io/AURA/
