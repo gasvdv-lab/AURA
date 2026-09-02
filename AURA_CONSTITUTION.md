@@ -1,5 +1,9 @@
 # AURA Constitution (cumulative)
 
+## Native leren (v0.8.7)
+
+`aura-learned` vereist een reproduceerbare lokale uitvoerder die zonder foundation-modelantwoord nieuwe invoer verwerkt. Trainingsdata alleen volstaat niet; onafhankelijke proeven en causale herkomst zijn verplicht.
+
 ## Capability-oorsprong (v0.8.6)
 
 Toestemming om foundation-modelkennis te gebruiken is geen leren door AURA. De oorsprong moet zichtbaar blijven en mag nooit door presentatie, persistentie of contextcompilatie worden afgezwakt.

@@ -1,3 +1,15 @@
+# AURA v0.8.7 — Native Skill Learning
+
+Live Android-test: https://gasvdv-lab.github.io/AURA/
+
+v0.8.7 voegt AURA's eerste lokale, deterministische vaardigheidsleerder toe. Uit minimaal drie invoer-uitvoervoorbeelden selecteert de Native Skill Kernel de enige generieke kandidaatregel die alle voorbeelden verklaart. Nieuwe opgaven worden volledig lokaal uitgevoerd via de opgeslagen regel; Gemini en Groq worden daarbij niet aangeroepen.
+
+Na twee unieke geslaagde native proeven krijgt de capability oorsprong `aura-learned`. Trainingsvoorbeelden tellen nooit als proef en een eerder gezien invoerpaar wordt als onafhankelijke proef geweigerd.
+
+De eerste begrensde regelruimte bevat identiteit, som, verschil en vermenigvuldiging als herhaald optellen. Dit is gecontroleerde symbolische regelverwerving, geen algemene intelligentie.
+
+## Cumulatief behouden uit v0.8.6
+
 # AURA v0.8.6 — Capability Origin & Learning Boundary
 
 Live Android-test: https://gasvdv-lab.github.io/AURA/

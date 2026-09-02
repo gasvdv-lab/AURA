@@ -1,5 +1,9 @@
 # AURA Experiments (cumulative)
 
+## v0.8.7 — native regelverwerving
+
+Registreer `2,3→6`, `4,5→20` en `3,7→21`. De enige passende regel moet `repeated-addition` zijn. Test daarna lokaal `6,8→48` en `9,4→36`; pas daarna mag `arithmetic.multiply` de oorsprong `aura-learned` krijgen.
+
 ## v0.8.6 — oorsprongsgrens
 
 Laat Gemini/Groq twee proeven slagen en controleer dat de capability uitsluitend `foundation-authorized` wordt. Een regressietest bewijst daarnaast dat alleen native-runtime-evidence ooit `aura-learned` kan opleveren.

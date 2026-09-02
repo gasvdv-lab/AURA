@@ -1,12 +1,12 @@
 {
   "project": "AURA",
-  "version": "0.8.6",
-  "release": "Capability Origin & Learning Boundary",
+  "version": "0.8.7",
+  "release": "Native Skill Learning",
   "date": "2026-09-02",
   "target": "Android Chrome",
   "hosting": "GitHub Pages repository root",
   "buildRequired": false,
-  "automaticTestFiles": 58,
+  "automaticTestFiles": 62,
   "automaticResult": "PASS",
   "manualHardwareStatus": "PENDING"
 }

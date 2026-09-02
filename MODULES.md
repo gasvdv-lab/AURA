@@ -1,4 +1,8 @@
-# AURA Modules — v0.8.6
+# AURA Modules — v0.8.7
+
+## Native Skill Kernel
+
+Beheert trainingsvoorbeelden, deterministische kandidaatregelselectie, lokale uitvoering van ongeziene opgaven, onafhankelijke proeven en snapshot/herstel. De module importeert of gebruikt geen foundation-modelprovider.
 
 ## Capability Origin Boundary
 

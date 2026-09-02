@@ -1,6 +1,6 @@
-# AURA v0.8.6 — actueel en cumulatief testplan
+# AURA v0.8.7 — actueel en cumulatief testplan
 
-Dit bestand is volledig Nederlandstalig en hoort bij **AURA v0.8.6 — Capability Origin & Learning Boundary**.
+Dit bestand is volledig Nederlandstalig en hoort bij **AURA v0.8.7 — Native Skill Learning**.
 
 Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
@@ -8,20 +8,20 @@ Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
 Uitgevoerd op 2 september 2026 met Node.js 24.20.0:
 
-- Testbestanden uitgevoerd: **58**
-- GESLAAGD: **58**
+- Testbestanden uitgevoerd: **62**
+- GESLAAGD: **62**
 - MISLUKT: **0**
 - Releasevalidatie: **GESLAAGD**
-- Vereiste releasepaden gecontroleerd: **29**
-- ZIP-inhoud: **134 onderdelen**
+- Vereiste releasepaden gecontroleerd: **31**
+- ZIP-inhoud: **140 onderdelen**
 - Oude ZIP-bestanden of `sources/` in de release-ZIP: **0**
 
 Samenvattende uitvoer:
 
 ```text
-PASS: 58/58 test files passed
-AURA v0.8.6 release validation: PASS
-Validated 29 required paths
+PASS: 62/62 test files passed
+AURA v0.8.7 release validation: PASS
+Validated 31 required paths
 ```
 
 De automatische tests controleren cumulatief:
@@ -66,7 +66,7 @@ De volgende onderdelen blijven een handmatige praktijktest:
 
 GESLAAGD wanneer:
 
-- bovenaan `v0.8.6` staat;
+- bovenaan `v0.8.7` staat;
 - de status begint met tick 0;
 - er 0 waarnemingen, 0 geheugenitems, 0 beliefs, 0 hypotheses en 0 modelantwoorden zijn;
 - onder de knoppen in het Nederlands staat waarom sommige knoppen nog niet beschikbaar zijn;
@@ -168,7 +168,7 @@ Bij een fout noteer je de volledige rode melding en of je Gemini of Groq gekozen
 5. Draai het toestel eenmaal van staand naar liggend en terug.
 6. Controleer dat knoppen bereikbaar blijven en tekst niet buiten het scherm valt.
 
-GESLAAGD wanneer v0.8.6 zichtbaar is, de volledige basisvolgorde en leerworkflow werken, uitgeschakelde knoppen uitleg tonen en de veilige AI-brugtest slaagt.
+GESLAAGD wanneer v0.8.7 zichtbaar is, de volledige basisvolgorde en leerworkflow werken, uitgeschakelde knoppen uitleg tonen en de veilige AI-brugtest slaagt.
 
 De lokale laptop-relay op `127.0.0.1` is vanaf een andere telefoon niet rechtstreeks bereikbaar. **Echte AI vragen** via GitHub Pages/Android blijft daarom MISLUKT of niet van toepassing totdat later een beveiligde online relay wordt ingericht. Dit is geen defect in de statische AURA-runtime.
 
@@ -207,6 +207,24 @@ De automatische test voert hetzelfde leertraject uit en controleert dat capabili
 
 MISLUKT wanneer het model zonder beschikbare capability toch latente modelkennis als AURA-kennis gebruikt, provenance ontbreekt of een verborgen wereldwaarde wordt verzonnen.
 
+## Test H — native vaardigheid zonder Gemini/Groq
+
+Voer deze test na een volledige reset uit. De AI-starter hoeft niet open te staan.
+
+1. Ga naar **3. Native**.
+2. Vul `2`, `3`, `6` in en klik **Voorbeeld toevoegen**.
+3. Herhaal met `4`, `5`, `20`.
+4. Herhaal met `3`, `7`, `21`.
+5. Klik **Regel zoeken**. GESLAAGD wanneer `repeated-addition` verschijnt.
+6. Vul proef-ID `native-1`, invoer `6` en `8`, en verwachte uitvoer `48` in.
+7. Klik **Native proef uitvoeren**. GESLAAGD wanneer uitvoer 48 en status 1/2 verschijnen.
+8. Vul proef-ID `native-2`, invoer `9` en `4`, en verwachte uitvoer `36` in.
+9. Klik opnieuw **Native proef uitvoeren**.
+
+GESLAAGD wanneer de capability daarna `available` is met oorsprong **AURA AANGELEERD**, terwijl de modelantwoordteller gedurende Test H niet stijgt.
+
+MISLUKT wanneer een trainingsvoorbeeld als proef wordt aanvaard, Gemini/Groq wordt aangeroepen, een fout antwoord meetelt of de oorsprong `foundation-authorized` blijft.
+
 ## Resultatenformulier
 
 ```text
@@ -223,6 +241,7 @@ Test D — echte Gemini/Groq-AI: GESLAAGD / MISLUKT / NIET UITGEVOERD
 Test E — reset: GESLAAGD / MISLUKT
 Test F — Android/GitHub Pages: GESLAAGD / MISLUKT / NIET UITGEVOERD
 Test G — gecontroleerd leren en kennisherkomst: GESLAAGD / MISLUKT / NIET UITGEVOERD
+Test H — native vaardigheid: GESLAAGD / MISLUKT / NIET UITGEVOERD
 
 Gekozen provider:
 Knop waarbij het misging:

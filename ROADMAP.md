@@ -1,5 +1,13 @@
 # AURA Roadmap (cumulative)
 
+## v0.8.7 — voltooid
+
+- Native Skill Kernel met deterministische selectie uit generieke kandidaatregels.
+- Minimaal drie verschillende trainingsvoorbeelden en een unieke verklarende regel vereist.
+- Nieuwe proeven volledig lokaal uitgevoerd, zonder foundation-modelaanroep.
+- Twee onafhankelijke native proeven vereist voor oorsprong `aura-learned`.
+- Snapshot/herstel en causale registratie van voorbeelden, regelkeuze en proeven.
+
 ## v0.8.6 — voltooid
 
 - Expliciete oorsprong `foundation-authorized`, `aura-learned` of `unknown-origin`.
