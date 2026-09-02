@@ -1,12 +1,12 @@
 {
   "project": "AURA",
-  "version": "0.6.0",
-  "release": "Memory Kernel",
+  "version": "0.7.0",
+  "release": "Belief & Hypothesis Kernel",
   "date": "2026-09-01",
   "target": "Android Chrome",
   "hosting": "GitHub Pages repository root",
   "buildRequired": false,
-  "automaticTestFiles": 36,
+  "automaticTestFiles": 44,
   "automaticResult": "PASS",
   "manualHardwareStatus": "PENDING"
 }

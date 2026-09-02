@@ -89,3 +89,23 @@ Laat geheugen-ticks verstrijken en bewijs dat sterkte deterministisch afneemt en
 ## MK-04 Continuïteit
 
 Herstel tijdelijke en geconsolideerde herinneringen midden in hun ontwikkeling en bewijs dat verdere opvraging en verzwakking exact gelijk verlopen.
+
+## MK-05 Vertraagde codering en bediening
+
+Neem waar, laat geheugentijd verstrijken en sla daarna de oude waarneming op. Bewijs dat bronmoment, coderingsmoment en vertraging correct blijven, en dat iedere interfaceknop zichtbare Nederlandstalige feedback of een verklaarde uitgeschakelde toestand heeft.
+
+## BH-01 Beliefgrens
+
+Vorm beliefs uit perceptie en geheugen en bewijs dat objectieve wereldvelden, Observatory en interne object-ID's actief geweigerd blijven.
+
+## BH-02 Tegenstrijdigheid
+
+Bied sterk verschillende metingen over dezelfde track en predicate aan. Bewijs dat alternatieven en status `contested` ontstaan in plaats van één waarde stil als waarheid te kiezen.
+
+## BH-03 Veroudering
+
+Laat tijd verstrijken zonder nieuwe evidence en bewijs dat confidence afneemt en de belief `stale` wordt zonder dat de wereldwaarheid geraadpleegd wordt.
+
+## BH-04 Hypothese-evidence
+
+Toets dezelfde generieke hypothese met ondersteunende en tegensprekende percepties. Bewijs dat de uitkomst en status reproduceerbaar zijn en geen verborgen truth-label bevatten.

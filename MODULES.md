@@ -1,6 +1,6 @@
-# AURA Modules — v0.6.0
+# AURA Modules — v0.7.0
 
-## Actief, cumulatief tot en met v0.6.0
+## Actief, cumulatief tot en met v0.7.0
 
 - `core/world`: objective state, 3D coordinates, bodies and fixed-step evolution.
 - `core/materials`: immutable generic material definitions and physical/degradation properties.
@@ -15,7 +15,9 @@
 - `sensorimotor`: objective signal sampling, explicitly initiated low-level trials, causal consequence deltas, incremental actuator-effect models and persistence.
 - `perception`: private access to objective state, range and occlusion filtering, reproducible measurement noise, uncertainty, opaque perceptual tracking and snapshot/restore.
 - `memory`: gevalideerde sensorische sporen uit `PERCEIVED_STATE`, deterministische opvraging, consolidatie, verzwakking, capaciteitsvergeten en snapshot/herstel.
+- `belief`: generieke perceptuele claims, alternatieven bij conflicterende evidence, veroudering, geheugenprovenance, hypotheses en evidence-evaluatie zonder waarheidsoracle.
+- `ui`: Nederlandstalige handelingfeedback, zichtbare knopvoorwaarden, actuator-/causaliteitstellers, veilige resetbevestiging en migratie van lokale v0.6.0-state.
 
 ## Reserved and inactive
 
-`belief`, `cognition`, `xr`, `synthetic-network` en `human-internet` hebben geen v0.6-runtime. Herinneringen zijn opgeslagen perceptuele sporen, geen beliefs, verlangens, beslissingen of objectieve feiten. Capability creep blijft verboden.
+`cognition`, `foundation-model`, `xr`, `synthetic-network` en `human-internet` hebben geen v0.7-runtime. Beliefs zijn evidencegewogen interne claims, geen objectieve feiten, begrip, verlangens of beslissingen. Capability creep blijft verboden.

@@ -1,6 +1,6 @@
-# AURA v0.6.0 — Memory Kernel
+# AURA v0.7.0 — Belief & Hypothesis Kernel
 
-AURA is een Android-first onderzoeksruntime voor een persistente, objectieve synthetische werkelijkheid. v0.6.0 behoudt alle eerdere kernels en voegt geheugen toe dat uitsluitend uit begrensde `PERCEIVED_STATE`-waarnemingen kan ontstaan.
+AURA is een Android-first onderzoeksruntime voor een persistente, objectieve synthetische werkelijkheid. v0.7.0 behoudt alle eerdere kernels en voegt beliefs en hypotheses toe die uitsluitend uit begrensde perceptie en geheugen-evidence ontstaan.
 
 Live Android test: https://gasvdv-lab.github.io/AURA/
 
@@ -15,7 +15,31 @@ npm test
 npm run validate
 ```
 
-## Bereik van v0.6.0
+## Nieuw in v0.7.0
+
+- Beliefs over aanwezigheid, afstand, relatieve positie en schijnbare grootte.
+- Meerdere alternatieven bij werkelijk tegenstrijdige evidence.
+- Confidence als evidencegewicht, nooit als verborgen waarheidsscore.
+- Veroudering en afnemende confidence zonder nieuwe evidence.
+- Hypotheses met expliciete verwachting en tolerantie.
+- Uitkomsten `support`, `contradiction` en `unknown`.
+- Statussen `undetermined`, `supported`, `contradicted` en `contested`.
+- Evidence uit zowel actuele percepties als bereikbare herinneringen.
+- Exact snapshot/herstel en volledige causale registratie.
+
+Er is nog geen taalmodel, begrip, semantische wereldkennis of autonome hypothesevorming.
+
+## Behouden herstellingen uit v0.6.1
+
+- Een oudere waarneming kan na verstreken simulatietijd nog veilig worden opgeslagen.
+- Bronmoment, opslagmoment en coderingsvertraging blijven afzonderlijk bewaard.
+- Iedere knop geeft een duidelijke Nederlandstalige resultaat- of foutmelding.
+- Actuatorproeven en causale gebeurtenissen staan opnieuw zichtbaar in de status.
+- Opslaan en opvragen zijn uitgeschakeld zolang hun voorwaarden ontbreken.
+- De reset vraagt eerst bevestiging.
+- Bestaande lokale v0.6.0-state wordt automatisch ingelezen en naar v0.6.1 bewaard.
+
+## Cumulatief bereik van v0.6
 
 Cumulatief inbegrepen: objectieve wereldfysica, causale Observatory, embodiment, sensorimotorisch bewijs, begrensde perceptie en een Memory Kernel met tijdelijke sensorische sporen, deterministische consolidatie, opvraging, toegankelijkheid, capaciteitslimieten, verzwakking en vergeten.
 

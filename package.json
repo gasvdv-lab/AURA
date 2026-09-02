@@ -1,1 +1,1 @@
-{"name":"aura-memory-kernel","version":"0.6.0","private":true,"type":"module","scripts":{"test":"node scripts/run-tests.mjs","validate":"node scripts/validate-release.mjs","check":"npm run test && npm run validate"},"engines":{"node":">=20"}}
+{"name":"aura-belief-kernel","version":"0.7.0","private":true,"type":"module","scripts":{"test":"node scripts/run-tests.mjs","validate":"node scripts/validate-release.mjs","check":"npm run test && npm run validate"},"engines":{"node":">=20"}}

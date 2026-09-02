@@ -1,1 +1,22 @@
-import {access,readFile} from 'node:fs/promises';const required=['index.html','README.md','ROADMAP.md','TESTING.md','MODULES.md','AURA_CONSTITUTION.md','EXPERIMENTS.md','docs/WORLD_LAWS.md','docs/OBSERVATORY.md','docs/EMBODIMENT.md','docs/SENSORIMOTOR.md','docs/PERCEPTION.md','docs/MEMORY.md','.github/workflows/validate.yml','src/embodiment/embodiment-kernel.js','src/sensorimotor/sensorimotor-kernel.js','src/perception/perception-kernel.js','src/memory/memory-kernel.js'];for(const p of required)await access(p);const link='https://gasvdv-lab.github.io/AURA/';for(const p of ['README.md','TESTING.md']){const s=await readFile(p,'utf8');if(!s.includes(link))throw new Error(`${p} lacks fixed live link`);}const testing=await readFile('TESTING.md','utf8');for(const marker of ['volledig Nederlandstalig','GESLAAGD','MISLUKT','Handmatige praktijktest'])if(!testing.toLowerCase().includes(marker.toLowerCase()))throw new Error(`TESTING.md mist Nederlandse marker: ${marker}`);const banned=['getUserMedia','geolocation','RTCPeerConnection','navigator.xr'];for(const p of ['src/app.js','src/core/world/world-kernel.js','src/embodiment/embodiment-kernel.js','src/sensorimotor/sensorimotor-kernel.js','src/perception/perception-kernel.js','src/memory/memory-kernel.js']){const s=await readFile(p,'utf8');for(const token of banned)if(s.includes(token))throw new Error(`Forbidden runtime capability ${token} in ${p}`);}const memory=(await readFile('src/memory/memory-kernel.js','utf8')).toLowerCase();for(const token of ['chat history','worldstate()','observatory.records'])if(memory.includes(token))throw new Error(`Forbidden memory shortcut: ${token}`);console.log('AURA v0.6.0 release validation: PASS');console.log(`Validated ${required.length} required paths, cumulative live links, memory boundaries, Dutch testing documentation, and excluded capabilities.`);
+import {access,readFile} from 'node:fs/promises';
+
+const required=['index.html','README.md','ROADMAP.md','TESTING.md','MODULES.md','AURA_CONSTITUTION.md','EXPERIMENTS.md','docs/WORLD_LAWS.md','docs/OBSERVATORY.md','docs/EMBODIMENT.md','docs/SENSORIMOTOR.md','docs/PERCEPTION.md','docs/MEMORY.md','docs/BELIEFS.md','.github/workflows/validate.yml','src/embodiment/embodiment-kernel.js','src/sensorimotor/sensorimotor-kernel.js','src/perception/perception-kernel.js','src/memory/memory-kernel.js','src/belief/belief-kernel.js'];
+for(const path of required)await access(path);
+
+const liveLink='https://gasvdv-lab.github.io/AURA/';
+for(const path of ['README.md','TESTING.md'])if(!(await readFile(path,'utf8')).includes(liveLink))throw new Error(`${path} mist de vaste live-link`);
+
+const testing=await readFile('TESTING.md','utf8');
+for(const marker of ['volledig Nederlandstalig','GESLAAGD','MISLUKT','handmatige praktijktest'])if(!testing.toLowerCase().includes(marker.toLowerCase()))throw new Error(`TESTING.md mist Nederlandse marker: ${marker}`);
+
+const bannedCapabilities=['getUserMedia','geolocation','RTCPeerConnection','navigator.xr'];
+for(const path of ['src/app.js','src/core/world/world-kernel.js','src/embodiment/embodiment-kernel.js','src/sensorimotor/sensorimotor-kernel.js','src/perception/perception-kernel.js','src/memory/memory-kernel.js','src/belief/belief-kernel.js']){const source=await readFile(path,'utf8');for(const token of bannedCapabilities)if(source.includes(token))throw new Error(`Verboden runtimecapability ${token} in ${path}`);}
+
+const memory=(await readFile('src/memory/memory-kernel.js','utf8')).toLowerCase();
+for(const token of ['chat history','worldstate()','observatory.records'])if(memory.includes(token))throw new Error(`Verboden geheugensnelkoppeling: ${token}`);
+
+const page=await readFile('index.html','utf8');
+for(const id of ['feedback','step','run','trial','observe','remember','recall','believe','propose','evaluate','reset'])if(!page.includes(`id="${id}"`))throw new Error(`Ontbrekend interface-element: ${id}`);
+
+console.log('AURA v0.7.0 release validation: PASS');
+console.log(`Validated ${required.length} required paths, belief boundaries, hypothesis evidence, Dutch testing documentation, and excluded capabilities.`);
