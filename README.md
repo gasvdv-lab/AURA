@@ -1,3 +1,13 @@
+# AURA v0.8.5.1 — Evaluation Flow & Research UI
+
+Live Android-test: https://gasvdv-lab.github.io/AURA/
+
+Deze correctierelease maakt de kandidaatproef werkelijk uitvoerbaar. AURA legt opgave en verwacht antwoord vooraf lokaal vast, geeft de kandidaat-capability uitsluitend voor één geïsoleerde modelaanroep vrij en vult het providerantwoord automatisch in. Verwacht antwoord en leermateriaal worden niet naar Gemini of Groq gestuurd.
+
+De interface is hertekend als compacte onderzoeksconsole: kleinere typografie en bediening, sobere panelen, vaste stapnummers en hogere informatiedichtheid.
+
+## Cumulatief behouden uit v0.8.5
+
 # AURA v0.8.5 — Generalization & Leakage Lab
 
 Live Android-test: https://gasvdv-lab.github.io/AURA/

@@ -1,1 +1,1 @@
-{"name":"aura-generalization-lab","version":"0.8.5","private":true,"type":"module","scripts":{"test":"node scripts/run-tests.mjs","validate":"node scripts/validate-release.mjs","check":"npm run test && npm run validate"},"engines":{"node":">=20"}}
+{"name":"aura-generalization-lab","version":"0.8.5.1","private":true,"type":"module","scripts":{"test":"node scripts/run-tests.mjs","validate":"node scripts/validate-release.mjs","check":"npm run test && npm run validate"},"engines":{"node":">=20"}}

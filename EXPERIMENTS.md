@@ -1,5 +1,9 @@
 # AURA Experiments (cumulative)
 
+## v0.8.5.1 — uitvoerbare blinde kandidaatproef
+
+Leg het verwachte antwoord vast, laat Gemini/Groq de nieuwe opgave via tijdelijke kandidaattoegang uitvoeren en vergelijk het automatisch ontvangen antwoord. Controleer dat les en verwacht antwoord niet in de provideraanvraag staan.
+
 ## v0.8.5 — generalisatie en antwoordlekkage
 
 Geef uitsluitend de algemene vermenigvuldigingsmethode als les. Test daarna twee nieuwe opgaven met vooraf vastgelegde verwachte antwoorden. Controleer dat een fout antwoord, dubbele opgave, letterlijk uit de les overgenomen opgave of uitsluitend menselijke goedkeuring de capability niet beschikbaar maakt.

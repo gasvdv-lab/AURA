@@ -1,4 +1,8 @@
-# AURA Modules — v0.8.5
+# AURA Modules — v0.8.5.1
+
+## Candidate Evaluation Mode
+
+Geeft één kandidaat-capability tijdelijk vrij voor exact één geïsoleerde toetsvraag. Leermateriaal en verwacht antwoord ontbreken in de modelaanvraag. De tijdelijke toegang verandert de normale capability-status niet.
 
 ## Generalization & Leakage Lab
 

@@ -1,6 +1,6 @@
-# AURA v0.8.5 — actueel en cumulatief testplan
+# AURA v0.8.5.1 — actueel en cumulatief testplan
 
-Dit bestand is volledig Nederlandstalig en hoort bij **AURA v0.8.5 — Generalization & Leakage Lab**.
+Dit bestand is volledig Nederlandstalig en hoort bij **AURA v0.8.5.1 — Evaluation Flow & Research UI**.
 
 Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
@@ -20,7 +20,7 @@ Samenvattende uitvoer:
 
 ```text
 PASS: 57/57 test files passed
-AURA v0.8.5 release validation: PASS
+AURA v0.8.5.1 release validation: PASS
 Validated 29 required paths
 ```
 
@@ -66,7 +66,7 @@ De volgende onderdelen blijven een handmatige praktijktest:
 
 GESLAAGD wanneer:
 
-- bovenaan `v0.8.5` staat;
+- bovenaan `v0.8.5.1` staat;
 - de status begint met tick 0;
 - er 0 waarnemingen, 0 geheugenitems, 0 beliefs, 0 hypotheses en 0 modelantwoorden zijn;
 - onder de knoppen in het Nederlands staat waarom sommige knoppen nog niet beschikbaar zijn;
@@ -168,7 +168,7 @@ Bij een fout noteer je de volledige rode melding en of je Gemini of Groq gekozen
 5. Draai het toestel eenmaal van staand naar liggend en terug.
 6. Controleer dat knoppen bereikbaar blijven en tekst niet buiten het scherm valt.
 
-GESLAAGD wanneer v0.8.5 zichtbaar is, de volledige basisvolgorde en leerworkflow werken, uitgeschakelde knoppen uitleg tonen en de veilige AI-brugtest slaagt.
+GESLAAGD wanneer v0.8.5.1 zichtbaar is, de volledige basisvolgorde en leerworkflow werken, uitgeschakelde knoppen uitleg tonen en de veilige AI-brugtest slaagt.
 
 De lokale laptop-relay op `127.0.0.1` is vanaf een andere telefoon niet rechtstreeks bereikbaar. **Echte AI vragen** via GitHub Pages/Android blijft daarom MISLUKT of niet van toepassing totdat later een beveiligde online relay wordt ingericht. Dit is geen defect in de statische AURA-runtime.
 
@@ -180,10 +180,13 @@ Voer eerst deze leerworkflow zonder echte AI uit:
 2. Laat capability-ID `arithmetic.multiply` en naam `vermenigvuldigen` staan.
 3. Schrijf bij **Les of instructie**: `Vermenigvuldigen is herhaald optellen; 3 × 50 = 150.`
 4. Klik **Les registreren**. De status moet `kandidaat` en `0/2` tonen.
-5. Vul proef-ID `vermenigvuldigen-1`, nieuwe proefopgave `7 × 8`, verwacht antwoord `56` en antwoord van AURA `56` in.
-6. Klik **Antwoord objectief controleren**. De status moet `1/2` tonen en nog niet beschikbaar zijn.
-7. Vul voor de volgende proef de nieuwe opgave `9 × 6`, verwacht antwoord `54` en antwoord van AURA `54` in.
-8. Klik opnieuw **Antwoord objectief controleren**. De status moet `beschikbaar` en `2/2` tonen.
+5. Start `server/start-aura-ai.cmd` en laat het zwarte venster open.
+6. Vul proef-ID `proef-1`, nieuwe proefopgave `7 × 8` en verwacht antwoord `56` in. **Antwoord van AURA** blijft leeg en kan niet handmatig worden aangepast.
+7. Klik **02 · Proef door echte AI uitvoeren**. Alleen de opgave en tijdelijke kandidaattoegang gaan naar Gemini/Groq; niet de les en niet het verwachte antwoord.
+8. Wacht tot **Antwoord van AURA** automatisch is ingevuld.
+9. Klik **03 · Antwoord objectief controleren**. Bij antwoord `56` toont de status `1/2`.
+10. Vul bij `proef-2` de nieuwe opgave `9 × 6` en verwacht antwoord `54` in.
+11. Herhaal stap 7–9. Bij antwoord `54` toont de status `beschikbaar` en `2/2`.
 9. Klik **AI-context voorbereiden**. De technische context moet `arithmetic.multiply`, status `available` en menselijke evidence bevatten.
 
 Controleer afzonderlijk dat een verkeerd AURA-antwoord als MISLUKT geldt. De knoppen voor menselijke beoordeling registreren alleen evidence en verhogen de onafhankelijke teller niet. Een reeds gebruikte proef-ID, dubbele opgave of opgave die letterlijk in het leermateriaal staat, moet worden geweigerd.
@@ -226,4 +229,4 @@ Aanvullende opmerkingen:
 
 ## Cumulatieve releasegrens
 
-v0.8.5 behoudt de automatische regressies van Synthetic Kernel, World Kernel, Embodiment, Sensorimotor, Perception, Memory, Belief/Hypothesis, capability-provenance en de providerfixes. Niet inbegrepen blijven WebXR, camera, microfoon, GPS, humanoid rendering, autonome actie, modeltools, automatische wereldacties, Synthetic Network runtime en Human Internet.
+v0.8.5.1 behoudt de automatische regressies van Synthetic Kernel, World Kernel, Embodiment, Sensorimotor, Perception, Memory, Belief/Hypothesis, capability-provenance en de providerfixes. Niet inbegrepen blijven WebXR, camera, microfoon, GPS, humanoid rendering, autonome actie, modeltools, automatische wereldacties, Synthetic Network runtime en Human Internet.

@@ -1,5 +1,9 @@
 # AURA Constitution (cumulative)
 
+## Tijdelijke evaluatietoegang (v0.8.5.1)
+
+Een kandidaat-capability mag uitsluitend binnen één begrensde toetsaanroep tijdelijk worden blootgesteld. Dat is geen normale beschikbaarstelling en verleent geen wereldactie, tooltoegang of toegang tot het verwachte antwoord.
+
 ## Onafhankelijke toetsing (v0.8.5)
 
 Leermateriaal en toetsmateriaal moeten herleidbaar gescheiden blijven. Menselijke goedkeuring alleen geldt niet als onafhankelijke prestatie. Een geslaagde gedragstest bewijst uitsluitend het gemeten gedrag en niet de interne oorsprong ervan of wijziging van modelgewichten.

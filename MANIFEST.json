@@ -1,7 +1,7 @@
 {
   "project": "AURA",
-  "version": "0.8.5",
-  "release": "Generalization & Leakage Lab",
+  "version": "0.8.5.1",
+  "release": "Evaluation Flow & Research UI",
   "date": "2026-09-02",
   "target": "Android Chrome",
   "hosting": "GitHub Pages repository root",

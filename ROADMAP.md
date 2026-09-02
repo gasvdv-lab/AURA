@@ -1,5 +1,12 @@
 # AURA Roadmap (cumulative)
 
+## v0.8.5.1 — voltooid
+
+- Kandidaatproef uitvoerbaar via tijdelijke, geïsoleerde evaluatiemodus.
+- Verwacht antwoord vooraf lokaal vastgelegd en nooit naar de provider gestuurd.
+- Echt Gemini/Groq-antwoord automatisch ingevuld en objectief vergeleken.
+- Compacte, sobere onderzoeksinterface met genummerde stappen.
+
 ## v0.8.5 — voltooid
 
 - Leermateriaal en onafhankelijke toetsopgaven expliciet gescheiden.

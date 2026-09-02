@@ -1,4 +1,8 @@
-# Foundation Model Bridge — v0.8.5
+# Foundation Model Bridge — v0.8.5.1
+
+## Tijdelijke kandidaatevaluatie
+
+Voor één proefaanroep krijgt het model uitsluitend de kandidaat-capability en de nieuwe opgave. Het vooraf vastgelegde verwachte antwoord en het leermateriaal blijven lokaal. De tijdelijke toegang wijzigt de normale capability-status niet.
 
 ## Generalization & Leakage Lab
 
