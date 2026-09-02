@@ -1,6 +1,6 @@
-# AURA v0.5.0 — Perception Kernel
+# AURA v0.6.0 — Memory Kernel
 
-AURA is an Android-first research runtime for a persistent, objective synthetic reality. v0.5.0 preserves all earlier kernels and introduces a strict boundary between objective `WORLD_STATE` and limited `PERCEIVED_STATE`.
+AURA is een Android-first onderzoeksruntime voor een persistente, objectieve synthetische werkelijkheid. v0.6.0 behoudt alle eerdere kernels en voegt geheugen toe dat uitsluitend uit begrensde `PERCEIVED_STATE`-waarnemingen kan ontstaan.
 
 Live Android test: https://gasvdv-lab.github.io/AURA/
 
@@ -15,12 +15,14 @@ npm test
 npm run validate
 ```
 
-## v0.5.0 scope
+## Bereik van v0.6.0
 
-Included cumulatively: objective world physics, causal Observatory, embodiment, sensorimotor evidence and range-limited synthetic perception. Observations originate at a body part, apply deterministic range and spherical occlusion, add reproducible bounded measurement noise, quantify uncertainty and expose stable perceptual track IDs instead of objective object IDs.
+Cumulatief inbegrepen: objectieve wereldfysica, causale Observatory, embodiment, sensorimotorisch bewijs, begrensde perceptie en een Memory Kernel met tijdelijke sensorische sporen, deterministische consolidatie, opvraging, toegankelijkheid, capaciteitslimieten, verzwakking en vergeten.
 
-`PERCEIVED_STATE` deliberately excludes exact world position, objective IDs, mass, material, force, integrity, static flags and Observatory. It may be incomplete, noisy and wrong. There is still no interpretation, memory, belief, cognition/LLM, autonomous behaviour, humanoid rendering, WebXR, camera, microphone, GPS, Synthetic Network or Human Internet runtime.
+Alleen geldige percepties mogen worden opgeslagen. Objectieve wereldvelden, Observatory, chatgeschiedenis en rechtstreekse databasedumps worden geweigerd. Een herinnering bewaart een eerdere onvolmaakte waarneming en is dus geen waarheid. Er zijn nog geen beliefs, interpretatie, cognitie/LLM, autonome handelingen, humanoid-rendering, WebXR, camera, microfoon, GPS, Synthetic Network of Human Internet.
 
-The service worker continues to use network-first navigation and immediate activation so GitHub Pages upgrades do not remain hidden behind older cached releases.
+Live Android-test: https://gasvdv-lab.github.io/AURA/
+
+De service worker blijft netwerk-eerst navigeren en onmiddellijk activeren, zodat GitHub Pages-upgrades niet verborgen blijven achter oudere caches.
 
 The browser interface is an Observatory-facing laboratory view, not AURA perception. AURA has no access to it.

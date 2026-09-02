@@ -1,3 +1,3 @@
 # Cognition boundary
 
-There is no cognition, LLM, memory, belief, attention, goal, emotion or agency runtime in v0.5. Perceptual observations are not interpreted and sensorimotor effect models are not beliefs. Laboratory inputs are not autonomous decisions. Observatory remains inaccessible to the perception boundary.
+Er is in v0.6 geen cognitie, LLM, belief, aandacht, doel, emotie of agency-runtime. Een opgevraagde herinnering wordt niet geïnterpreteerd en is geen belief. Laboratoriuminvoer is geen autonome beslissing. Observatory blijft ontoegankelijk voor perceptie en geheugen.

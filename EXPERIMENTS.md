@@ -73,3 +73,19 @@ Repeat observations from identical snapshots and seeds; prove bounded noise and 
 ## PK-04 Perceptual continuity
 
 Restore after observations and prove random state, track identities, next observation and subsequent `PERCEIVED_STATE` continue exactly.
+
+## MK-01 Geheugengrens
+
+Bewaar een geldige perceptie en bewijs dat objectieve ID's, massa, materiaal, krachten, integriteit, `WORLD_STATE` en Observatory niet in het geheugen terechtkomen en actief worden geweigerd.
+
+## MK-02 Consolidatie
+
+Vraag hetzelfde sensorische spoor herhaald op en bewijs dat de ingestelde generieke toegangsdrempel deterministisch één geconsolideerde herinnering vormt.
+
+## MK-03 Verzwakking en vergeten
+
+Laat geheugen-ticks verstrijken en bewijs dat sterkte deterministisch afneemt en items bij de drempel werkelijk uit de actieve geheugenstaat verdwijnen met een causale gebeurtenis.
+
+## MK-04 Continuïteit
+
+Herstel tijdelijke en geconsolideerde herinneringen midden in hun ontwikkeling en bewijs dat verdere opvraging en verzwakking exact gelijk verlopen.

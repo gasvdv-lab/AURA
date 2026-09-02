@@ -1,10 +1,12 @@
-# AURA Testing — cumulative release record
+# AURA-testplan — cumulatief en volledig Nederlandstalig
 
-Live Android test: https://gasvdv-lab.github.io/AURA/
+Vaste live Android-test: https://gasvdv-lab.github.io/AURA/
 
-## v0.5.0 automatic result
+Vanaf v0.6.0 worden alle testinstructies, verwachte resultaten en mislukcriteria in het Nederlands bijgehouden. Technische bestandsnamen en de letterlijke automatische uitvoer blijven onvertaald zodat resultaten exact vergelijkbaar zijn.
 
-Executed on 2026-09-01 with Node.js in the release workspace. Exact result:
+## Automatisch resultaat v0.6.0
+
+Uitgevoerd op 2 september 2026 met Node.js in de releasewerkruimte:
 
 ```text
 PASS tests/integration/browser-entry-smoke.test.mjs
@@ -13,6 +15,9 @@ PASS tests/integration/determinism-collision.test.mjs
 PASS tests/integration/embodiment-damage.test.mjs
 PASS tests/integration/embodiment-determinism.test.mjs
 PASS tests/integration/embodiment-persistence.test.mjs
+PASS tests/integration/memory-consolidation-retrieval.test.mjs
+PASS tests/integration/memory-determinism.test.mjs
+PASS tests/integration/memory-persistence.test.mjs
 PASS tests/integration/perception-determinism.test.mjs
 PASS tests/integration/perception-occlusion.test.mjs
 PASS tests/integration/perception-persistence.test.mjs
@@ -26,167 +31,172 @@ PASS tests/regression/v0.1-invariants.test.mjs
 PASS tests/regression/v0.2-world-with-embodiment.test.mjs
 PASS tests/regression/v0.3-embodiment-with-learning.test.mjs
 PASS tests/regression/v0.4-sensorimotor-with-perception.test.mjs
+PASS tests/regression/v0.5-perception-with-memory.test.mjs
 PASS tests/unit/actuator-boundary.test.mjs
 PASS tests/unit/damage-degradation.test.mjs
 PASS tests/unit/embodiment-blueprint.test.mjs
 PASS tests/unit/force-gravity.test.mjs
+PASS tests/unit/memory-boundary.test.mjs
+PASS tests/unit/memory-capacity.test.mjs
+PASS tests/unit/memory-decay-forgetting.test.mjs
 PASS tests/unit/perception-boundary.test.mjs
 PASS tests/unit/perception-range.test.mjs
 PASS tests/unit/resource-process.test.mjs
 PASS tests/unit/sensorimotor-boundaries.test.mjs
 PASS tests/unit/sensorimotor-signals.test.mjs
 PASS tests/unit/vector-material.test.mjs
-PASS: 29/29 test files passed
+PASS: 36/36 test files passed
 
-AURA v0.5.0 release validation: PASS
-Validated 16 required paths, cumulative live links, perception separation, and excluded capabilities.
+AURA v0.6.0 release validation: PASS
+Validated 18 required paths, cumulative live links, memory boundaries, Dutch testing documentation, and excluded capabilities.
 ```
 
-New coverage proves the objective-state firewall, range limitation, deterministic occlusion, stable opaque tracks, reproducible noise, causal observation records, exact perception snapshot/restore, browser-entry observation and preservation of all v0.1–v0.4 invariants.
+De nieuwe tests bewijzen invoerafscherming, tijdelijke sporen, deterministische opvraging, consolidatie, verzwakking, vergeetdrempels, capaciteitsvergeten, exact snapshot/herstel en behoud van alle invarianten uit v0.1 tot en met v0.5.
 
-## v0.5.0 Android real-world acceptance (manual)
+## Voorbereiding voor handmatige tests
 
-Record each as PASS or FAIL with device model, Android version and Chrome version.
+1. Open AURA v0.6.0 via Live Server of de vaste live-link.
+2. Sluit oudere AURA-tabbladen.
+3. Klik voor een volledig nieuwe proef op **Lokale wereld resetten**.
+4. Controleer dat bovenaan **Memory Kernel v0.6.0** staat.
+5. Noteer laptopmodel, besturingssysteem, browser en browserversie.
 
-1. Open the fixed live link in current Chrome for Android. PASS: **Perception Kernel v0.5.0** appears with 14 body parts, zero perceptions and no permission prompt. FAIL: older release, blank/error page or any hardware permission prompt.
-2. Tap **Observe** once. PASS: perception count becomes one and `perceivedState.items` contains the generic fixture as an opaque `track-1`. FAIL: no observation, crash or an objective ID such as `perception-fixture` inside `perceivedState`.
-3. Inspect `perceivedState`. PASS: it contains relative position, distance, apparent radius and uncertainty; it does not contain mass, material, force, integrity or Observatory. FAIL: any privileged field leaks.
-4. Tap **Observe** again. PASS: the same external body keeps the same track while measurements may differ reproducibly due to bounded noise. FAIL: arbitrary track replacement or non-finite measurements.
-5. Close Chrome fully and reopen. PASS: observations, track identity and all earlier kernel state restore. FAIL: state resets or corrupts.
-6. Reload five times. PASS: no bodies, trials, tracks or observations appear spontaneously. FAIL: duplicated genesis/state.
-7. After one online load, test airplane mode. PASS: v0.5 opens from cache. A first-ever offline visit may fail and is not a kernel failure.
-8. Tap **Reset local world**. PASS: only AURA v0.5 local state resets to one body embodiment, one external fixture and zero perceptions/trials. FAIL: reset fails or affects unrelated browser data.
+## Test 1 — Opstarten
 
-Interpretation, attention, memory, belief, cognition, autonomous observation, visual rendering, WebXR, camera, microphone and GPS are **not applicable** to v0.5.0.
+Controleer titel, status en knoppen.
 
-## v0.4.0 automatic result
+**GESLAAGD:** v0.6.0 verschijnt, 14 lichaamsdelen zijn aanwezig, er zijn 0 percepties, 0 sporen en 0 geconsolideerde herinneringen, en er verschijnt geen hardwaretoestemming.
 
-Executed on 2026-09-01 with Node.js in the release workspace. Exact result:
+**MISLUKT:** oudere versie, lege pagina, blijvend `opstarten…`, verkeerd aantal lichaamsdelen, crash of camera-/microfoon-/locatievraag.
+
+## Test 2 — Een waarneembaar spoor maken
+
+1. Klik eenmaal op **Waarnemen**.
+2. Controleer dat de perceptieteller 1 wordt.
+3. Klik eenmaal op **Laatste waarneming opslaan**.
+4. Controleer dat de sporenteller 1 wordt.
+
+**GESLAAGD:** `memoryState.traces` bevat `trace-1`, gekoppeld aan `observation-1`, met sterkte 1 en uitsluitend perceptuele inhoud.
+
+**MISLUKT:** geen spoor, meerdere spontane sporen, een crash of objectieve wereldvelden in het spoor.
+
+## Test 3 — Geheugengrens
+
+Inspecteer `memoryState` en zoek naar verboden informatie.
+
+**GESLAAGD:** geheugen bevat geen `objectiveWorld`, `worldState`, `observatory`, `materialId`, `mass`, `force`, `acceleration`, `integrity`, `static`, `bodyId` of `perception-fixture`.
+
+**MISLUKT:** één van deze objectieve of geprivilegieerde velden staat binnen een spoor of herinnering. Dezelfde velden mogen wel in het afzonderlijke menselijke `objectiveWorld`-gedeelte voorkomen.
+
+## Test 4 — Eerste opvraging
+
+1. Klik eenmaal op **Track-1 opvragen**.
+2. Controleer `trace-1`.
+
+**GESLAAGD:** `accessCount` wordt 1, `lastAccessTick` wordt bijgewerkt, toegankelijkheid wordt berekend en er bestaat nog geen geconsolideerde herinnering.
+
+**MISLUKT:** geen resultaat, verkeerde track, onmiddellijke willekeurige consolidatie of een waarheids-/belieflabel.
+
+## Test 5 — Consolidatie
+
+1. Klik een tweede keer op **Track-1 opvragen**.
+2. Controleer `memoryState.memories`.
+
+**GESLAAGD:** exact één `memory-1` ontstaat met type `consolidated-memory`, verwijzing naar `trace-1` en dezelfde begrensde perceptuele inhoud. Observatory bevat `memory.consolidated`.
+
+**MISLUKT:** geen consolidatie, meerdere herinneringen uit hetzelfde spoor of nieuwe objectieve informatie in de herinnering.
+
+## Test 6 — Verzwakking door tijd
+
+1. Noteer de sterkte van spoor en herinnering.
+2. Klik eenmaal op **60 ticks vooruit**.
+3. Vergelijk de nieuwe sterktes.
+
+**GESLAAGD:** het tijdelijke spoor verzwakt sneller dan de geconsolideerde herinnering; tijd stijgt exact 60 ticks; waarden blijven eindig.
+
+**MISLUKT:** sterkte groeit zonder opvraging, tijd verandert verkeerd, `NaN`/`Infinity` verschijnt of wereld-/lichaamsstaat raakt corrupt.
+
+## Test 7 — Werkelijk vergeten
+
+Klik herhaaldelijk op **60 ticks vooruit** en volg de tijdelijke sporen.
+
+**GESLAAGD:** een spoor dat de ingestelde drempel bereikt verdwijnt werkelijk uit `traces`, met een causale `memory.forgotten`-gebeurtenis. Een geconsolideerde herinnering blijft langer bestaan maar is niet permanent gegarandeerd.
+
+**MISLUKT:** een zwak spoor blijft eeuwig actief, verdwijnt zonder loggebeurtenis of verwijdert objectieve wereldobjecten mee.
+
+## Test 8 — Opslaan en herstellen
+
+1. Maak minstens één perceptie, spoor en geconsolideerde herinnering.
+2. Noteer tick, sterktes, aantallen en ID's.
+3. Sluit het AURA-tabblad en de browser volledig.
+4. Open dezelfde URL opnieuw.
+
+**GESLAAGD:** alle genoteerde waarden, ID's en aantallen herstellen exact en verdere opvraging gaat vanaf dezelfde toestand verder.
+
+**MISLUKT:** geheugen reset, ID's veranderen, alleen sommige kernels herstellen of state wordt gedupliceerd.
+
+## Test 9 — Vijfmaal vernieuwen
+
+Vernieuw de pagina vijfmaal met `F5`.
+
+**GESLAAGD:** ticks, wereldobjecten, lichaamsdelen, percepties, sporen en herinneringen blijven gelijk. Er ontstaat geen nieuwe genesis.
+
+**MISLUKT:** spontane of dubbele state, verdwenen geheugen of terugkeer naar een oudere release.
+
+## Test 10 — Offline heropenen
+
+1. Open v0.6.0 minstens eenmaal online.
+2. Sluit het tabblad.
+3. Schakel wifi uit of gebruik vliegtuigstand.
+4. Open dezelfde URL opnieuw.
+
+**GESLAAGD:** de volledige v0.6-interface opent uit cache en lokale geheugenstate blijft beschikbaar. Een allereerste offline bezoek hoeft niet te werken.
+
+**MISLUKT:** een eerder succesvol geladen release kan niet offline openen of toont een oudere versie.
+
+## Test 11 — Volledige lokale reset
+
+Klik **Lokale wereld resetten**.
+
+**GESLAAGD:** tick wordt 0, er zijn 14 lichaamsdelen, één generieke externe testfixture, 0 percepties, 0 sporen en 0 herinneringen. Andere websites blijven onaangetast.
+
+**MISLUKT:** oude geheugenstate blijft bestaan, AURA wordt leeg, genesis dupliceert of gegevens van andere websites verdwijnen.
+
+## Niet van toepassing in v0.6.0
+
+Beliefs, interpretatie, bewustzijn, emoties, AI/LLM, autonome observatie, autonoom handelen, visuele humanoid-rendering, WebXR, camera, microfoon en GPS zijn bewust afwezig en hoeven niet getest te worden.
+
+## Resultatenformulier
 
 ```text
-PASS tests/integration/browser-entry-smoke.test.mjs
-PASS tests/integration/construction-causality.test.mjs
-PASS tests/integration/determinism-collision.test.mjs
-PASS tests/integration/embodiment-damage.test.mjs
-PASS tests/integration/embodiment-determinism.test.mjs
-PASS tests/integration/embodiment-persistence.test.mjs
-PASS tests/integration/persistence-mid-simulation.test.mjs
-PASS tests/integration/sensorimotor-determinism.test.mjs
-PASS tests/integration/sensorimotor-learning.test.mjs
-PASS tests/integration/sensorimotor-persistence.test.mjs
-PASS tests/regression/no-spontaneous-creation.test.mjs
-PASS tests/regression/v0.1-invariants.test.mjs
-PASS tests/regression/v0.2-world-with-embodiment.test.mjs
-PASS tests/regression/v0.3-embodiment-with-learning.test.mjs
-PASS tests/unit/actuator-boundary.test.mjs
-PASS tests/unit/damage-degradation.test.mjs
-PASS tests/unit/embodiment-blueprint.test.mjs
-PASS tests/unit/force-gravity.test.mjs
-PASS tests/unit/resource-process.test.mjs
-PASS tests/unit/sensorimotor-boundaries.test.mjs
-PASS tests/unit/sensorimotor-signals.test.mjs
-PASS tests/unit/vector-material.test.mjs
-PASS: 22/22 test files passed
+AURA v0.6.0 — handmatige praktijktest
 
-AURA v0.4.0 release validation: PASS
-Validated 15 required paths, cumulative live links, sensorimotor boundaries, and excluded capabilities.
+Apparaat:
+Besturingssysteem:
+Browser en versie:
+Datum:
+
+1. Opstarten: GESLAAGD / MISLUKT
+2. Waarneembaar spoor: GESLAAGD / MISLUKT
+3. Geheugengrens: GESLAAGD / MISLUKT
+4. Eerste opvraging: GESLAAGD / MISLUKT
+5. Consolidatie: GESLAAGD / MISLUKT
+6. Verzwakking: GESLAAGD / MISLUKT
+7. Vergeten: GESLAAGD / MISLUKT
+8. Opslaan en herstellen: GESLAAGD / MISLUKT
+9. Vijfmaal vernieuwen: GESLAAGD / MISLUKT
+10. Offline heropenen: GESLAAGD / MISLUKT
+11. Lokale reset: GESLAAGD / MISLUKT
+
+Opmerkingen:
 ```
 
-New coverage proves raw signal validity, semantic/API absence, actuator and trial bounds, deterministic consequence learning, accumulating model samples, causal trial chains, exact combined persistence, unchanged 14-part embodiment, no spontaneous creation and browser-entry trial/persistence behaviour. All v0.1–v0.3 regressions remain active.
+## Historische automatische baselines
 
-## v0.4.0 Android real-world acceptance (manual)
-
-Record each as PASS or FAIL with device model, Android version and Chrome version.
-
-1. Open the fixed live link in current Chrome for Android. PASS: it shows **Sensorimotor Development v0.4.0**, 14 body parts, zero trials on fresh state and no permission prompt. FAIL: older version, blank/error page, wrong part count or any permission prompt.
-2. Tap **Run actuator trial** once. PASS: tick increases by four, trial count becomes one, and the displayed state contains one learned model with `samples: 1`. FAIL: no model, wrong count, crash or non-finite values.
-3. Tap the trial button again. PASS: trial count becomes two and the matching model reports `samples: 2`. FAIL: the model resets, duplicates under another key or adds scripted skill labels.
-4. Close Chrome fully and reopen. PASS: world, 14-part body, both trials and learned model restore exactly. FAIL: any layer resets or corrupts.
-5. Reload five times. PASS: no duplicate genesis, body parts or trials appear. FAIL: spontaneous state creation.
-6. Leave an older AURA tab open during deployment, then open a new AURA tab after GitHub Pages updates. PASS: v0.4 appears after a normal refresh because navigation is network-first and the new worker activates immediately. FAIL: an older release remains indefinitely.
-7. After one online load, test airplane mode. PASS: the full v0.4 runtime opens from cache. A first-ever offline visit may fail and is not a kernel failure.
-8. Tap **Reset local world**. PASS: only AURA v0.4 local state resets to one fresh body and zero trials. FAIL: reset fails or affects unrelated browser data.
-
-Autonomous exploration, action choice, walking, balance, visual humanoid rendering, perception, WebXR, camera, microphone, GPS and cognition are **not applicable** to v0.4.0.
-
-## v0.3.0 automatic result
-
-Executed on 2026-09-01 with Node.js in the release workspace. Exact result:
-
-```text
-PASS tests/integration/browser-entry-smoke.test.mjs
-PASS tests/integration/construction-causality.test.mjs
-PASS tests/integration/determinism-collision.test.mjs
-PASS tests/integration/embodiment-damage.test.mjs
-PASS tests/integration/embodiment-determinism.test.mjs
-PASS tests/integration/embodiment-persistence.test.mjs
-PASS tests/integration/persistence-mid-simulation.test.mjs
-PASS tests/regression/no-spontaneous-creation.test.mjs
-PASS tests/regression/v0.1-invariants.test.mjs
-PASS tests/regression/v0.2-world-with-embodiment.test.mjs
-PASS tests/unit/actuator-boundary.test.mjs
-PASS tests/unit/damage-degradation.test.mjs
-PASS tests/unit/embodiment-blueprint.test.mjs
-PASS tests/unit/force-gravity.test.mjs
-PASS tests/unit/resource-process.test.mjs
-PASS tests/unit/vector-material.test.mjs
-PASS: 16/16 test files passed
-
-AURA v0.3.0 release validation: PASS
-Validated 13 required paths, cumulative live links, embodiment boundaries, and excluded capabilities.
-```
-
-New coverage proves sex-characteristic-free topology, unique and valid parent links, absence of scripted motor skills, actuator bounds and causal logging, deterministic embodiment trajectories, local part damage/raw integrity sensing, joint/body conservation, and exact combined World + Embodiment snapshot/restore. All v0.1 and v0.2 regression coverage remains active.
-
-## v0.3.0 Android real-world acceptance (manual)
-
-Record each as PASS or FAIL with device model, Android version and Chrome version.
-
-1. Open the fixed live link in current Chrome for Android. PASS: it shows **Embodiment Kernel v0.3.0**, 14 body parts and no permission prompt. FAIL: older release, wrong part count, blank/error page, or camera/microphone/location/XR prompt.
-2. Tap **Step 1 tick**. PASS: tick increases once; causal events include joint evaluation, forces, integration and sensor samples. Values remain finite. FAIL: missing event categories, `NaN`/infinite values, or crash.
-3. Tap **Step 60 ticks**. PASS: the body evolves under gravity/constraints without spontaneous extra/missing parts. Physical instability is a FAIL only if values become non-finite or the runtime crashes; learned standing is intentionally absent.
-4. Close Chrome fully and reopen the link. PASS: tick, all 14 parts, joint commands and causal history restore. FAIL: state resets or corrupts.
-5. Reload five times. PASS: exactly one `embodiment.created` genesis event remains and the body is not duplicated. FAIL: repeated genesis or changed saved state.
-6. After one online load, test airplane mode. PASS: the full v0.3 runtime opens from cache. A first-ever offline visit may fail and is not a kernel failure.
-7. Tap **Reset local world**. PASS: only AURA v0.3 local state resets and one fresh 14-part body appears. FAIL: reset fails or affects unrelated browser data.
-
-Humanoid rendering/appearance, WebXR, camera, microphone, GPS, cognition, autonomous movement and sensorimotor learning are **not applicable** to v0.3.0.
-
-## v0.2.0 automatic result
-
-Executed on 2026-09-01 with Node.js in the release workspace. Exact result:
-
-```text
-PASS tests/integration/construction-causality.test.mjs
-PASS tests/integration/determinism-collision.test.mjs
-PASS tests/integration/persistence-mid-simulation.test.mjs
-PASS tests/regression/no-spontaneous-creation.test.mjs
-PASS tests/regression/v0.1-invariants.test.mjs
-PASS tests/unit/damage-degradation.test.mjs
-PASS tests/unit/force-gravity.test.mjs
-PASS tests/unit/resource-process.test.mjs
-PASS tests/unit/vector-material.test.mjs
-PASS: 9/9 test files passed
-
-AURA v0.2.0 release validation: PASS
-Validated 10 required paths, cumulative live links, and runtime boundaries.
-```
-
-Coverage includes repeat determinism, force/mass integration, gravity, deterministic collisions, material damage and degradation, no spontaneous bodies/resources, construction conservation, process loss accounting, causal references and hash-chain integrity, mid-simulation snapshot/restore, and v0.1 state/time/entity/randomness/persistence invariants.
-
-## Android real-world acceptance (manual)
-
-These are the only tests not software-verifiable here. Record each as PASS or FAIL with device model, Android version and Chrome version.
-
-1. Open the fixed live link in current Chrome for Android. PASS: page loads over HTTPS, identifies v0.2.0, shows one body and no permission prompt. FAIL: blank/error page, older version, or any camera/microphone/location/XR prompt.
-2. Tap **Step 1 tick**. PASS: tick and event count increase once; `origin-body` position/velocity change under gravity. FAIL: no change, non-finite values, or crash.
-3. Tap **Step 60 ticks**, note tick and body position, close the tab/app fully, then reopen the link. PASS: saved tick/state return exactly. FAIL: reset or corrupted state.
-4. Reload five times. PASS: state remains stable and no duplicate `body.created` event appears. FAIL: spontaneous body/resource creation or changed saved values.
-5. Enable airplane mode after one successful load and reopen if the service worker has installed. PASS: shell opens from cache (persistence remains local). A first-ever offline visit may fail and is not a kernel failure.
-6. Tap **Reset local world**. PASS: only local v0.2.0 world data resets and a fresh origin world appears. FAIL: reset does nothing or affects unrelated browser data.
-
-WebXR, tracking, camera, microphone, GPS, cognition, network and humanoid tests are **not applicable** to v0.2.0 because those capabilities are intentionally absent.
-
-## Earlier baselines
-
-v0.0.1 documentation validator: 15 documents / 11 core rules passed. v0.1.0: 29 required paths passed and 6/6 Synthetic Kernel test files passed. Their invariants remain represented in the v0.2 regression suite.
+- v0.0.1: documentatievalidator geslaagd voor 15 documenten en 11 kernregels.
+- v0.1.0: 6/6 Synthetic Kernel-testbestanden geslaagd.
+- v0.2.0: 9/9 testbestanden geslaagd.
+- v0.3.0: 16/16 testbestanden geslaagd.
+- v0.4.0: 22/22 testbestanden geslaagd.
+- v0.5.0: 29/29 testbestanden geslaagd.
+- v0.6.0: 36/36 testbestanden geslaagd.

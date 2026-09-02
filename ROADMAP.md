@@ -6,8 +6,9 @@
 - v0.3.0 Embodiment Kernel — abstract physically sexless humanoid biostructure, raw sensors and low-level actuators, no prescribed identity or skills — complete.
 - v0.4.0 Sensorimotor Development — deterministic actuator/consequence evidence without scripted skills or goals — complete.
 - v0.5.0 Perception Kernel — range-limited, occluded, noisy `PERCEIVED_STATE` strictly separated from `WORLD_STATE` — complete.
-- v0.6.0 Memory Kernel — next; sensory traces, persistent memory structures, retrieval, modification and possible forgetting without chat-history-as-memory.
-- v0.7+ Beliefs, foundation-model bridge and autonomy only after their earlier gates.
+- v0.6.0 Memory Kernel — sensorische sporen, consolidatie, opvraging, verzwakking, capaciteit en vergeten zonder chatgeschiedenis als geheugen — voltooid.
+- v0.7.0 Belief & Hypothesis Kernel — volgende stap; onzekere, tegenstrijdige, verouderde en mogelijk onjuiste beliefs afgeleid uit perceptie en geheugen.
+- v0.8+ Foundation-modelkoppeling en autonomie pas na hun eerdere veiligheidspoorten.
 - Later phases: persistent environments, synthetic information systems, strictly read-only Human Internet, communication, physical-world sensing, places, WebAR rendering, and longitudinal research.
 
 Capabilities remain gated: adding a later phase must not silently pull its runtime into an earlier release.

@@ -1,12 +1,12 @@
 {
   "project": "AURA",
-  "version": "0.5.0",
-  "release": "Perception Kernel",
+  "version": "0.6.0",
+  "release": "Memory Kernel",
   "date": "2026-09-01",
   "target": "Android Chrome",
   "hosting": "GitHub Pages repository root",
   "buildRequired": false,
-  "automaticTestFiles": 29,
+  "automaticTestFiles": 36,
   "automaticResult": "PASS",
   "manualHardwareStatus": "PENDING"
 }
