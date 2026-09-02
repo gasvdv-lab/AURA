@@ -1,5 +1,9 @@
 # AURA Constitution (cumulative)
 
+## Gecontroleerd leren (v0.8.4)
+
+Een menselijke les of proefbeoordeling is herleidbare evidence, geen objectieve wereldwaarheid en geen bewijs van interne modeltraining. Beschikbaarstelling moet reproduceerbaar, persistent, causaal gelogd en herroepbaar onderzoekbaar blijven.
+
 ## Capability- en kennisherkomst (v0.8.3)
 
 Latente kennis of vaardigheid van een gekoppeld foundation model geldt niet automatisch als kennis of vaardigheid van AURA. Een hogere cognitieve capability moet een expliciete, causale herkomst hebben en door afzonderlijke proeven beschikbaar worden gesteld. Onzekerheid of “ik weet het niet” is geldig gedrag en mag niet alleen voor gebruiksgemak worden weggeprogrammeerd.

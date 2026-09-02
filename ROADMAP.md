@@ -1,5 +1,13 @@
 # AURA Roadmap (cumulative)
 
+## v0.8.4 — voltooid
+
+- Bedienbare leerworkflow voor lesregistratie en menselijke proefbeoordeling.
+- Zichtbare kandidaat-/beschikbaarheidsstatus met voortgang naar twee unieke proeven.
+- Capability-state persistent opgeslagen en opgenomen in gecontroleerde AI-context.
+- Iedere leerstap causaal gelogd; menselijke beoordeling blijft evidence, geen wereldwaarheid.
+- v0.8.5 wordt de capability-leakage- en onafhankelijkheidsproef.
+
 ## v0.8.3 — voltooid
 
 - Foundation-modelkennis gescheiden van AURA-kennis.

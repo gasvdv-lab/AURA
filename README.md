@@ -1,3 +1,13 @@
+# AURA v0.8.4 — Controlled Learning Workflow
+
+Live Android-test: https://gasvdv-lab.github.io/AURA/
+
+v0.8.4 maakt de capabilitygrens bedienbaar. In **2. Leren** kan een mens een les als herleidbare evidence registreren, daarna afzonderlijke proeven beoordelen en precies zien waarom een capability nog kandidaat is. Pas na minimaal twee verschillende geslaagde proeven wordt ze beschikbaar voor de gecontroleerde AI-context.
+
+Dit is gecontroleerd, menselijk begeleid leren—geen bewijs dat het model intern nieuwe gewichten heeft geleerd. Een menselijke beoordeling is expliciete evidence, geen objectieve wereldwaarheid. Iedere stap wordt opgeslagen, kan worden hersteld en krijgt een causale Observatory-registratie.
+
+## Cumulatief behouden uit v0.8.3
+
 # AURA v0.8.3 — Capability & Knowledge Provenance
 
 Live Android-test: https://gasvdv-lab.github.io/AURA/

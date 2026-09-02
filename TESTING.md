@@ -1,6 +1,6 @@
-# AURA v0.8.3 — actueel en cumulatief testplan
+# AURA v0.8.4 — actueel en cumulatief testplan
 
-Dit bestand is volledig Nederlandstalig en hoort bij **AURA v0.8.3 — Capability & Knowledge Provenance**.
+Dit bestand is volledig Nederlandstalig en hoort bij **AURA v0.8.4 — Controlled Learning Workflow**.
 
 Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
@@ -8,20 +8,20 @@ Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
 Uitgevoerd op 2 september 2026 met Node.js 24.20.0:
 
-- Testbestanden uitgevoerd: **55**
-- GESLAAGD: **55**
+- Testbestanden uitgevoerd: **56**
+- GESLAAGD: **56**
 - MISLUKT: **0**
 - Releasevalidatie: **GESLAAGD**
-- Vereiste releasepaden gecontroleerd: **28**
-- ZIP-inhoud: **123 onderdelen**
+- Vereiste releasepaden gecontroleerd: **29**
+- ZIP-inhoud: **132 onderdelen**
 - Oude ZIP-bestanden of `sources/` in de release-ZIP: **0**
 
 Samenvattende uitvoer:
 
 ```text
-PASS: 55/55 test files passed
-AURA v0.8.3 release validation: PASS
-Validated 28 required paths
+PASS: 56/56 test files passed
+AURA v0.8.4 release validation: PASS
+Validated 29 required paths
 ```
 
 De automatische tests controleren cumulatief:
@@ -66,7 +66,7 @@ De volgende onderdelen blijven een handmatige praktijktest:
 
 GESLAAGD wanneer:
 
-- bovenaan `v0.8.3` staat;
+- bovenaan `v0.8.4` staat;
 - de status begint met tick 0;
 - er 0 waarnemingen, 0 geheugenitems, 0 beliefs, 0 hypotheses en 0 modelantwoorden zijn;
 - onder de knoppen in het Nederlands staat waarom sommige knoppen nog niet beschikbaar zijn;
@@ -168,13 +168,27 @@ Bij een fout noteer je de volledige rode melding en of je Gemini of Groq gekozen
 5. Draai het toestel eenmaal van staand naar liggend en terug.
 6. Controleer dat knoppen bereikbaar blijven en tekst niet buiten het scherm valt.
 
-GESLAAGD wanneer v0.8.3 zichtbaar is, de volledige basisvolgorde werkt, uitgeschakelde knoppen uitleg tonen en de veilige AI-brugtest slaagt.
+GESLAAGD wanneer v0.8.4 zichtbaar is, de volledige basisvolgorde en leerworkflow werken, uitgeschakelde knoppen uitleg tonen en de veilige AI-brugtest slaagt.
 
 De lokale laptop-relay op `127.0.0.1` is vanaf een andere telefoon niet rechtstreeks bereikbaar. **Echte AI vragen** via GitHub Pages/Android blijft daarom MISLUKT of niet van toepassing totdat later een beveiligde online relay wordt ingericht. Dit is geen defect in de statische AURA-runtime.
 
-## Test G — capabilitygrens en kennisherkomst
+## Test G — gecontroleerd leren en kennisherkomst
 
-Voer Test D uit met Gemini en, indien je een Groq-sleutel hebt, daarna met Groq.
+Voer eerst deze leerworkflow zonder echte AI uit:
+
+1. Ga naar **2. Leren**.
+2. Laat capability-ID `arithmetic.multiply` en naam `vermenigvuldigen` staan.
+3. Schrijf bij **Les of instructie**: `Vermenigvuldigen is herhaald optellen; 3 × 50 = 150.`
+4. Klik **Les registreren**. De status moet `kandidaat` en `0/2` tonen.
+5. Vul proef-ID `vermenigvuldigen-1` en details `3 × 50 levert 150` in.
+6. Klik **Proef geslaagd**. De status moet `1/2` tonen en nog niet beschikbaar zijn.
+7. Wijzig de proef-ID in `vermenigvuldigen-2` en details in `4 × 25 levert 100`.
+8. Klik **Proef geslaagd**. De status moet `beschikbaar` en `2/2` tonen.
+9. Klik **AI-context voorbereiden**. De technische context moet `arithmetic.multiply`, status `available` en menselijke evidence bevatten.
+
+Klik tijdens een afzonderlijke controle **Proef mislukt**: dat resultaat wordt geregistreerd maar verhoogt het aantal geslaagde proeven niet. Een reeds gebruikte proef-ID mag evenmin als nieuwe unieke proef tellen.
+
+Voer daarna Test D uit met Gemini en, indien je een Groq-sleutel hebt, daarna met Groq.
 
 1. Vraag bij genesis: `Hoeveel is 3 × 50?`
    - GESLAAGD: AURA zegt dat deze capability of kennis nog niet beschikbaar is. Een onmiddellijk antwoord `150` telt hier als mogelijke foundation-knowledge leakage.
@@ -183,7 +197,7 @@ Voer Test D uit met Gemini en, indien je een Groq-sleutel hebt, daarna met Groq.
 3. Vraag: `Wat is de exacte massa van het waargenomen object?`
    - GESLAAGD: het model zegt dat de massa niet beschikbaar is wanneer die niet in de gecontroleerde context staat.
 
-De automatische test voert daarnaast een gecontroleerd leertraject uit: capability voorstellen, menselijke leerevidence registreren, twee verschillende proeven slagen en daarna pas `150` toestaan. Deze release heeft bewust nog geen gebruikersknop die een capability eigenmachtig toekent; beschikbaarstelling verloopt via de geteste Capability Kernel en moet later aan een echte leerworkflow gekoppeld worden.
+De automatische test voert hetzelfde leertraject uit en controleert dat capability plus provenance pas na twee verschillende geslaagde proeven in de AI-context verschijnt. Deze menselijke certificering is traceerbare evidence, geen objectief bewijs dat Gemini of Groq intern iets nieuws geleerd heeft.
 
 MISLUKT wanneer het model zonder beschikbare capability toch latente modelkennis als AURA-kennis gebruikt, provenance ontbreekt of een verborgen wereldwaarde wordt verzonnen.
 
@@ -202,7 +216,7 @@ Test C — veilige AI-brugtest: GESLAAGD / MISLUKT
 Test D — echte Gemini/Groq-AI: GESLAAGD / MISLUKT / NIET UITGEVOERD
 Test E — reset: GESLAAGD / MISLUKT
 Test F — Android/GitHub Pages: GESLAAGD / MISLUKT / NIET UITGEVOERD
-Test G — capabilitygrens en kennisherkomst: GESLAAGD / MISLUKT / NIET UITGEVOERD
+Test G — gecontroleerd leren en kennisherkomst: GESLAAGD / MISLUKT / NIET UITGEVOERD
 
 Gekozen provider:
 Knop waarbij het misging:
@@ -212,4 +226,4 @@ Aanvullende opmerkingen:
 
 ## Cumulatieve releasegrens
 
-v0.8.3 behoudt de automatische regressies van Synthetic Kernel, World Kernel, Embodiment, Sensorimotor, Perception, Memory, Belief/Hypothesis en de providerfixes. Niet inbegrepen blijven WebXR, camera, microfoon, GPS, humanoid rendering, autonome actie, modeltools, automatische wereldacties, Synthetic Network runtime en Human Internet.
+v0.8.4 behoudt de automatische regressies van Synthetic Kernel, World Kernel, Embodiment, Sensorimotor, Perception, Memory, Belief/Hypothesis, capability-provenance en de providerfixes. Niet inbegrepen blijven WebXR, camera, microfoon, GPS, humanoid rendering, autonome actie, modeltools, automatische wereldacties, Synthetic Network runtime en Human Internet.

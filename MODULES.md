@@ -1,4 +1,8 @@
-# AURA Modules — v0.8.3
+# AURA Modules — v0.8.4
+
+## Controlled Learning UI
+
+Verbindt menselijke instructie en afzonderlijke proefresultaten met de Capability Kernel. De interface toont voortgang en blokkaderedenen, bewaart de workflow lokaal en stelt alleen beschikbare capabilities bloot aan de gecontroleerde modelcontext. Ze traint of wijzigt het externe foundation model niet.
 
 ## Capability Kernel
 

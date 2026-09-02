@@ -1,5 +1,5 @@
 $ErrorActionPreference = 'Stop'
-Write-Host 'AURA v0.8.3 - eenvoudige AI-starter' -ForegroundColor Cyan
+Write-Host 'AURA v0.8.4 - eenvoudige AI-starter' -ForegroundColor Cyan
 $sleutelmap = Join-Path $env:LOCALAPPDATA 'AURA'
 $providerbestand = Join-Path $sleutelmap 'provider.txt'
 New-Item -ItemType Directory -Path $sleutelmap -Force | Out-Null

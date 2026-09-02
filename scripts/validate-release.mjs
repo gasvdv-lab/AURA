@@ -16,9 +16,9 @@ const memory=(await readFile('src/memory/memory-kernel.js','utf8')).toLowerCase(
 for(const token of ['chat history','worldstate()','observatory.records'])if(memory.includes(token))throw new Error(`Verboden geheugensnelkoppeling: ${token}`);
 
 const page=await readFile('index.html','utf8');
-for(const id of ['feedback','workflow-help','next-action','step','run','trial','observe','remember','recall','believe','propose','evaluate','new-hypothesis','compile','test-model','live-model','relay-provider','relay-endpoint','relay-model','model-input','reset'])if(!page.includes(`id="${id}"`))throw new Error(`Ontbrekend interface-element: ${id}`);
+for(const id of ['feedback','workflow-help','next-action','step','run','trial','observe','remember','recall','believe','propose','evaluate','new-hypothesis','capability-status','capability-id','capability-label','lesson-input','start-learning','test-id','test-details','test-pass','test-fail','compile','test-model','live-model','relay-provider','relay-endpoint','relay-model','model-input','reset'])if(!page.includes(`id="${id}"`))throw new Error(`Ontbrekend interface-element: ${id}`);
 
 for(const path of ['src/app.js','src/foundation-model/context-compiler.js','src/foundation-model/foundation-model-bridge.js','src/foundation-model/providers.js']){const source=await readFile(path,'utf8');for(const secretToken of ['OPENAI_API_KEY','api.openai.com','authorization:'])if(source.includes(secretToken))throw new Error(`Servergeheim of directe OpenAI-aanroep in browsercode: ${path}`);}
 
-console.log('AURA v0.8.3 release validation: PASS');
+console.log('AURA v0.8.4 release validation: PASS');
 console.log(`Validated ${required.length} required paths, controlled model context, relay isolation, Dutch testing documentation, and excluded capabilities.`);

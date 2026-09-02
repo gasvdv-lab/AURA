@@ -1,5 +1,9 @@
 # AURA Experiments (cumulative)
 
+## v0.8.4 — gecontroleerde leerworkflow
+
+Registreer een les voor `arithmetic.multiply`, beoordeel twee verschillend benoemde proeven als geslaagd en controleer dat de capability pas daarna van `candidate` naar `available` gaat. Compileer vervolgens AI-context en verifieer dat capability en provenance aanwezig zijn. Een mislukte of dubbel benoemde proef mag de drempel niet omzeilen.
+
 ## v0.8.3 — Capability & Knowledge Provenance
 
 Zonder beschikbare vermenigvuldigingscapability weigert de cognitieve component de berekening. Na gecontroleerde leerevidence en twee unieke geslaagde proeven verschijnt `arithmetic.multiply` met herkomst in de modelcontext en mag dezelfde vraag worden berekend.

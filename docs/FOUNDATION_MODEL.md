@@ -1,4 +1,10 @@
-# Foundation Model Bridge — v0.8.3
+# Foundation Model Bridge — v0.8.4
+
+## Controlled Learning Workflow
+
+De gebruikersinterface kan nu menselijke instructie als evidence registreren en verschillende proeven als geslaagd of mislukt vastleggen. De Capability Kernel beslist deterministisch over beschikbaarstelling; Gemini en Groq beslissen dat niet zelf. Alleen een beschikbare capability wordt in de whitelist-context opgenomen. Deze workflow verandert geen modelgewichten en promoveert menselijke beoordeling niet tot objectieve `WORLD_STATE`.
+
+## Cumulatief behouden uit v0.8.3
 
 ## Capability & Knowledge Provenance
 
