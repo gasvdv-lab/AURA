@@ -1,5 +1,12 @@
 # AURA Roadmap (cumulative)
 
+## v0.9.2.4 — voltooid
+
+- Globale feedback zichtbaar vanuit iedere fase.
+- Zichtbare wachtstatus voor echte AI-aanvragen.
+- Dubbelklikken tijdens lopende AI-aanvragen geblokkeerd.
+- Automatische codekoppeling voor iedere zichtbare knop.
+
 ## v0.9.2.3 — voltooid
 
 - Testplan volledig herschreven volgens de zeven actuele sitefasen.

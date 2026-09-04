@@ -1,3 +1,11 @@
+# AURA v0.9.2.4 — Global Action Feedback Fix
+
+Live Android-test: https://gasvdv-lab.github.io/AURA/
+
+v0.9.2.4 verplaatst actiefeedback uit het verborgen Bewijs-paneel naar een globale statusbalk. **Proef door echte AI uitvoeren** toont nu zichtbaar dat de aanvraag bezig is, daarna het resultaat of de volledige foutmelding. Tijdens een lopende aanvraag is de gebruikte knop tijdelijk geblokkeerd tegen dubbelklikken. Een automatische dekkingstest controleert voortaan iedere zichtbare knop-ID tegen de achterliggende applicatiecode.
+
+## Cumulatief behouden uit v0.9.2.3
+
 # AURA v0.9.2.3 — Testing and UI Synchronization
 
 Live Android-test: https://gasvdv-lab.github.io/AURA/

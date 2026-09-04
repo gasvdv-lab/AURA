@@ -1,4 +1,4 @@
-# AURA v0.9.2.3 — actueel Nederlandstalig testplan
+# AURA v0.9.2.4 — actueel Nederlandstalig testplan
 
 Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
@@ -8,11 +8,11 @@ Dit plan is volledig Nederlandstalig en gebruikt exact de namen en zeven fasen v
 
 Uitgevoerd op 4 september 2026 met Node.js 24.20.0:
 
-- Testbestanden: **77**
-- GESLAAGD: **77**
+- Testbestanden: **79**
+- GESLAAGD: **79**
 - MISLUKT: **0**
 - Releasevalidatie: **GESLAAGD**
-- ZIP-inhoud: **162 onderdelen**
+- ZIP-inhoud: **164 onderdelen**
 - Sleutels, oude ZIP-bestanden en `sources/` in de ZIP: **0**
 
 De suite controleert cumulatief wereldfysica, determinisme, causaliteit, resources, persistentie, embodiment, waarneming, geheugen, beliefs, hypothesen, aandacht, Foundation-context, Gemini/Groq-relay, Native leren, zelfstandig leren, objectabstractie en alle eerdere regressiegrenzen.
@@ -35,7 +35,7 @@ Klik op **Volledig overzicht tonen** om alle zeven panelen te zien. De knop heet
 2. Klik **Alle lokale AURA-state resetten**.
 3. Bevestig de reset.
 
-GESLAAGD wanneer bovenaan `v0.9.2.3` staat, de status `tick 0` en overal nul resultaten toont, en **Volgende teststap: Waarnemen** verschijnt. Er mag geen camera-, microfoon- of GPS-toestemming worden gevraagd.
+GESLAAGD wanneer bovenaan `v0.9.2.4` staat, de status `tick 0` en overal nul resultaten toont, en **Volgende teststap: Waarnemen** verschijnt. Er mag geen camera-, microfoon- of GPS-toestemming worden gevraagd.
 
 ## Test 2 — fasenavigatie
 
@@ -83,7 +83,7 @@ Hiervoor moet `server/start-aura-ai.cmd` op dezelfde laptop openstaan.
 4. Klik **01 · Leermateriaal registreren**.
 5. Vul proef-ID `proef-1`, opgave `7 × 8` en verwacht antwoord `56` in.
 6. Klik **02 · Proef door echte AI uitvoeren**.
-7. Wacht tot **Antwoord van AURA** automatisch is ingevuld.
+7. De globale status toont eerst **AI-aanroep bezig… even wachten**. Wacht daarna tot **Antwoord van AURA** automatisch is ingevuld.
 8. Klik **03 · Antwoord objectief controleren**.
 9. Herhaal met proef-ID `proef-2`, opgave `9 × 6` en verwacht antwoord `54`.
 
@@ -140,7 +140,7 @@ De GitHub Pages-site op dezelfde laptop kan de lokale relay bereiken. Een telefo
 
 1. Publiceer de repositoryroot via GitHub Pages.
 2. Open https://gasvdv-lab.github.io/AURA/ in Android Chrome.
-3. Controleer versie `v0.9.2.3` en voer Test 1–4, Test 7–9 uit.
+3. Controleer versie `v0.9.2.4` en voer Test 1–4, Test 7–9 uit.
 4. Draai het toestel van staand naar liggend en terug.
 
 GESLAAGD wanneer alle bediening bereikbaar blijft, niets buiten het scherm valt en geen hardwaretoestemming wordt gevraagd.
