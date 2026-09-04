@@ -1,3 +1,11 @@
+# AURA v0.9.2.5 — Storage Quota Recovery Fix
+
+Live Android-test: https://gasvdv-lab.github.io/AURA/
+
+v0.9.2.5 ruimt bij het bewaren verouderde, dubbele AURA-opslagkopieën op. Een geslaagde AI-aanroep wordt niet langer als mislukt gemeld wanneer uitsluitend de browseropslag vol is: het antwoord blijft zichtbaar en AURA geeft een afzonderlijke opslagwaarschuwing met herstelstap.
+
+## Cumulatief behouden uit v0.9.2.4
+
 # AURA v0.9.2.4 — Global Action Feedback Fix
 
 Live Android-test: https://gasvdv-lab.github.io/AURA/

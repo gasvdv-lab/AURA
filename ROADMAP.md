@@ -1,5 +1,12 @@
 # AURA Roadmap (cumulative)
 
+## v0.9.2.5 — voltooid
+
+- Oude dubbele AURA-opslagkopieën worden bij bewaren verwijderd.
+- Een volle browseropslag overschrijft geen succesvol AI-antwoord meer.
+- Opslagproblemen en echte AI-/relayproblemen worden afzonderlijk gemeld.
+- Automatische regressietest voor opslagquotaherstel toegevoegd.
+
 ## v0.9.2.4 — voltooid
 
 - Globale feedback zichtbaar vanuit iedere fase.

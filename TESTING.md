@@ -1,4 +1,4 @@
-# AURA v0.9.2.4 — actueel Nederlandstalig testplan
+# AURA v0.9.2.5 — actueel Nederlandstalig testplan
 
 Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
@@ -6,16 +6,16 @@ Dit plan is volledig Nederlandstalig en gebruikt exact de namen en zeven fasen v
 
 ## Automatisch resultaat
 
-Uitgevoerd op 4 september 2026 met Node.js 24.20.0:
+Uitgevoerd op 5 september 2026 met Node.js 24.20.0:
 
-- Testbestanden: **79**
-- GESLAAGD: **79**
+- Testbestanden: **80**
+- GESLAAGD: **80**
 - MISLUKT: **0**
 - Releasevalidatie: **GESLAAGD**
-- ZIP-inhoud: **164 onderdelen**
+- ZIP-inhoud: **165 onderdelen**
 - Sleutels, oude ZIP-bestanden en `sources/` in de ZIP: **0**
 
-De suite controleert cumulatief wereldfysica, determinisme, causaliteit, resources, persistentie, embodiment, waarneming, geheugen, beliefs, hypothesen, aandacht, Foundation-context, Gemini/Groq-relay, Native leren, zelfstandig leren, objectabstractie en alle eerdere regressiegrenzen.
+De suite controleert cumulatief wereldfysica, determinisme, causaliteit, resources, persistentie, embodiment, waarneming, geheugen, beliefs, hypothesen, aandacht, Foundation-context, Gemini/Groq-relay, Native leren, zelfstandig leren, objectabstractie en alle eerdere regressiegrenzen. De opslagtest controleert aanvullend dat verouderde AURA-kopieën worden opgeruimd en dat een volle browseropslag niet als een mislukte AI-aanroep wordt voorgesteld.
 
 ## De zeven fasen op de site
 
@@ -35,7 +35,7 @@ Klik op **Volledig overzicht tonen** om alle zeven panelen te zien. De knop heet
 2. Klik **Alle lokale AURA-state resetten**.
 3. Bevestig de reset.
 
-GESLAAGD wanneer bovenaan `v0.9.2.4` staat, de status `tick 0` en overal nul resultaten toont, en **Volgende teststap: Waarnemen** verschijnt. Er mag geen camera-, microfoon- of GPS-toestemming worden gevraagd.
+GESLAAGD wanneer bovenaan `v0.9.2.5` staat, de status `tick 0` en overal nul resultaten toont, en **Volgende teststap: Waarnemen** verschijnt. Er mag geen camera-, microfoon- of GPS-toestemming worden gevraagd.
 
 ## Test 2 — fasenavigatie
 
@@ -134,13 +134,15 @@ GESLAAGD wanneer `CONTEXT_OK` verschijnt en de modelantwoordteller met één sti
 
 GESLAAGD wanneer provider, model en antwoord verschijnen. De API-sleutel mag nergens in de pagina, browseropslag, repository of ZIP staan.
 
+Als de browseropslag vol is, mag het ontvangen AI-antwoord niet veranderen in de melding **AI-aanroep mislukt**. AURA moet het antwoord behouden en afzonderlijk melden dat alleen lokaal bewaren niet lukte. Klik dan één keer op **Alle lokale AURA-state resetten**, bevestig de reset en begin opnieuw; oude dubbele versie-opslag wordt vanaf v0.9.2.5 bij iedere normale opslag automatisch opgeruimd.
+
 De GitHub Pages-site op dezelfde laptop kan de lokale relay bereiken. Een telefoon kan niet via zijn eigen `127.0.0.1` bij de laptop; echte AI op Android wacht daarom op een latere beveiligde online relay.
 
 ## Test 11 — Android Chrome
 
 1. Publiceer de repositoryroot via GitHub Pages.
 2. Open https://gasvdv-lab.github.io/AURA/ in Android Chrome.
-3. Controleer versie `v0.9.2.4` en voer Test 1–4, Test 7–9 uit.
+3. Controleer versie `v0.9.2.5` en voer Test 1–4, Test 7–9 uit.
 4. Draai het toestel van staand naar liggend en terug.
 
 GESLAAGD wanneer alle bediening bereikbaar blijft, niets buiten het scherm valt en geen hardwaretoestemming wordt gevraagd.
