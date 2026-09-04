@@ -1,2 +1,0 @@
-import {strict as assert} from 'node:assert';import {NativeSkillKernel} from '../../src/native-skill/native-skill-kernel.js';
-const k=new NativeSkillKernel();k.create({id:'x'});k.addExample('x',{inputs:[1,2],output:3});assert.throws(()=>k.learn('x'),/drie/);k.addExample('x',{inputs:[2,3],output:5});k.addExample('x',{inputs:[3,4],output:99});assert.throws(()=>k.learn('x'),/Geen generieke regel/);assert.equal(JSON.stringify(k.snapshot()).includes('foundation'),false);

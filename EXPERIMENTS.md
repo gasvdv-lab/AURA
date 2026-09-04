@@ -1,5 +1,9 @@
 # AURA Experiments (cumulative)
 
+## v0.9.2.2 — object-overstijgende representatie
+
+Genereer twee fysiek gelijke werelden met volledig verschillende body-ID's. De abstractie, relaties en signatuur moeten exact gelijk zijn. Wijzig daarna massa of materiaal; alleen de overeenkomstige fysieke kenmerken en signatuur mogen veranderen.
+
 ## v0.9.2 — zelfstandige kracht-massalering
 
 Start het zelfstandige leerprogramma zonder velden in te vullen. Controleer dat AURA drie trainingsmetingen en twee onafhankelijke proeven uitvoert, `force-divided-by-mass` selecteert en alleen bij twee exacte overeenkomsten `aura-learned` rapporteert.

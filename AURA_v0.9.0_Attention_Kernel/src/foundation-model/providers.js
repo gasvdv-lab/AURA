@@ -1,9 +1,0 @@
-const clone=structuredClone;
-export class DeterministicTestProvider{
- constructor(){this.id='deterministic-test-provider';}
- async generate(request){const c=request.context;return {provider:this.id,model:'none',text:`CONTEXT_OK perception=${c.perception?1:0} memories=${c.memories.length} beliefs=${c.beliefs.length} hypotheses=${c.hypotheses.length}`,raw:null};}
-}
-export class RelayProvider{
- constructor({endpoint,model='',provider='gemini',fetchImpl=fetch,timeoutMs=30000}={}){if(!endpoint)throw new Error('Relay-endpoint is verplicht');if(!['gemini','groq'].includes(provider))throw new Error('Kies Gemini of Groq');const url=new URL(endpoint);if(url.protocol!=='https:'&&!['localhost','127.0.0.1'].includes(url.hostname))throw new Error('Relay moet HTTPS gebruiken, behalve lokaal');this.id=`${provider}-relay`;this.endpoint=url.href;this.model=model;this.provider=provider;this.fetchImpl=fetchImpl;this.timeoutMs=timeoutMs;}
- async generate(request){const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),this.timeoutMs);try{const response=await this.fetchImpl.call(globalThis,this.endpoint,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({provider:this.provider,model:this.model||undefined,instructions:request.instructions,input:request.input,context:clone(request.context),store:false,tools:[]}),signal:controller.signal});const data=await response.json().catch(()=>({}));if(!response.ok)throw new Error(data.error??`Relay antwoordde met HTTP ${response.status}`);const text=data.output_text??data.text;if(typeof text!=='string'||!text.trim())throw new Error('Relay gaf geen tekst terug');return {provider:data.provider??this.id,model:data.model??(this.model||'relay-model'),text:text.trim(),raw:{responseId:data.id??null,status:data.status??'completed',fallback:Boolean(data.fallback)}};}finally{clearTimeout(timer);}}
-}

@@ -1,12 +1,12 @@
 {
   "project": "AURA",
-  "version": "0.9.2.1",
-  "release": "Autonomous Learning Controls Fix",
+  "version": "0.9.2.3",
+  "release": "Testing and UI Synchronization",
   "date": "2026-09-03",
   "target": "Android Chrome",
   "hosting": "GitHub Pages repository root",
   "buildRequired": false,
-  "automaticTestFiles": 74,
+  "automaticTestFiles": 77,
   "automaticResult": "PASS",
   "manualHardwareStatus": "PENDING"
 }

@@ -1,2 +1,0 @@
-import {strict as assert} from 'node:assert';import {AttentionKernel} from '../../src/attention/attention-kernel.js';
-const input=[{id:'b',kind:'belief',priority:.5},{id:'p',kind:'perception',priority:1},{id:'m2',kind:'memory',priority:.7},{id:'m1',kind:'memory',priority:.7},{id:'h',kind:'hypothesis',priority:.2}],a=new AttentionKernel({capacity:3}),b=new AttentionKernel({capacity:3});assert.deepEqual(a.select(input,4),b.select([...input].reverse(),4));assert.deepEqual(a.selected.map(x=>x.id),['p','m1','m2']);assert.equal(a.selected.length,3);

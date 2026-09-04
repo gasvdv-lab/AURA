@@ -1,3 +1,21 @@
+# AURA v0.9.2.3 — Testing and UI Synchronization
+
+Live Android-test: https://gasvdv-lab.github.io/AURA/
+
+v0.9.2.3 brengt de site en `TESTING.md` opnieuw exact overeen. Alle zeven fasen, huidige knopnamen, de actuele AI-starter, Native-route, Zelfleren en objectabstractie staan nu in één volledig herschreven Nederlandstalig testplan. De interface toont vanaf de eerste render consequent `van 7`, ook na wisselen tussen volledig overzicht en begeleid testen.
+
+## Cumulatief behouden uit v0.9.2.2
+
+# AURA v0.9.2.2 — Object-Agnostic Abstraction
+
+Live Android-test: https://gasvdv-lab.github.io/AURA/
+
+v0.9.2.2 voegt het gevraagde object-overstijgende script toe. De nieuwe `ObjectAbstractionKernel` zet `WORLD_STATE` om in generieke fysieke volumes, materiaal- en massakenmerken, contactrelaties en een categorie-onafhankelijke signatuur. Objectnamen zoals House, Shed, Tree of Chair worden niet opgeslagen of gebruikt.
+
+In fase **5 Zelfleren** staat de knop **Wereld object-overstijgend abstraheren**. De abstractie wordt causaal geregistreerd en lokaal bewaard.
+
+## Cumulatief behouden uit v0.9.2.1
+
 # AURA v0.9.2.1 — Autonomous Learning Controls Fix
 
 Live Android-test: https://gasvdv-lab.github.io/AURA/

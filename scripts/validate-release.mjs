@@ -20,7 +20,8 @@ for(const id of ['feedback','workflow-help','next-action','step','run','trial','
 
 for(const path of ['src/app.js','src/foundation-model/context-compiler.js','src/foundation-model/foundation-model-bridge.js','src/foundation-model/providers.js']){const source=await readFile(path,'utf8');for(const secretToken of ['OPENAI_API_KEY','api.openai.com','authorization:'])if(source.includes(secretToken))throw new Error(`Servergeheim of directe OpenAI-aanroep in browsercode: ${path}`);}
 
-await access('docs/GUIDED_TESTING.md');await access('docs/AUTONOMOUS_LEARNING.md');await access('src/self-learning/self-learning-kernel.js');
-for(const id of ['view-toggle','phase-help','self-learning-lab','self-learning-run','self-learning-status'])if(!page.includes(`id="${id}"`))throw new Error(`Ontbrekend begeleidings- of zelfleer-element: ${id}`);
-console.log('AURA v0.9.2.1 release validation: PASS');
+await access('docs/GUIDED_TESTING.md');await access('docs/AUTONOMOUS_LEARNING.md');await access('docs/OBJECT_ABSTRACTION.md');await access('src/self-learning/self-learning-kernel.js');await access('src/abstraction/object-abstraction-kernel.js');
+for(const id of ['view-toggle','phase-help','self-learning-lab','self-learning-run','self-learning-status','object-abstraction-run','object-abstraction-status'])if(!page.includes(`id="${id}"`))throw new Error(`Ontbrekend begeleidings-, zelfleer- of abstractie-element: ${id}`);
+for(const marker of ['1. **Bewijs**','2. **Aandacht**','3. **Foundation**','4. **Native**','5. **Zelfleren**','6. **AI**','7. **Details**','Wereld object-overstijgend abstraheren','Zelfstandig leerprogramma uitvoeren','Klik hier voor instellingen voor echte AI'])if(!testing.includes(marker))throw new Error(`TESTING.md loopt achter op de site: ${marker}`);
+console.log('AURA v0.9.2.3 release validation: PASS');
 console.log(`Validated ${required.length} required paths, controlled model context, relay isolation, Dutch testing documentation, and excluded capabilities.`);

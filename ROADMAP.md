@@ -1,5 +1,19 @@
 # AURA Roadmap (cumulative)
 
+## v0.9.2.3 — voltooid
+
+- Testplan volledig herschreven volgens de zeven actuele sitefasen.
+- Alle knopnamen, versies en AI-starterstappen gesynchroniseerd.
+- Fase-uitleg bij laden en weergavewissel consequent `van 7`.
+- Herstelde lokale toestand krijgt geen misleidende genesisfeedback meer.
+
+## v0.9.2.2 — voltooid
+
+- Object-overstijgende abstractie uit objectieve physical bodies.
+- Geen objectnamen of categorieën in het abstractieresultaat.
+- Generieke volumes, materiaal, massa, omvang en contactrelaties.
+- ID-invariantie, causaliteit en snapshot/herstel automatisch bewezen.
+
 ## v0.9.2.1 — voltooid
 
 - Alle zichtbare acties gekoppeld en opnieuw doorgelopen.

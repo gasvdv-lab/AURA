@@ -1,7 +1,0 @@
-# AURA-geheimen mogen nooit naar GitHub of een release-ZIP.
-server/*.key
-server/.env
-*.key
-.env
-.env.*
-

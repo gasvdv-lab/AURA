@@ -1,4 +1,8 @@
-# AURA Modules — v0.9.2
+# AURA Modules — v0.9.2.2
+
+## Object Abstraction Kernel
+
+Produceert een canonieke, categorie-onafhankelijke beschrijving van fysieke wereldonderdelen en hun contacten. Identifiers en hoog-niveauobjectnamen worden verwijderd voordat een signatuur ontstaat.
 
 ## Autonomous Learning Loop
 

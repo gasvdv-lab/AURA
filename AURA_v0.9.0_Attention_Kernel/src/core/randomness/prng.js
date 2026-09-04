@@ -1,1 +1,0 @@
-export class PRNG{constructor(seed=1){this.state=seed>>>0||1;}next(){let x=this.state;x^=x<<13;x^=x>>>17;x^=x<<5;this.state=x>>>0;return this.state/4294967296;}snapshot(){return this.state;}static restore(s){const r=new PRNG();r.state=s>>>0;return r;}}

@@ -1,2 +1,0 @@
-import {createPerception} from './helpers-perception.mjs';import {MemoryKernel} from '../src/memory/memory-kernel.js';
-export function createMemory(options={}){const {memory:memoryOptions={},...perceptionOptions}=options,x=createPerception(perceptionOptions);const memory=new MemoryKernel({...memoryOptions,emit:(type,payload,causeIds=[])=>x.world.emit(type,payload,causeIds)});return {...x,memory};}

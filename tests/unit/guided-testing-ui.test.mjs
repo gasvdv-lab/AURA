@@ -7,3 +7,4 @@ for(const id of ['world-lab','attention-lab','learning-lab','native-lab','ai-lab
 assert.match(page,/id="view-toggle"/);assert.match(page,/id="phase-help"/);
 assert.match(app,/panel\.hidden=panel\.id!==id/);assert.match(app,/body\.classList\.toggle\('focus-mode'/);
 assert.match(css,/\.focus-mode main>section\[hidden\]\{display:none\}/);
+assert.match(app,/Alle zeven testfasen zijn zichtbaar/);assert.match(page,/Fase 1 van 7/);

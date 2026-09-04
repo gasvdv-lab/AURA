@@ -1,2 +1,0 @@
-import {strict as assert} from 'node:assert';import {HUMANOID_BLUEPRINT} from '../../src/embodiment/humanoid-blueprint.js';
-const ids=HUMANOID_BLUEPRINT.parts.map(p=>p.id);assert.equal(ids.length,14);for(const id of ['head','torso','left-hand','right-hand','left-foot','right-foot'])assert.ok(ids.includes(id));assert.equal(new Set(ids).size,ids.length);assert.ok(!JSON.stringify(HUMANOID_BLUEPRINT).match(/gender|male|female|genital|identity/i));for(const p of HUMANOID_BLUEPRINT.parts)if(p.parent)assert.ok(ids.includes(p.parent));
