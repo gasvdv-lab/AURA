@@ -1,4 +1,4 @@
-# AURA v0.9.2.5 — actueel Nederlandstalig testplan
+# AURA v0.9.4 — actueel Nederlandstalig testplan
 
 Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
@@ -8,11 +8,11 @@ Dit plan is volledig Nederlandstalig en gebruikt exact de namen en zeven fasen v
 
 Uitgevoerd op 5 september 2026 met Node.js 24.20.0:
 
-- Testbestanden: **80**
-- GESLAAGD: **80**
+- Testbestanden: **81**
+- GESLAAGD: **81**
 - MISLUKT: **0**
 - Releasevalidatie: **GESLAAGD**
-- ZIP-inhoud: **165 onderdelen**
+- ZIP-inhoud: **166 onderdelen**
 - Sleutels, oude ZIP-bestanden en `sources/` in de ZIP: **0**
 
 De suite controleert cumulatief wereldfysica, determinisme, causaliteit, resources, persistentie, embodiment, waarneming, geheugen, beliefs, hypothesen, aandacht, Foundation-context, Gemini/Groq-relay, Native leren, zelfstandig leren, objectabstractie en alle eerdere regressiegrenzen. De opslagtest controleert aanvullend dat verouderde AURA-kopieën worden opgeruimd en dat een volle browseropslag niet als een mislukte AI-aanroep wordt voorgesteld.
@@ -35,7 +35,7 @@ Klik op **Volledig overzicht tonen** om alle zeven panelen te zien. De knop heet
 2. Klik **Alle lokale AURA-state resetten**.
 3. Bevestig de reset.
 
-GESLAAGD wanneer bovenaan `v0.9.2.5` staat, de status `tick 0` en overal nul resultaten toont, en **Volgende teststap: Waarnemen** verschijnt. Er mag geen camera-, microfoon- of GPS-toestemming worden gevraagd.
+GESLAAGD wanneer bovenaan `v0.9.4` staat, de status `tick 0` en overal nul resultaten toont, en **Volgende teststap: Waarnemen** verschijnt. Er mag geen camera-, microfoon- of GPS-toestemming worden gevraagd.
 
 ## Test 2 — fasenavigatie
 
@@ -101,13 +101,17 @@ Voer deze test na Test 1 uit; de AI-starter is niet nodig.
 
 GESLAAGD wanneer `repeated-addition`, `2/2`, `available` en oorsprong **AURA AANGELEERD** verschijnen en de modelantwoordteller nul blijft.
 
-## Test 7 — Zelfleren
+## Test 7 — autonoom onderzoek
 
 1. Open **5 Zelfleren**.
 2. Vul niets in.
-3. Klik **Zelfstandig leerprogramma uitvoeren**.
+3. Klik **Volgende autonome onderzoekscyclus uitvoeren**.
+4. Controleer dat `1/2 cycli`, de gekozen vraag over kracht en massa, `VERIFIED`, `force-divided-by-mass`, `2/2` en `aura-learned` verschijnen.
+5. Klik dezelfde knop een tweede keer.
+6. Controleer dat `2/2 cycli`, de gekozen vraag over snelheid zonder nettokracht, `VERIFIED`, `velocity-remains-constant`, `2/2` en `aura-learned` verschijnen.
+7. Controleer dat de knop nu uitgeschakeld is omdat de begrensde agenda voltooid is.
 
-GESLAAGD wanneer `VERIFIED`, `force-divided-by-mass`, drie zelf verzamelde metingen, `2/2` onafhankelijke proeven en oorsprong `aura-learned` verschijnen.
+GESLAAGD wanneer beide cycli slagen. In **7 Details** moeten voor beide cycli `self-learning.question-selected`, `self-learning.experiment-plan-committed`, `self-learning.prediction-committed` en pas daarna de overeenkomstige meetevents staan. De teller voor modelantwoorden mag door deze test niet stijgen.
 
 ## Test 8 — object-overstijgende abstractie
 
@@ -142,7 +146,7 @@ De GitHub Pages-site op dezelfde laptop kan de lokale relay bereiken. Een telefo
 
 1. Publiceer de repositoryroot via GitHub Pages.
 2. Open https://gasvdv-lab.github.io/AURA/ in Android Chrome.
-3. Controleer versie `v0.9.2.5` en voer Test 1–4, Test 7–9 uit.
+3. Controleer versie `v0.9.4` en voer Test 1–4, Test 7–9 uit.
 4. Draai het toestel van staand naar liggend en terug.
 
 GESLAAGD wanneer alle bediening bereikbaar blijft, niets buiten het scherm valt en geen hardwaretoestemming wordt gevraagd.

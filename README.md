@@ -1,3 +1,11 @@
+# AURA v0.9.4 — Autonomous Research Agenda
+
+Live Android-test: https://gasvdv-lab.github.io/AURA/
+
+v0.9.4 laat AURA achtereenvolgens twee veilige onderzoeksvragen kiezen. Per cyclus legt de runtime eerst een proefplan vast, verzamelt zelf trainingsmetingen, vergelijkt vier concurrerende verklaringen, legt voorspellingen vast en voert daarna twee ongeziene verificatieproeven uit. Alleen volledig bevestigde resultaten worden als `aura-learned` capability gepubliceerd. Gemini, Groq en menselijke verwachte antwoorden spelen hierin geen rol.
+
+## Cumulatief behouden uit v0.9.2.5
+
 # AURA v0.9.2.5 — Storage Quota Recovery Fix
 
 Live Android-test: https://gasvdv-lab.github.io/AURA/

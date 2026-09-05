@@ -1,4 +1,8 @@
-# AURA Modules — v0.9.2.2
+# AURA Modules — v0.9.4
+
+## Autonomous Research Agenda
+
+Selecteert deterministisch de eerstvolgende onverkende vraag uit een expliciet begrensde veilige onderzoeksagenda. Elke cyclus legt vraag en proefplan causaal vast, verzamelt World Kernel-metingen, elimineert concurrerende verklaringen en committeert voorspellingen vóór onafhankelijke observaties. De module gebruikt geen foundation model en ontvangt geen menselijk verwacht antwoord.
 
 ## Object Abstraction Kernel
 

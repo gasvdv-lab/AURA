@@ -1,5 +1,12 @@
 # AURA Experiments (cumulative)
 
+## v0.9.4 — autonome onderzoeksagenda
+
+- Cyclus 1 onderzoekt vier verklaringen voor kracht, massa en versnelling met drie trainingsmetingen en twee vooraf voorspelde, ongeziene controles.
+- Cyclus 2 onderzoekt vier verklaringen voor snelheid zonder nettokracht met drie trainingsmetingen en twee vooraf voorspelde, ongeziene controles.
+- Slagingsvoorwaarde: één verklaring overleeft de training en beide onafhankelijke voorspellingen stemmen exact overeen met latere World Kernel-metingen.
+- Verboden bronnen: Gemini, Groq, netwerk, menselijke les, menselijke beoordeling en vooraf ingevulde verwachte antwoorden.
+
 ## v0.9.2.2 — object-overstijgende representatie
 
 Genereer twee fysiek gelijke werelden met volledig verschillende body-ID's. De abstractie, relaties en signatuur moeten exact gelijk zijn. Wijzig daarna massa of materiaal; alleen de overeenkomstige fysieke kenmerken en signatuur mogen veranderen.

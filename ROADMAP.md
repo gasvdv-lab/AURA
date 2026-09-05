@@ -1,5 +1,13 @@
 # AURA Roadmap (cumulative)
 
+## v0.9.4 — voltooid
+
+- Deterministische selectie van de volgende begrensde onderzoeksvraag.
+- Expliciete causale events voor vraagselectie en vooraf vastgelegd proefplan.
+- Twee autonome onderzoeksdomeinen: kracht/versnelling en inertiële snelheid.
+- Vier concurrerende verklaringen per domein en twee onafhankelijke proeven.
+- Alleen geverifieerde kennis krijgt oorsprong `aura-learned`.
+
 ## v0.9.2.5 — voltooid
 
 - Oude dubbele AURA-opslagkopieën worden bij bewaren verwijderd.

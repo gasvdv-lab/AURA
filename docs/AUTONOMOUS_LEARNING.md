@@ -1,7 +1,9 @@
-# Autonomous Learning Loop v0.9.2
+# Autonomous Research Agenda v0.9.4
 
-Deze release bevat één streng begrensd zelfstandig onderzoeksprogramma: de relatie tussen kracht, massa en versnelling. AURA kiest zelf vijf vooraf begrensde, onderling verschillende experimentconfiguraties. Drie metingen dienen voor kandidaatselectie; twee ongeziene configuraties dienen uitsluitend voor onafhankelijke verificatie.
+Deze release bevat twee streng begrensde zelfstandige onderzoekscycli. AURA kiest deterministisch de eerstvolgende onverkende vraag: eerst de relatie tussen kracht, massa en versnelling, daarna het behoud van snelheid zonder nettokracht.
 
-Iedere uitkomst wordt gemeten door een nieuwe geïsoleerde `WorldKernel` met nulzwaartekracht. Het leermechanisme krijgt geen verwacht antwoord. Het vergelijkt de gemeten versnelling met vier generieke kandidaatregels. Alleen de regel die alle trainingsmetingen verklaart wordt voorafgaand aan de twee proeven geselecteerd.
+Per cyclus registreert de kernel causaal de gekozen onderzoeksvraag en het volledige proefplan vóór de metingen. Drie zelf uitgevoerde World Kernel-experimenten dienen voor vergelijking van vier concurrerende kandidaatverklaringen. Vervolgens wordt precies één regel gekozen. Voor elk van twee ongeziene configuraties wordt de voorspelling geregistreerd vóór de onafhankelijke meting plaatsvindt.
 
-De capability wordt pas `aura-learned` wanneer beide voorspellingen exact overeenkomen met de daarna verkregen wereldmetingen. De module gebruikt geen Gemini, Groq, relay, netwerk of menselijke beoordeling. v0.9.2 is nog geen open-ended nieuwsgierigheid: het onderzoeksdomein en de veilige experimentruimte zijn door de software begrensd.
+Een capability krijgt uitsluitend oorsprong `aura-learned` wanneer beide onafhankelijke voorspellingen exact overeenkomen met de later verkregen metingen. Een verworpen programma publiceert geen zelfgeleerde kennis. Snapshot en herstel bewaren agenda, cycli, plannen, verklaringen, metingen en herkomst.
+
+De module gebruikt geen Gemini, Groq, relay, netwerk, menselijke les, menselijke beoordeling of menselijk verwacht antwoord. Dit is begrensde onderzoeksautonomie, geen open-ended nieuwsgierigheid: de veilige domeinen, kandidaatregels en toegestane experimentruimte blijven door de software bepaald.

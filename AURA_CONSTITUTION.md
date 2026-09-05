@@ -1,5 +1,9 @@
 # AURA Constitution (cumulative)
 
+## Autonoom onderzoek (v0.9.4)
+
+Autonomie betekent binnen deze release: zelf een volgende vraag uit een vooraf begrensde veilige agenda kiezen, zelf een proefplan uitvoeren en verklaringen weerlegbaar vergelijken. Vraag, plan en voorspelling moeten vóór de toetsmeting causaal zijn vastgelegd. Open internet, foundation-modeltekst en menselijke verwachte antwoorden kunnen nooit zelfstandig geleerde oorsprong vestigen.
+
 ## Aandacht (v0.9.0)
 
 Aandacht is begrensde selectie van bestaande evidence en geen bron van waarheid, motivatie of wereldactie. Selectie moet deterministisch, inspecteerbaar en causaal geregistreerd zijn.
