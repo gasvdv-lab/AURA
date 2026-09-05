@@ -1,4 +1,8 @@
-# AURA Modules — v0.9.4
+# AURA Modules — v0.10.0
+
+## Laptop Embodiment Preview
+
+Leest de bestaande torso en sensorsamples van `aura-body` en projecteert positie, snelheid, activiteit en gemiddelde integriteit naar een 2D-laboratoriumweergave. Deze adapter kan geen body creëren, kracht toepassen, simulatiestap starten of causaliteit wijzigen.
 
 ## Autonomous Research Agenda
 

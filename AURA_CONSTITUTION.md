@@ -1,5 +1,9 @@
 # AURA Constitution (cumulative)
 
+## Visuele representatie (v0.10.0)
+
+Een avatarweergave is een projectie van bestaande embodimenttoestand en geen afzonderlijk wezen, wereldobject of waarheidsbron. De presentatielaag mag `WORLD_STATE` niet wijzigen en visuele beweging mag nooit als waarneming, intentie of aangeleerd gedrag worden geregistreerd.
+
 ## Autonoom onderzoek (v0.9.4)
 
 Autonomie betekent binnen deze release: zelf een volgende vraag uit een vooraf begrensde veilige agenda kiezen, zelf een proefplan uitvoeren en verklaringen weerlegbaar vergelijken. Vraag, plan en voorspelling moeten vóór de toetsmeting causaal zijn vastgelegd. Open internet, foundation-modeltekst en menselijke verwachte antwoorden kunnen nooit zelfstandig geleerde oorsprong vestigen.

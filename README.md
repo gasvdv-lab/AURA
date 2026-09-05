@@ -1,3 +1,11 @@
+# AURA v0.10.0 — Laptop Embodiment Preview
+
+Live Android-test: https://gasvdv-lab.github.io/AURA/
+
+v0.10.0 voegt de eerste zichtbare AURA toe als een permanent laptop-laboratoriumscherm. De door de projecteigenaar aangeleverde avatarafbeelding beweegt uitsluitend als weergave van de bestaande fysieke torso, snelheid, tick en gemiddelde integriteit. De visualisatie heeft geen schrijfrecht naar `WORLD_STATE`, simuleert geen camera/AR en voegt geen hoog-niveaugedrag toe.
+
+## Cumulatief behouden uit v0.9.4
+
 # AURA v0.9.4 — Autonomous Research Agenda
 
 Live Android-test: https://gasvdv-lab.github.io/AURA/

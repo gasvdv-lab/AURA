@@ -1,5 +1,9 @@
 # AURA Experiments (cumulative)
 
+## v0.10.0 — visuele embodimentprojectie
+
+Vergelijk tick, torso-positie, snelheid en gemiddelde integriteit vóór en na een fysieke simulatiestap. De laptoppreview moet de nieuwe waarden tonen zonder zelf een body, event, kracht of waarneming te creëren. Navigeren tussen testfasen mag de preview niet verbergen of de simulatie veranderen.
+
 ## v0.9.4 — autonome onderzoeksagenda
 
 - Cyclus 1 onderzoekt vier verklaringen voor kracht, massa en versnelling met drie trainingsmetingen en twee vooraf voorspelde, ongeziene controles.

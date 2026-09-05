@@ -1,12 +1,12 @@
 {
   "project": "AURA",
-  "version": "0.9.4",
-  "release": "Autonomous Research Agenda",
-  "date": "2026-09-03",
+  "version": "0.10.0",
+  "release": "Laptop Embodiment Preview",
+  "date": "2026-09-05",
   "target": "Android Chrome",
   "hosting": "GitHub Pages repository root",
   "buildRequired": false,
-  "automaticTestFiles": 81,
+  "automaticTestFiles": 82,
   "automaticResult": "PASS",
   "manualHardwareStatus": "PENDING"
 }

@@ -1,5 +1,12 @@
 # AURA Roadmap (cumulative)
 
+## v0.10.0 — voltooid
+
+- Eerste laptopweergave van de door de projecteigenaar gekozen avatar.
+- Live uitlezing van torso-positie, snelheid, tick, activiteit en integriteit.
+- Visuele beweging gekoppeld aan de bestaande embodiment.
+- Presentatielaag heeft geen schrijfrecht naar WORLD_STATE en is nog geen AR-renderer.
+
 ## v0.9.4 — voltooid
 
 - Deterministische selectie van de volgende begrensde onderzoeksvraag.

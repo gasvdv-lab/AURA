@@ -1,4 +1,4 @@
-# AURA v0.9.4 — actueel Nederlandstalig testplan
+# AURA v0.10.0 — actueel Nederlandstalig testplan
 
 Vaste live-link: https://gasvdv-lab.github.io/AURA/
 
@@ -8,11 +8,11 @@ Dit plan is volledig Nederlandstalig en gebruikt exact de namen en zeven fasen v
 
 Uitgevoerd op 5 september 2026 met Node.js 24.20.0:
 
-- Testbestanden: **81**
-- GESLAAGD: **81**
+- Testbestanden: **82**
+- GESLAAGD: **82**
 - MISLUKT: **0**
 - Releasevalidatie: **GESLAAGD**
-- ZIP-inhoud: **166 onderdelen**
+- ZIP-inhoud: **169 onderdelen**
 - Sleutels, oude ZIP-bestanden en `sources/` in de ZIP: **0**
 
 De suite controleert cumulatief wereldfysica, determinisme, causaliteit, resources, persistentie, embodiment, waarneming, geheugen, beliefs, hypothesen, aandacht, Foundation-context, Gemini/Groq-relay, Native leren, zelfstandig leren, objectabstractie en alle eerdere regressiegrenzen. De opslagtest controleert aanvullend dat verouderde AURA-kopieën worden opgeruimd en dat een volle browseropslag niet als een mislukte AI-aanroep wordt voorgesteld.
@@ -35,7 +35,17 @@ Klik op **Volledig overzicht tonen** om alle zeven panelen te zien. De knop heet
 2. Klik **Alle lokale AURA-state resetten**.
 3. Bevestig de reset.
 
-GESLAAGD wanneer bovenaan `v0.9.4` staat, de status `tick 0` en overal nul resultaten toont, en **Volgende teststap: Waarnemen** verschijnt. Er mag geen camera-, microfoon- of GPS-toestemming worden gevraagd.
+GESLAAGD wanneer bovenaan `v0.10.0` staat, de status `tick 0` en overal nul resultaten toont, en **Volgende teststap: Waarnemen** verschijnt. Er mag geen camera-, microfoon- of GPS-toestemming worden gevraagd.
+
+## Test 1A — visuele laptoppreview
+
+1. Controleer dat de gekozen AURA-avatar boven de testnavigatie zichtbaar is.
+2. Noteer dat **Tick** op `0` staat en **Integriteit** `100%` toont.
+3. Open **1 Bewijs** en klik éénmaal **1 tick vooruit**.
+4. Controleer dat de visuele teller onmiddellijk `1` toont en positie of snelheid verandert.
+5. Klik **Actuatorproef** en controleer dat **Toestand** tijdelijk of na de verwerking fysieke activiteit weergeeft en de uitlezingen veranderen.
+
+GESLAAGD wanneer de afbeelding en alle vijf uitlezingen zichtbaar blijven, ook wanneer je tussen testfasen wisselt. De preview mag geen extra bodies, waarnemingen of causaliteit creëren; zij leest alleen de bestaande embodiment.
 
 ## Test 2 — fasenavigatie
 
@@ -146,7 +156,7 @@ De GitHub Pages-site op dezelfde laptop kan de lokale relay bereiken. Een telefo
 
 1. Publiceer de repositoryroot via GitHub Pages.
 2. Open https://gasvdv-lab.github.io/AURA/ in Android Chrome.
-3. Controleer versie `v0.9.4` en voer Test 1–4, Test 7–9 uit.
+3. Controleer versie `v0.10.0` en voer Test 1, Test 1A, Test 2–4 en Test 7–9 uit.
 4. Draai het toestel van staand naar liggend en terug.
 
 GESLAAGD wanneer alle bediening bereikbaar blijft, niets buiten het scherm valt en geen hardwaretoestemming wordt gevraagd.
@@ -159,6 +169,7 @@ Apparaat, besturingssysteem en browser:
 Getoonde AURA-versie:
 
 Test 1 Schone start: GESLAAGD / MISLUKT
+Test 1A Visuele laptoppreview: GESLAAGD / MISLUKT
 Test 2 Navigatie: GESLAAGD / MISLUKT
 Test 3 Bewijs: GESLAAGD / MISLUKT
 Test 4 Aandacht: GESLAAGD / MISLUKT
